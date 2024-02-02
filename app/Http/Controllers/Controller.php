@@ -11,12 +11,13 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
-    public function action(){
+  public function action(){
 
+        $user = User::first(); //Sélectionne le premier utilisateur dans cette variable
 
-        $user = User::first();
-
-        return view("user")
-                ->with(['user'=>$user]);
+        return view("user") //Afficher la page user blade
+                ->with(['user'=>$user]); //Les informations de la variable est récupérée et affichée sur la page blade
+                //ajouter essai
     }
+
 }
