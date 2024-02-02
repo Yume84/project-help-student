@@ -6,6 +6,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 use App\Models\User;
+use App\Models\Language;
 
 class Controller extends BaseController
 {
@@ -15,9 +16,13 @@ class Controller extends BaseController
 
         $user = User::first(); //Sélectionne le premier utilisateur dans cette variable
 
+        $languages = Language::all();
+
         return view("user") //Afficher la page user blade
-                ->with(['user'=>$user]); //Les informations de la variable est récupérée et affichée sur la page blade
-                //ajouter essai
+                ->with([
+                    'user'=>$user,
+                    "languages"=>$languages
+            ]); //Les informations de la variable est récupérée et affichée sur la page blade
     }
 
 }
