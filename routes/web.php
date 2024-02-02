@@ -25,5 +25,4 @@ Route::view('profile', 'profile')
 
 require __DIR__.'/auth.php';
 
-
 Route::get('/user',[Controller::class, 'action']);

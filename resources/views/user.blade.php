@@ -5,6 +5,5 @@
 <hr>
 
 <p>
-
 L'email est : {{ $user->email }}
 </p>
