@@ -1,0 +1,478 @@
+body {
+    margin: 30px 100px;
+    background-color: #001053;
+  }
+  
+  .back {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .home img {
+    width: auto;
+    height: 25px;
+  }
+  
+  .mascotte {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin-bottom: 25px;
+  }
+  
+  /* Sign-up-0.html */
+  .mascotte-0 {
+    height: 400px;
+    margin-top: 30px;
+  }
+  
+  .mascotte-1 {
+    height: 120px;
+  }
+  
+  .chargement {
+    background: #80CAFF;
+    width: 100%;
+    border: 2px solid #80CAFF;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .remplissage {
+    width: 0;
+    height: 20px;
+    border-radius: 10px;
+    background: #FFDA7C;
+  }
+  
+  .page-1 .remplissage {
+    animation: remplissage-1 3s ease-in-out forwards;
+  }
+  
+  .page-2 .remplissage {
+    animation: remplissage-2 3s ease-in-out forwards;
+  }
+  
+  .page-3 .remplissage {
+    animation: remplissage-3 3s ease-in-out forwards;
+  }
+  
+  .page-4 .remplissage {
+    animation: remplissage-4 3s ease-in-out forwards;
+  }
+  
+  .page-5 .remplissage {
+    animation: remplissage-5 3s ease-in-out forwards;
+  }
+  
+  /* Animation pour chaque page de la barre de chargement */
+  @keyframes remplissage-1 {
+    0% { width: 0; } 100% { width: 20%; }
+  }
+  
+  @keyframes remplissage-2 {
+    0% { width: 20%; } 100% { width: 40%; }
+  }
+  
+  @keyframes remplissage-3 {
+    0% { width: 40%; } 100% { width: 60%; }
+  }
+  
+  @keyframes remplissage-4 {
+    0% { width: 60%; } 100% { width: 80%; }
+  }
+  
+  @keyframes remplissage-5 {
+    0% { width: 80%; } 100% { width: 100%; }
+  }
+  
+  .choix, .liste {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 30px 0;
+  }
+  
+  .liste {
+    flex-direction: column;
+    display: none;
+  }
+  
+  .option, .coche, .langue, .campus {
+    height: 100px;
+    width: 500px;
+  }
+  
+  /*Sign-up-3.html + Sign-up-4.html*/
+  .langue > img, .campus > img {
+    height: 10px;
+    margin-left: 10px;
+  }
+  
+  button > input[type="checkbox"] {
+    opacity: 0;
+  }
+  
+  /*Sign-up-3.html + Sign-up-4.html*/
+  .menu-langue, .menu-campus {
+    height: 400px;
+    gap: 0;
+  }
+  
+  /*Sign-up-3.html*/
+  .drapeau {
+    margin-right: 10px;
+    height: 40px;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0 0 0;
+  }
+  
+  .navigation > a .btn {
+    width: 200px;
+  }
+  
+  .btn {
+    background-color: #80CAFF;
+    height: 50px;
+    font-weight: 600;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+  }
+  
+  .option:hover,
+  .option.selected,
+  .coche:hover,
+  .coche.selected,
+  .suivant-0,
+  .btn.suivant.hovered {
+    background-color: #FFDA7C;
+    border: 2px solid #80CAFF;
+    box-shadow: 3px 3px 1px 0 #80CAFF;
+  }
+  
+  /*Sign-up-5.html : Inscription*/
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #E1F2FF;
+    border-radius: 10px;
+    border: 2px solid #80CAFF;
+    box-shadow: 3px 3px 1px 0 #80CAFF;
+    color: #001053;
+    font-size: 20px;
+    width: 50%;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  .cadre {
+    width: 90%;
+    padding: 25px 0;
+  }
+  
+  .cadre input[type="text"], input[type="email"], input[type="password"] {
+    margin : 5px 0;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #e8e8e8;
+  }
+  
+  /*Couleur des écritures temporaires dans les cases de saisie*/
+  .cadre input::placeholder {
+    color: #e8e8e8;
+    font-size: 15px;
+  }
+  
+  /*Bordure de couleur quand on clique sur une case*/
+  .cadre label input:focus {
+    border: 2px solid #FFDA7C;
+    outline: none; /* Supprimer la bordure par défaut de certains navigateurs */
+  }
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+  }
+  
+  .checkbox > label {
+    display: block;
+    margin: 0 15px;
+    padding: 10px 0;
+    font-weight: 400;
+  }
+  
+  /* Design des cases à cocher */
+  .checkbox input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .checkbox input[type="checkbox"]:checked {
+    background-color: #FFDA7C;
+    border: 1px solid #80CAFF;
+  }
+  
+  a.rgpd {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  
+  /* Popup de conditions d'utilisation */
+  .popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px 40px 40px 40px;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .close {
+    display: flex;
+    justify-content: flex-end;
+    color: #32AAFF;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #FFDA7C;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .popup-text {
+    text-align: justify;
+    line-height: 1.5;
+  }
+  
+  /*--------------------------------------------------------------------------------------------------------------------Responsive largeur - PC*/
+  @media only screen and (max-width: 1200px) {
+    body {
+      margin: 30px 20px; /* Modifiez selon vos besoins */
+    }
+  
+    form {
+      width: 100%;
+    }
+  
+    .back {
+      width: 25%; /* La div .back prend 100% de la largeur de son conteneur */
+    }
+  
+    .choix, .liste {
+      flex-direction: column; /* Place les boutons les uns en dessous des autres */
+      gap: 15px;
+    }
+  
+    .option, .coche, .langue, .campus {
+      width: 100%; /* Les boutons occupent toute la largeur de l'écran */
+    }
+  
+    .menu-langue, .menu-campus {
+      gap: 0;
+    }
+  
+    .drapeau {
+      height: 30px;
+    }
+    
+    .popup-content {
+      padding: 20px 30px 40px 30px;
+      width: 90%;
+    }
+  
+    .close {
+      margin-bottom: 12px;
+    }
+  }
+  
+  /*--------------------------------------------------------------------------------------------------------------------Responsive hauteur - Mobile*/
+  @media only screen and (min-height: 1600px) {
+    body {
+      margin: 100px 50px;
+    }
+  
+    h3 {
+      font-size: 70px;
+    }
+  
+    h4 {  
+      font-size: 60px;
+      margin: 100px 0 30px 0;
+    }
+  
+    h5 {  
+      font-size: 50px;
+    }
+  
+    button {
+      font-size: 45px;
+    }
+  
+    form {
+      font-size: 45px;
+    }
+  
+    label {
+      margin-bottom: 50px;
+    }
+  
+    .cadre {
+      padding: 50px 0;
+    }
+  
+    .cadre input[type="text"], input[type="email"], input[type="password"] {
+      padding: 35px;
+      font-size: 50px;
+    }
+  
+    .cadre input::placeholder {
+      font-size: 40px;
+    }
+  
+    .checkbox {
+      font-size: 35px;
+      padding: 10px 0;
+    }
+  
+    .checkbox > label {
+      margin: 0 20px;
+    }
+  
+    .checkbox input[type="checkbox"] {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+    }
+  
+    a.rgpd {
+      text-underline-offset: 8px;
+    }
+  
+    .back {
+      margin-bottom: 200px;
+    }
+  
+    .home {
+      height: 120px;
+      width: 120px;
+    }
+  
+    .home img {
+      height: 50px;
+    }
+  
+    .mascotte-0 {
+      height: 800px;
+      margin: 100px 0;
+    }
+  
+    .mascotte-1 {
+      height: 300px;
+      margin-bottom: 35px;
+    }
+  
+    .remplissage {
+      height: 30px;
+    }
+  
+    .chargement {
+      margin-bottom: 50px;
+    }
+  
+    .chargement, .remplissage {
+      border-radius: 15px;
+    }
+  
+    .choix, .liste {
+      gap: 50px;
+      margin-top: 50px;
+    }
+  
+    .option, .coche, .langue, .campus {
+      height: 200px;
+      font-size: 50px;
+    }
+  
+    .menu-langue, .menu-campus {
+      height: 900px;
+      gap: 0;
+  }
+  
+    .drapeau {
+      margin-right: 25px;
+      height: 80px;
+  }
+  
+    .navigation {
+      margin: 200px 0 0 0;
+    }
+  
+    .navigation > a .btn {
+      width: 350px;
+      height: 120px;
+    }
+  
+    .popup-content {
+      padding: 20px 40px 40px 40px;
+      width: 80%;
+      max-width: 1000px;
+    }
+  
+    .close {
+      font-size: 90px;
+    }
+  
+    .popup-text {
+      font-size: 40px;
+    }
+  }
+  

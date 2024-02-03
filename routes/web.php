@@ -13,7 +13,17 @@ use App\Http\Controllers\Controller;
 |
 */
 
-Route::view('/', 'welcome');
+Route::view('home', 'home'); // Pour avoir accès à la page d'accueil de Stoddle
+
+Route::view('sign-up', 'sign-up-0'); // Pour avoir accès à la première page du tunnel d'inscription
+Route::view('sign-up-1', 'sign-up-1'); // 1
+Route::view('sign-up-2', 'sign-up-2'); // 2
+Route::view('sign-up-3', 'sign-up-3'); // 3
+Route::view('sign-up-4', 'sign-up-4'); // 4
+Route::view('sign-up-5', 'sign-up-5'); // 5
+
+
+Route::view('/', 'welcome'); 
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
