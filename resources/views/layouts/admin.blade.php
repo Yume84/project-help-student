@@ -20,11 +20,15 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     </head>
+
     <body class="font-sans antialiased">
+
         <div class="relative min-h-screen md:flex" x-data="{ open: true }">
+
             <!--Sidebar -->
-            <aside :class="{ '-translate-x-full': !open }" class="z-10 bg-dark-blue text-light-blue w-80 px-2 py-4 absolute inset-y-0 left-0 md:relative transform md:translate-x-0 overflow-y-auto transition ease-in-out duration-200 shadow-lg">
-                <!-- Logo -->
+            <aside :class="{ '-translate-x-full': !open }" class="z-10 bg-dark-blue text-light-blue w-80 px-2 py-4 absolute inset-y-0 left-0 md:relative transform md:transform-x-0 overflow-y-auto transition ease-in-out duration-200 shadow-lg">
+               
+            <!-- Logo -->
                 <div class="flex items-center justify-between px-2">
                     <div class="flex items-center space-x-4">
                         <a href="">
@@ -32,12 +36,12 @@
                         </a> 
                         <span class="text-2xl font-extrabold">Mon compte</span>
                     </div>
+
                     <button type="button" @click="open = !open" class="md:hidden lg:inline-flex p-2 items-center justify-center rounded-md text-light-blue hover:bg-medium-blue focus:outline-none">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="block w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                         </svg>
                     </button>
-
                 </div>
 
                 <!-- Nav Links -->
@@ -47,8 +51,24 @@
             </aside>
 
             <!-- Main Content-->
-            <main>
-                <nav></nav>
+            <main class="flex-1 absolute w-full bg-light-blue h-screen"> <!--Attention au absolute -->
+                <nav class="bg-dark-blue shadow-lg">
+                    <div class="mx-auto sm:px-6 lg:px-8">
+                        <div class="relative flex items-center justify-between md:justify-end h-16">
+                            <div class="absolute inset-y-0 left-0 flex items-center ">
+                               
+                            <!-- Menu hamburger -->
+                                <button type="button" @click="open = !open" @click.away="open = false" class="inline-flex items-center justify-center p-2 ml-2 rounded-md text-light-blue hover:bg-medium-blue focus:outline-none">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="block w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                    </svg>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                
                 <div>
                     {{ $slot }}
                 </div>
