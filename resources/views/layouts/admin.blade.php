@@ -29,7 +29,7 @@
             <aside :class="{ '-translate-x-full': !open }" class="z-10 bg-dark-blue text-light-blue w-80 px-2 py-4 absolute inset-y-0 left-0 md:relative transform md:transform-x-0 overflow-y-auto transition ease-in-out duration-200 shadow-lg">
                
             <!-- Logo -->
-                <div class="flex items-center justify-between px-2">
+                <div class="flex items-center justify-between px-2 mb-4">
                     <div class="flex items-center space-x-4">
                         <a href="">
                             <x-application-logo class="block h-10 w-auto fill-current text-light-blue"/> <!-- Changer avec notre logo -->
@@ -46,7 +46,21 @@
 
                 <!-- Nav Links -->
                 <nav>
-
+                    <x-side-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                        Mon compte
+                    </x-side-nav-link>
+                    <x-side-nav-link href="{{ route('settings') }}" :active="request()->routeIs('settings')"> <!-- Remplacer dashboard par settings -->
+                        Paramètres et confidentialité
+                    </x-side-nav-link>
+                    <x-side-nav-link href="{{ route('notifications') }}" :active="request()->routeIs('notifications')"> <!-- Remplacer dashboard par notifications -->
+                        Notifications
+                    </x-side-nav-link>
+                    <x-side-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')"> <!-- Remplacer dashboard par contact -->
+                        Contact
+                    </x-side-nav-link>
+                    <x-side-nav-link href="{{ route('logout') }}" :active="request()->routeIs('logout')"> <!-- Remplacer dashboard par log out -->
+                        Déconnexion
+                    </x-side-nav-link>
                 </nav>
             </aside>
 

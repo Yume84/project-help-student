@@ -6,14 +6,34 @@
     background-color: #001053;
 }
 
-.hover\:bg-medium-blue:hover {
+.bg-medium-blue {
     background-color: #32AAFF;
 }
-  
-.text-light-blue {
-    color: #E1F2FF;
+
+.bg-middle-blue {
+    background-color: #80CAFF;
 }
 
 .bg-light-blue {
     background-color: #E1F2FF;
+}
+
+.bg-yellow {
+    background-color: #FFDA7C;
+}
+
+.hover\:bg-medium-blue:hover {
+    background-color: #32AAFF;
+}
+
+.hover\:bg-middle-blue:hover {
+    background-color: #80CAFF;
+}
+
+.hover\:bg-yellow:hover {
+    background-color: #FFDA7C;
+}
+  
+.text-light-blue {
+    color: #E1F2FF;
 }
