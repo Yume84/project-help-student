@@ -167,7 +167,7 @@
                 </div>               
 
                 <!-- Footer / Barre de navigation du bas --> 
-                <footer class="bg-dark-blue shadow-lg ">
+                <footer class="bg-dark-blue shadow-lg">
                         <div class="mx-auto sm:px-6 lg:px-8">
                             <div class="grid grid-cols-5 gap-1 items-center justify-center h-16">
 

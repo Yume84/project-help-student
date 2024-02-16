@@ -25,4 +25,15 @@ class Controller extends BaseController
             ]); //Les informations de la variable est récupérée et affichée sur la page blade
     }
 
+    /* public function showArticle(){
+
+        $lang = app()->getLocale();
+
+        $article = Article::where('lang', '=', $lang)->first();
+
+        return view('')
+            ->with(['article' => $article]);
+
+    }*/
+
 }

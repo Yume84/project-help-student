@@ -11,10 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('languages', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->id();
-            $table->string('label', 50);
-            $table->string('iso', 10);
+            $table->string('label');
+        });
+
+        Schema::create('article_tag', function (Blueprint $table) {
+            $table->unsignedBigInteger('article_id');
+            $table->unsignedBigInteger('tag_id');
         });
     }
 
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('languages');
+        Schema::dropIfExists('tags');
     }
 };
