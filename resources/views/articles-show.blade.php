@@ -17,4 +17,3 @@
 </p>
 
 </x-admin-layout>
-
