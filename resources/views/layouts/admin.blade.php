@@ -143,28 +143,7 @@
                 <!-- Contenu de la page -->
                 <div>
                     {{ $slot }}
-                </div>
-
-                 <!-- Contenu de la page -->
-                 <div>
-                    {{ $slot }}
-                </div>                
-                <!-- Contenu de la page -->
-                <div>
-                    {{ $slot }}
-                </div>                
-                <!-- Contenu de la page -->
-                <div>
-                    {{ $slot }}
-                </div>                
-                <!-- Contenu de la page -->
-                <div>
-                    {{ $slot }}
-                </div>                
-                <!-- Contenu de la page -->
-                <div>
-                    {{ $slot }}
-                </div>               
+                </div>   
 
                 <!-- Footer / Barre de navigation du bas --> 
                 <footer class="bg-dark-blue shadow-lg">
