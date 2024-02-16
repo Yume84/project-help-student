@@ -24,30 +24,41 @@ Route::view('sign-up-5', 'sign-up-5'); // 5
 
 Route::view('/', 'welcome'); 
 
-Route::view('dashboard', 'dashboard') //Route qui mène au dashboard
+Route::view('dashboard', 'dashboard') // Route qui mène au dashboard / feed
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-Route::view('settings', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('settings');
+// Route pour la sidebar
 
-Route::view('notifications', 'dashboard')
+Route::view('profile', 'profile') // Route qui mène à la page Paramètres et confidentialité
+    ->middleware(['auth'])
+    ->name('profile');
+
+Route::view('notifications', 'dashboard') // Route qui mène à la page Notifications
     ->middleware(['auth', 'verified'])
     ->name('notifications');
 
-Route::view('contact', 'dashboard')
+Route::view('contact', 'dashboard') // Route qui mène à la page Contact
     ->middleware(['auth', 'verified'])
     ->name('contact');
 
-Route::view('logout', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('logout');
+// Route pour le footer
 
-Route::view('profile', 'profile')
+Route::view('search', 'dashboard') // Route qui mène à la page Paramètres et confidentialité
     ->middleware(['auth'])
-    ->name('profile');
+    ->name('search');
+
+Route::view('add', 'dashboard') // Route qui mène à la page Notifications
+    ->middleware(['auth', 'verified'])
+    ->name('add');
+
+Route::view('messages', 'dashboard') // Route qui mène à la page Notifications
+    ->middleware(['auth', 'verified'])
+    ->name('messages');
+
+// Autres
 
 require __DIR__.'/auth.php';
 
 Route::get('/user',[Controller::class, 'action']);
+

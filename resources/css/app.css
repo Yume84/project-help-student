@@ -2,15 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Couleurs de fond */
+
 .bg-dark-blue {
     background-color: #001053;
 }
 
-.bg-medium-blue {
+.bg-blue {
     background-color: #32AAFF;
 }
 
-.bg-middle-blue {
+.bg-medium-blue {
     background-color: #80CAFF;
 }
 
@@ -22,18 +24,36 @@
     background-color: #FFDA7C;
 }
 
-.hover\:bg-medium-blue:hover {
+/* Couleurs au survol */
+
+.hover\:bg-blue:hover {
     background-color: #32AAFF;
 }
 
-.hover\:bg-middle-blue:hover {
+.hover\:bg-medium-blue:hover {
     background-color: #80CAFF;
 }
 
 .hover\:bg-yellow:hover {
     background-color: #FFDA7C;
 }
+
+/* Couleurs du texte */
+
+.text-dark-blue {
+    color: #001053;
+}
   
 .text-light-blue {
     color: #E1F2FF;
+}
+
+/* Couleurs de la seconde navigation pour le feed */
+
+.feed {
+    border-bottom: 2px solid #32AAFF;
+}
+
+.hover\:feed:hover {
+    border-bottom: 2px solid #32AAFF;
 }
