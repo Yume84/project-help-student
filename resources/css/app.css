@@ -48,7 +48,7 @@
     color: #E1F2FF;
 }
 
-/* Couleurs de la seconde navigation pour le feed */
+/* Border-bottom pour le feed */
 
 .feed {
     border-bottom: 2px solid #32AAFF;
@@ -56,4 +56,21 @@
 
 .hover\:feed:hover {
     border-bottom: 2px solid #32AAFF;
+}
+
+/* Couleurs de bordure */
+
+.border-dark-blue {
+    border: 2px solid #001053;
+}
+.border-light-blue {
+    border: 2px solid #E1F2FF;
+}
+
+.border-blue {
+    border: 2px solid #32AAFF;
+}
+
+.hover\:border-blue:hover {
+    border: 2px solid #32AAFF;
 }

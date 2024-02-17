@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ArticleController;
 /*
 |--------------------------------------------------------------------------
@@ -64,3 +65,7 @@ require __DIR__.'/auth.php';
 Route::get('/user',[Controller::class, 'action']);
 
 Route::get('/articles/{article}', [ArticleController::class, 'show']);
+
+Route::get('posts', [PostController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('posts'); 
