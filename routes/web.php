@@ -66,6 +66,6 @@ Route::get('/user',[Controller::class, 'action']);
 
 Route::get('/articles/{article}', [ArticleController::class, 'show']);
 
-Route::get('posts', [PostController::class, 'index'])
+Route::get('add', [PostController::class, 'index'])
     ->middleware(['auth', 'verified'])
-    ->name('posts'); 
+    ->name('add'); 
