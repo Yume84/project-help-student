@@ -1,6 +1,43 @@
 {
     "Name" : "Nom",
     "Password" : "Mot de passe",
-    "Remember me" : "Se souvenir de moi"
+    "Remember me" : "Se souvenir de moi",
+    "Forgot your password?" : "Mot de passe oublié",
+    "Log in" : "Se connecter",
 
+    "Confirm Password" : "Confirmer le mot de passe",
+    "Already registered?" : "Déjà inscrit(e)?",
+    "Register" : "S'inscrire",
+
+    "Forgot your password ? No problem. Enter your email and we will send you a link to set up a new password." : "Mot de passe oublié ? Pas de problème. Entre ton mail et nous t'enverrons un lien pour configurer un nouveau mot de passe.",
+    "Confirm Email" : "Confirmer le mail",
+
+    "Reset Password" : "Réinitialiser le mot de passe",
+
+    "Thanks for signing up ! Before getting started, could you verify your email address by clicking on the link we just emailed to you ? If you didn't receive the email, we will gladly send you another." : "Merci pour l'inscription ! Avant de commencer, pourrais-tu confirmer ton adresse mail en cliquant sur le lien que nous venons de t'envoyer par mail ? Si tu n'as pas reçu le mail, nous t'en enverrons volontiers un autre.",
+    "A new verification link has been sent to the email address you provided during registration." : "Un nouveau lien de vérification a été envoyé à l'adresse mail que tu nous as fournie lors de l'inscription.",
+    "Resend Verification Email" : "Renvoyer le mail de vérification",
+    "Log Out" : "Se déconnecter",
+
+    "This is a secure area of the application. Please confirm your password before continuing." : "Il s'agit d'une zone sécurisée de l'application. Confirme ton mot de passe avant de continuer.",
+    "Confirm" : "Confirmer",
+
+    "Delete Account" : "Supprimer le compte",
+    "Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain." : "Une fois le compte supprimé, toutes ses ressources et données seront définitivement supprimées. Avant de supprimer ton compte, veuille à télécharger toutes les données ou informations que tu souhaites conserver.",
+    "Are you sure you want to delete your account ?" : "Es-tu sûr(e) de vouloir supprimer ton compte ?",
+    "Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account." : "Une fois le compte supprimé, toutes ses ressources et données seront définitivement supprimées. Saisis ton mot de passe pour confirmer que tu souhaites supprimer définitivement ton compte.",
+    "Cancel" : "Annuler",
+
+    "Update Password" : "Changer le mot de passe",
+    "Ensure your account is using a long, random password to stay secure." : "Assure-toi que ton compte utilise un mot de passe long et aléatoire pour une sécurité optimale.",
+    "Current Password" : "Mot de passe actuel",
+    "New Password" : "Nouveau mot de passe",
+    "Save" : "Sauvegarder",
+    "Saved" : "Sauvegardé",
+
+    "Profile Information" : "Informations du compte",
+    "Update your account's profile information and email address." : "Mettre à jour les informations de profil et le mail du compte.",
+    "Your email address is unverified." : "Ton mail n'est pas vérifié",
+    "Click here to re-send the verification email." : "Clique ici pour renvoyer le mail de vérification.",
+    "A new verification link has been sent to your email address." : "Un nouveau mail de vérification t'a été envoyé par mail."
 }

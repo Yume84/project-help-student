@@ -84,9 +84,9 @@ $register = function () {
                 {{ __('Already registered?') }}
             </a>
 
-            <x-primary-button class="ms-4">
+            <x-post-button class="ms-4">
                 {{ __('Register') }}
-            </x-primary-button>
+            </x-post-button>
         </div>
     </form>
 </div>

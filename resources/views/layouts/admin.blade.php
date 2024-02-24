@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>{{ config('app.name', 'Studdle') }}</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -31,9 +31,7 @@
             <!-- Logo à l'intérieur du menu hamburger -->
                 <div class="flex items-center justify-between px-2 mb-4">
                     <div class="flex items-center space-x-4">
-                        <a href="{{ route('dashboard') }}">
-                            <img src="{{ asset('images/logo/mascotte.png') }}" alt="Mascotte_Studdle" class="block h-10 w-auto text-light-blue"/>
-                        </a> 
+                        <x-studdle-mascotte :href="route('dashboard')" class="block h-10 w-auto text-light-blue"></x-studdle-mascotte>                               
                         <span class="text-2xl font-extrabold">Mon compte</span>
                     </div>
 

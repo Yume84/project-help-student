@@ -38,7 +38,7 @@ $sendPasswordResetLink = function () {
 
 <div>
     <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-        {{ __('Mot de passe oublié ? Pas de problème. Entrez votre mail et nous vous enverrons un lien pour configurer un nouveau mot de passe.') }}
+        {{ __('Forgot your password ? No problem. Enter your email and we will send you a link to set up a new password.') }}
     </div>
 
     <!-- Session Status -->
@@ -54,7 +54,7 @@ $sendPasswordResetLink = function () {
 
         <div class="flex items-center justify-end mt-4">
             <x-primary-button>
-                {{ __('Confirmer votre mail') }}
+                {{ __('Confirm Email') }}
             </x-primary-button>
         </div>
     </form>

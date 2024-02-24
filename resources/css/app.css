@@ -74,3 +74,10 @@
 .hover\:border-blue:hover {
     border: 2px solid #32AAFF;
 }
+
+/* Ombres */
+.ombre-blue {
+    box-shadow: 3px 3px 0px 0 #80CAFF;
+    border: 2px solid #80CAFF;
+    border-radius: 10px;
+}

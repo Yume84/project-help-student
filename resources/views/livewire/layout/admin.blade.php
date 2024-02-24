@@ -15,9 +15,7 @@
             <!-- Logo au centre de la barre de navigation --> 
             <div class="flex flex-1 items-center justify-center md-hidden">
                 <div class="flex flex-shrink-0 items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <img src="{{ asset('images/logo/logo.png') }}" alt="Logo_Studdle" class="block h-10 w-auto text-light-blue"/>
-                    </a>                                 
+                    <x-studdle-logo :href="route('dashboard')" class="block h-10 w-auto text-light-blue"></x-studdle-logo>                         
                 </div>
             </div>
 
