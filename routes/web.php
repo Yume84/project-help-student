@@ -58,6 +58,12 @@ Route::view('messages', 'dashboard') // Route qui mène à la page Notifications
     ->middleware(['auth', 'verified'])
     ->name('messages');
 
+// Route pour le compte
+
+Route::view('account', 'account') // Route qui mène à la page Notifications
+    ->middleware(['auth', 'verified'])
+    ->name('account');
+
 // Autres
 
 require __DIR__.'/auth.php';

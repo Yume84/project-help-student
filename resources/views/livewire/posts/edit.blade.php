@@ -43,8 +43,8 @@ new class extends Component {
         ></textarea>
  
         <x-input-error :messages="$errors->get('message')" class="mt-2" />
-        <x-post-button class="mt-4">{{ __('Sauvegarder') }}</x-post-button>
-        <button class="mt-4" wire:click.prevent="cancel">Annuler</button>
+        <x-post-button class="mt-4">{{ __('Save') }}</x-post-button>
+        <button class="mt-4" wire:click.prevent="cancel">{{ __('Cancel') }}</button>
     </form> 
 
 </div>

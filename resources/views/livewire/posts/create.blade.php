@@ -30,7 +30,7 @@ new class extends Component {
         ></textarea>
  
         <x-input-error :messages="$errors->get('message')" class="mt-2" />
-        <x-post-button class="bg-dark-blue hover:bg-blue mt-4">{{ __('Envoyer') }}</x-post-button>
+        <x-post-button class="mt-4">{{ __('Envoyer') }}</x-post-button>
     </form> 
 
 </div>

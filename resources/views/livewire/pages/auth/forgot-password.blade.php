@@ -53,9 +53,9 @@ $sendPasswordResetLink = function () {
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
+            <x-post-button>
                 {{ __('Confirm Email') }}
-            </x-primary-button>
+            </x-post-button>
         </div>
     </form>
 </div>

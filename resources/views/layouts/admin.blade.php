@@ -44,9 +44,15 @@
 
                 <!-- Liens à l'intérieur du menu hamburger -->
                 <nav>
-                    <x-hamburger-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        Mon compte
-                    </x-hamburger-link>
+                <x-hamburger-link href="{{ route('account') }}" :active="request()->routeIs('account')">
+                    <div class="flex items-center">
+                        <img src="{{ asset('/images/exemple.jpg') }}" alt="avatar" class="block w-20 h-20 object-cover rounded border-blue">
+                        <div class="ml-4 flex flex-col">
+                            <div x-data="{ name: '{{ auth()->user()->name }}' }" x-text="name" x-on:profile-updated.window="name = $event.detail.name"></div>
+                            <span class="mt-2">Aller sur mon profil</span>
+                        </div>
+                    </div>
+                </x-hamburger-link>
                     <x-hamburger-link href="{{ route('profile') }}" :active="request()->routeIs('profile')">
                         Paramètres et confidentialité
                     </x-hamburger-link>
