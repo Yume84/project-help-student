@@ -15,7 +15,7 @@ use App\Http\Controllers\ArticleController;
 |
 */
 
-Route::view('home', 'home'); // Pour avoir accès à la page d'accueil de Stoddle
+Route::view('home', 'home'); // Pour avoir accès à la page d'accueil de Studdle
 
 Route::view('sign-up', 'sign-up-0'); // Pour avoir accès à la première page du tunnel d'inscription
 Route::view('sign-up-1', 'sign-up-1'); // 1
