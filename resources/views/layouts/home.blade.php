@@ -1,50 +1,45 @@
-<!-- Header -->
+<!-- Side bar / Menu hamburger après connexion -->
 
 <!DOCTYPE html>
-
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Studdle</title>
+        <title>{{ config('app.name', 'Studdle') }}</title>
 
-    <!-- Scripts -->
-    @vite(['resources/css/style.css', 'resources/css/home.css'])
-</head>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-<header>
-  <div class="logo-container">
-    <h1><a href="home">STODDLE</a></h1>
-  </div>
-  <div class="menu-container">
-    <div class="menu-icon">
-      <img src="/images/drapeau/france.png" alt="FR" class="langue">
-    <img src="/images/icone/arrow.png" alt="arrow" class="arrow">
+        <!-- Alpine.js -->
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-      <div class="menu-list">
-        <nav id="menu-nav">
-          <a href="#"><img src="/images/drapeau/france.png" alt="FR" class="langue">Français</a>
-          <a href="#"><img src="/images/drapeau/royaume-uni.png" alt="EN" class="langue">Anglais</a>
-          <a href="#"><img src="/images/drapeau/allemagne.png" alt="DE" class="langue">Allemand</a>
-          <a href="#"><img src="/images/drapeau/espagne.png" alt="ES" class="langue">Espagnol</a>
-          <a href="#"><img src="/images/drapeau/italie.png" alt="IT" class="langue">Italien</a>
-          <a href="#"><img src="/images/drapeau/coree-du-sud.png" alt="KR" class="langue">Coréen</a>
-        </nav>
-      </div>
-    </div>
-  </div>
-</header>
+        <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-@yield('contenu')
+    </head>
 
-<!-- Footer -->
+    <body class="font-sans antialiased bg-light-blue">
 
-<div class="footer">
-  <div class="infos"><a href="#">À propos</a></div>
-  <div class="infos"><a href="#">Mentions légales</a></div>
-  <div class="infos"><a href="#">Aide</a></div>
-</div>
+            <!-- Barre de navigation-->
+            <main class="flex-1 fixed w-full"> <!--Attention au absolute -->
+            
+                <livewire:layout.admin/>
+                
 
-</body>
+            </main> 
+
+            <!-- Contenu de la page -->
+            <div class="py-16">
+                {{ $slot }}
+            </div>   
+
+            <!-- Footer / Barre de navigation du bas --> 
+            <livewire:layout.footer-account/>
+
+        </div>
+
+    </body>
 </html>

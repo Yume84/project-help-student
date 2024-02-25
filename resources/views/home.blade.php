@@ -1,6 +1,4 @@
-@extends('layouts.home')
-
-@section('contenu')
+<x-home-layout>
 
 <div class="illustration">
   <div class="mascotte">
@@ -81,4 +79,4 @@
   </div>
 </div>
 
-@endsection
+</x-home-layout>

@@ -100,7 +100,7 @@
             </div>   
 
             <!-- Footer / Barre de navigation du bas --> 
-            <livewire:layout.footer-account/>
+            <x-footer-account></x-footer-account>
 
         </div>
 
