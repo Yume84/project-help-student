@@ -60,4 +60,20 @@ class User extends Authenticatable
         return $this->belongsTo(Level::class);
     }
 
+    /*public function askHelp()
+    {
+        $user = User::find(auth()->id());
+        $user->status = 'Demande de l\'aide';
+        $user->save();
+    }
+
+    public function offerHelp()
+    {
+        $user = User::find(auth()->id());
+        $user->status = 'Proposer ton aide';
+        $user->save();
+    }*/
+
+    
+
 }

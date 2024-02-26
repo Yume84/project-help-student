@@ -15,7 +15,7 @@
     </head>
     <body class="antialiased">
 
-    <livewire:welcome.home />
+    <livewire:layout.home/>
 
     </body>
 </html>
