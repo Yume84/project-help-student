@@ -19,6 +19,13 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->unsignedBigInteger('avatar_id')->nullable();
+            $table->string('status')->nullable(); /*Enlever le nullable après*/
+            $table->unsignedBigInteger('help_id')->nullable(); /*Enlever le nullable après*/
+            $table->unsignedBigInteger('college_id')->nullable();
+            $table->unsignedBigInteger('language_id')->nullable(); /*Maternelle*/
+            $table->unsignedBigInteger('language_id')->nullable(); /*Seconde*/
+            $table->unsignedBigInteger('language_id')->nullable(); /*Troisième*/
+            $table->unsignedBigInteger('level_id')->nullable(); /*Table ou pas*/
             $table->rememberToken();
             $table->timestamps();
         });
