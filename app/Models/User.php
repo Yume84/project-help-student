@@ -55,4 +55,9 @@ class User extends Authenticatable
         return $this->belongsTo(Avatar::class);
     }
 
+    public function levels(): BelongsTo /*A vérifier*/
+    {
+        return $this->belongsTo(Level::class);
+    }
+
 }
