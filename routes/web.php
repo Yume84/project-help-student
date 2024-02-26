@@ -40,7 +40,7 @@ Route::view('profile', 'profile') // Route qui mène à la page Paramètres et c
 
 Route::view('notifications', 'dashboard') // Route qui mène à la page Notifications
     ->middleware(['auth', 'verified'])
-    ->name('notifications');
+    ->name('notifications'); 
 
 Route::view('contact', 'dashboard') // Route qui mène à la page Contact
     ->middleware(['auth', 'verified'])
