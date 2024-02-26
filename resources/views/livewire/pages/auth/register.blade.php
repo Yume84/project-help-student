@@ -77,7 +77,7 @@ $register = function () {
                 <option value="campus_1">Campus 1</option>
                 <option value="campus_2">Campus 2</option>
             </select>
-            <x-input-error :messages="$errors->get('help')" class="mt-2" />
+            <x-input-error :messages="$errors->get('college')" class="mt-2" />
         </div>
 
         <div class="mt-4">
@@ -89,7 +89,7 @@ $register = function () {
                     @endforeach 
                 </select>
             <x-input-error :messages="$errors->get('college')" class="mt-2" />
-        </div> --->
+        </div> -->
 
 
         <!-- Email Address -->
