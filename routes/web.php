@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\AvatarController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,6 +73,10 @@ require __DIR__.'/auth.php';
 Route::get('/user',[Controller::class, 'action']);
 
 Route::get('/articles/{article}', [ArticleController::class, 'show']);
+
+Route::get('/avatars', [AvatarController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('avatars');
 
 Route::get('add', [PostController::class, 'index'])
     ->middleware(['auth', 'verified'])

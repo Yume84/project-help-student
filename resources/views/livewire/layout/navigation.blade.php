@@ -29,8 +29,8 @@ $logout = function (Logout $logout) {
                     </x-nav-link>
 
                     <!-- Ajout pour les annonces -->
-                    <x-nav-link :href="route('posts')" :active="request()->routeIs('chirps')" wire:navigate>
-                        {{ __('Posts') }}
+                    <x-nav-link :href="route('add')" :active="request()->routeIs('add')" wire:navigate>
+                        {{ __('Accueil') }}
                     </x-nav-link>
                 </div>
             </div>
