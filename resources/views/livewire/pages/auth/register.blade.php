@@ -89,7 +89,7 @@ $register = function () {
                     @endforeach 
                 </select>
             <x-input-error :messages="$errors->get('college')" class="mt-2" />
-        </div> -->
+        </div> --->
 
 
         <!-- Email Address -->
