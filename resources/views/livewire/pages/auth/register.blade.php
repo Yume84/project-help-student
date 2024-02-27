@@ -44,8 +44,22 @@ $register = function () {
 
 <div>
     <form wire:submit="register">
+
+        <!-- Status -->
+        <div class="mt-4"> <!--Ajouter titre-->
+            <div class="flex items-center justify-between mt-4">
+                <x-post-button> <!--Ajouter href-->
+                    {{ __('Ask for help') }}
+                </x-post-button>
+                    
+                <x-post-button> <!--Ajouter href-->
+                    {{ __('Offer help') }}
+                </x-post-button>
+            </div>
+        </div>
+
         <!-- Name -->
-        <div>
+        <div class="mt-4">
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input wire:model="name" id="name" class="block mt-1 w-full" type="text" name="name" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
