@@ -19,7 +19,11 @@ use App\Http\Controllers\MessageController;
 |
 */
 
-Route::view('home', 'home'); // Pour avoir accès à la page d'accueil de Studdle
+Route::get('/home', function(){
+    return view('home');
+})
+->name('home');
+
 
 Route::view('sign-up', 'sign-up-0'); // Pour avoir accès à la première page du tunnel d'inscription
 Route::view('sign-up-1', 'sign-up-1'); // 1
@@ -42,7 +46,7 @@ Route::view('profile', 'profile') // Route qui mène à la page Paramètres et c
 
 Route::view('notifications', 'dashboard') // Route qui mène à la page Notifications
     ->middleware(['auth', 'verified'])
-    ->name('notifications');
+    ->name('notifications'); 
 
 Route::view('contact', 'dashboard') // Route qui mène à la page Contact
     ->middleware(['auth', 'verified'])
@@ -68,13 +72,14 @@ Route::view('account', 'account') // Route qui mène à la page Notifications
     ->middleware(['auth', 'verified'])
     ->name('account');
 
+Route::get('/articles/{article}', [ArticleController::class, 'show']);
+
 // Autres
 
 require __DIR__.'/auth.php';
 
 Route::get('/user',[Controller::class, 'action']);
 
-Route::get('/articles/{article}', [ArticleController::class, 'show']);
 
 Route::get('/avatars', [AvatarController::class, 'index'])
     ->middleware(['auth', 'verified'])

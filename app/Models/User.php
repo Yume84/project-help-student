@@ -21,6 +21,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'pseudo',
         'email',
         'password',
     ];
@@ -50,15 +51,26 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
-    public function avatars(): BelongsTo /*A vérifier*/
+    public function user(): HasMany /*A vérifier*/
     {
-        return $this->belongsTo(Avatar::class);
+        return $this->hasMany(User::class);
     }
 
-    public function levels(): BelongsTo /*A vérifier*/
+    /*public function askHelp()
     {
-        return $this->belongsTo(Level::class);
+        $user = User::find(auth()->id());
+        $user->status = 'Demande de l\'aide';
+        $user->save();
     }
+
+    public function offerHelp()
+    {
+        $user = User::find(auth()->id());
+        $user->status = 'Proposer ton aide';
+        $user->save();
+    }*/
+
+    
 
     public function messages(): HasMany
     {

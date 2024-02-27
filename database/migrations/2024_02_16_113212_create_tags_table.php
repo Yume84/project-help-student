@@ -16,10 +16,6 @@ return new class extends Migration
             $table->string('label');
         });
 
-        Schema::create('article_tag', function (Blueprint $table) {
-            $table->unsignedBigInteger('article_id');
-            $table->unsignedBigInteger('tag_id');
-        });
     }
 
     /**

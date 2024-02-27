@@ -15,6 +15,7 @@ layout('layouts.guest');
 
 state([
     'name' => '',
+    'pseudo' => '',
     'email' => '',
     'password' => '',
     'password_confirmation' => ''
@@ -22,6 +23,7 @@ state([
 
 rules([
     'name' => ['required', 'string', 'max:255'],
+    'pseudo' => ['required', 'string', 'max:50', 'unique:'.User::class],
     'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
     'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
 ]);
@@ -47,6 +49,13 @@ $register = function () {
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input wire:model="name" id="name" class="block mt-1 w-full" type="text" name="name" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
+        </div>
+
+        <!-- Pseudo -->
+        <div class="mt-4">
+            <x-input-label for="pseudo" :value="__('Pseudo')" />
+            <x-text-input wire:model="pseudo" id="pseudo" class="block mt-1 w-full" type="text" name="pseudo" required autofocus autocomplete="pseudo" />
+            <x-input-error :messages="$errors->get('pseudo')" class="mt-2" />
         </div>
 
         <!-- Email Address -->

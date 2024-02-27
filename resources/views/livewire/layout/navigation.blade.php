@@ -30,7 +30,7 @@ $logout = function (Logout $logout) {
 
                     <!-- Ajout pour les annonces -->
                     <x-nav-link :href="route('add')" :active="request()->routeIs('add')" wire:navigate>
-                        {{ __('Accueil') }}
+                        {{ __('Posts') }}
                     </x-nav-link>
 
                     <!--Ajout pour les messages-->

@@ -1,4 +1,4 @@
-<x-admin-layout>
+<x-home-layout>
 
 <h1>
     {{ $article->title }} 
@@ -16,4 +16,4 @@
     URL : {{ $article->slug}}
 </p>
 
-</x-admin-layout>
+</x-home-layout>
