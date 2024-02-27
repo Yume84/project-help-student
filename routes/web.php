@@ -17,7 +17,7 @@ use App\Http\Controllers\AvatarController;
 |
 */
 
-Route::get('/home', function(){
+Route::get('/', function(){
     return view('home');})
     ->name('home');
 
@@ -40,7 +40,7 @@ Route::view('sign-up-3', 'sign-up-3'); // 3
 Route::view('sign-up-4', 'sign-up-4'); // 4
 Route::view('sign-up-5', 'sign-up-5'); // 5
 
-Route::view('/', 'welcome'); 
+Route::view('welcome', 'welcome'); 
 
 Route::view('dashboard', 'dashboard') // Route qui mène au dashboard / feed
     ->middleware(['auth', 'verified'])
