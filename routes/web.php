@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AvatarController;
+use App\Http\Controllers\MessageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -81,3 +83,7 @@ Route::get('/avatars', [AvatarController::class, 'index'])
 Route::get('add', [PostController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('add'); 
+
+Route::get('chat', [MessageController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('chat'); 

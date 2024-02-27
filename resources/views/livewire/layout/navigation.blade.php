@@ -32,6 +32,11 @@ $logout = function (Logout $logout) {
                     <x-nav-link :href="route('add')" :active="request()->routeIs('add')" wire:navigate>
                         {{ __('Accueil') }}
                     </x-nav-link>
+
+                    <!--Ajout pour les messages-->
+                    <x-nav-link :href="route('chat')" :active="request()->routeIs('chat')" wire:navigate>
+                        {{ __('Accueil') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -85,6 +90,9 @@ $logout = function (Logout $logout) {
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('posts')" :active="request()->routeIs('posts')" wire:navigate>
                 {{ __('Posts') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('chirps')" :active="request()->routeIs('chirps')" wire:navigate>
+                 {{ __('Chat') }}
             </x-responsive-nav-link>
         </div>
 
