@@ -18,7 +18,7 @@
 
                     <x-slot name="trigger"> <!-- Contenu visible -->
                         <button class="flex items-center text-light-blue bg-dark-blue hover:bg-blue px-3 py-2 mr-2 rounded-md focus:outline-none transition ease-in-out duration-200">
-                            <span>Langue</span><!--<div x-data="{ name: '{{ auth()->user()->name }}' }" x-text="name" x-on:profile-updated.window="name = $event.detail.name"></div> A changer avec la langue choisie -->
+                            <span>Langue</span>
 
                                 <div class="ms-1"> <!-- Flèche -->
                                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">

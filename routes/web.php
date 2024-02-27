@@ -17,7 +17,12 @@ use App\Http\Controllers\AvatarController;
 |
 */
 
-Route::view('home', 'home'); // Pour avoir accès à la page d'accueil de Studdle
+Route::get('/home', function(){
+    return view('home');
+})
+->name('home');
+
+
 
 Route::view('sign-up', 'sign-up-0'); // Pour avoir accès à la première page du tunnel d'inscription
 Route::view('sign-up-1', 'sign-up-1'); // 1

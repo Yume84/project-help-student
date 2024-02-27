@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('helps', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('category');
-            $table->timestamps();
+        Schema::create('article_tag', function (Blueprint $table) {
+            $table->unsignedBigInteger('article_id');
+            $table->unsignedBigInteger('tag_id');
+            $table->primary(['article_id', 'tag_id']);
         });
     }
 
@@ -24,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('helps');
+        Schema::dropIfExists('article_tag');
     }
 };

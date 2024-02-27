@@ -23,7 +23,7 @@ state([
 
 rules([
     'name' => ['required', 'string', 'max:255'],
-    'pseudo' => ['required', 'string', 'max:50'],
+    'pseudo' => ['required', 'string', 'max:50', 'unique:'.User::class],
     'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
     'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
 ]);
@@ -57,40 +57,6 @@ $register = function () {
             <x-text-input wire:model="pseudo" id="pseudo" class="block mt-1 w-full" type="text" name="pseudo" required autofocus autocomplete="pseudo" />
             <x-input-error :messages="$errors->get('pseudo')" class="mt-2" />
         </div>
-
-        <!-- Status -->
-        <div class="flex items-center justify-between mt-4">
-            <x-post-button wire:click="ask_help" >
-                {{ __('Ask for help') }}
-            </x-post-button>
-
-            <x-post-button wire:click="offer_help">
-                {{ __('Offer help') }}
-            </x-post-button>
-        </div>
-
-        <!-- Administration scolaire
-        <div class="mt-4">
-            <x-input-label for="campus" :value="__('College')" />
-            <select wire:model="campus" id="campus" class="block mt-1 w-full" required>
-                <option value="" disabled selected>Sélectionne ton campus</option>
-                <option value="campus_1">Campus 1</option>
-                <option value="campus_2">Campus 2</option>
-            </select>
-            <x-input-error :messages="$errors->get('college')" class="mt-2" />
-        </div>
-
-        <div class="mt-4">
-            <x-input-label for="college" :value="__('College')" />
-                <select name="college" id="college" class="form-control">
-                    <option value=""> -- Select One --</option>
-                    @foreach ($colleges as $college)
-                        <option value="{{ $college->id }}">{{ $college->name }}</option>
-                    @endforeach 
-                </select>
-            <x-input-error :messages="$errors->get('college')" class="mt-2" />
-        </div> -->
-
 
         <!-- Email Address -->
         <div class="mt-4">
