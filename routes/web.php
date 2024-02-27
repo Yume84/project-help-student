@@ -23,7 +23,6 @@ Route::get('/home', function(){
 ->name('home');
 
 
-
 Route::view('sign-up', 'sign-up-0'); // Pour avoir accès à la première page du tunnel d'inscription
 Route::view('sign-up-1', 'sign-up-1'); // 1
 Route::view('sign-up-2', 'sign-up-2'); // 2
@@ -71,13 +70,14 @@ Route::view('account', 'account') // Route qui mène à la page Notifications
     ->middleware(['auth', 'verified'])
     ->name('account');
 
+Route::get('/articles/{article}', [ArticleController::class, 'show']);
+
 // Autres
 
 require __DIR__.'/auth.php';
 
 Route::get('/user',[Controller::class, 'action']);
 
-Route::get('/articles/{article}', [ArticleController::class, 'show']);
 
 Route::get('/avatars', [AvatarController::class, 'index'])
     ->middleware(['auth', 'verified'])

@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('pseudo')->unique();
-            $table->string('avatar_url')->nullable();
-            $table->unsignedBigInteger('college_id')->nullable();
+        Schema::create('language_user', function (Blueprint $table) {
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('language_id');
+            $table->string('level');
+            $table->boolean('is_primary');
+            $table->primary(['language_id', 'user_id']);
         });
     }
 
@@ -24,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('language_user');
     }
 };

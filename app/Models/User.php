@@ -51,6 +51,11 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    public function user(): HasMany /*A vérifier*/
+    {
+        return $this->hasMany(User::class);
+    }
+
     /*public function askHelp()
     {
         $user = User::find(auth()->id());
