@@ -18,10 +18,20 @@ use App\Http\Controllers\AvatarController;
 */
 
 Route::get('/home', function(){
-    return view('home');
-})
-->name('home');
+    return view('home');})
+    ->name('home');
 
+Route::get('/a-propos', function(){
+    return view('a-propos');})
+    ->name('a-propos');
+
+Route::get('/mentions-legales', function(){
+    return view('mentions-legales');})
+    ->name('mentions-legales');
+
+Route::get('/contact', function(){
+    return view('contact');})
+    ->name('contact');
 
 Route::view('sign-up', 'sign-up-0'); // Pour avoir accès à la première page du tunnel d'inscription
 Route::view('sign-up-1', 'sign-up-1'); // 1

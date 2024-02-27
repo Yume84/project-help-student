@@ -1,21 +1,20 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<x-home-layout>
+    <!--Couverture-->
+    <div class="bg-dark-blue w-full ">
+        <div class="flex items-center h-auto max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
 
-        <title>Studdle</title>
+            <!-- Photo de profil -->
+            <x-studdle-logo :href="route('home')" class="block w-80 h-80 object-cover w-auto text-light-blue"></x-studdle-logo>                         
+            
+            <!-- Contenu à droite de la photo -->
+            <div class="ml-10 flex flex-row sm:flex-row sm:items-center flex-grow">
+                <div>
+                    <span class="mt-2 text-light-blue">Le statut sera ici</span>
+                    @if (Route::has('login'))
+                        <livewire:welcome.studdle />
+                    @endif
+                </div>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
-    <body class="antialiased">
-
-    <livewire:layout.home/>
-
-    </body>
-</html>
+        </div>
+    </div>
+</x-home-layout>
