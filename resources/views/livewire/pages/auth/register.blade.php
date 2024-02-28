@@ -6,6 +6,9 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
+use App\Http\Controllers\LanguageController;
+use App\Models\Language;
+
 
 use function Livewire\Volt\layout;
 use function Livewire\Volt\rules;
@@ -95,23 +98,20 @@ $register = function () {
   <button class="langue" onclick="toggleListeLangue(this)">Sélectionne ta / tes langue(s)<img src="images/icone/arrow.png" alt="arrow" class="arrow"></button>
 </div>
 
-<div class="liste menu-langue" id="langue">
-    <button class="coche" id="france" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_france"><img src="images/drapeau/france.png" alt="FR" class="drapeau">Français</button>
-    <button class="coche" id="royaume-uni" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_royaume-uni"><img src="images/drapeau/royaume-uni.png" alt="EN" class="drapeau">Anglais</button>
-    <button class="coche" id="allemagne" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_allemagne"><img src="images/drapeau/allemagne.png" alt="DE" class="drapeau">Allemand</button>
-    <button class="coche" id="espagne" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_espagne"><img src="images/drapeau/espagne.png" alt="ES" class="drapeau">Espagnol</button>
-    <button class="coche" id="italie" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_italie"><img src="images/drapeau/italie.png" alt="IT" class="drapeau">Italien</button>
-    <button class="coche" id="coree-du-sud" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_coree-du-sud"><img src="images/drapeau/coree-du-sud.png" alt="KR" class="drapeau">Coréen</button>
-</div>
+<ul>
+    @foreach ($languages as $language)
+        <li>{{ $language->label }}</li>
+    @endforeach
+</ul>
 
 <h3>Quel est ton niveau de langue ?</h3>
 <div class="choix">
-  <select name="level" id="level">
+  <select name="level" id="level" multiple>
     <option value="default">Sélectionne un niveau</option>
-    A1 : Je débute
-  <input type="select" name="level" value="a2">A2 : Je comprends quelques mots
-  <input type="select" name="level" value="b1">B1-B2 : Je peux communiquer
-  <input type="select" name="level" value="c1">C1-C2 : Je suis à l'aise
+    <option value="a1">A1 : Je débute</option>
+  <option value="a2">A2 : Je comprends quelques mots</option>
+  <option value="b1">B1-B2 : Je peux communiquer</option>
+  <option value="c1">C1-C2 : Je suis à l'aise</option>
 </div>
 
         <!-- Name -->
