@@ -56,6 +56,13 @@ class User extends Authenticatable
         return $this->hasMany(User::class);
     }
 
+    public function languages(){
+        return $this->belongsToMany(Language::class);
+    }
+
+    public function articles(){
+        return $this->belongsToMany(Article::class);
+    }
     /*public function askHelp()
     {
         $user = User::find(auth()->id());

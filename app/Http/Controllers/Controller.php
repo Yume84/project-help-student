@@ -25,6 +25,12 @@ class Controller extends BaseController
             ]); //Les informations de la variable est récupérée et affichée sur la page blade
     }
 
+    public function index()
+    {
+        $languages = $this->getLanguages();
+        return view('livewire.multi-step-form', compact('languages'));
+    }
+
     /* public function showArticle(){
 
         $lang = app()->getLocale();
