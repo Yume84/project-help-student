@@ -1,4 +1,4 @@
-<footer class="bg-dark-blue shadow-lg fixed bottom-0 w-full">
+<footer class="bg-dark-blue shadow-lg">
     <div class="mx-auto sm:px-6 lg:px-8">
         <div class="grid grid-cols-3 gap-1 items-center justify-center h-16">
 
