@@ -18,8 +18,7 @@ class Article extends Model
         return $this->belongsTo(Language::class, 'lang_id', 'id');
     }
 
-    public function user(): HasMany /*A vérifier*/
-    {
-        return $this->hasMany(User::class);
+    public function users(){
+        return $this->belongsToMany(User::class);
     }
 }

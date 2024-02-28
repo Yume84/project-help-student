@@ -82,6 +82,9 @@ Route::view('account', 'account') // Route qui mène à la page Notifications
 
 Route::get('/articles/{article}', [ArticleController::class, 'show']);
 
+Route::get('/register', 'Controller@index');
+
+
 // Autres
 
 require __DIR__.'/auth.php';
