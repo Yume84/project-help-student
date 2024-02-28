@@ -22,9 +22,19 @@
     </head>
 
     <body class="font-sans antialiased bg-light-blue">
+
         <!-- Barre de navigation -->
         <livewire:layout.home/>
 
+        <!-- Page d'accueil -->
+        @if (isset($header))
+            <header class="bg-dark-blue w-full">
+                <div class="flex flex-col items-center h-auto max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
+                    {{ $header }}
+                </div>
+            </header>
+        @endif
+        
         <!-- Contenu de la page -->
         <div>
             {{ $slot }}

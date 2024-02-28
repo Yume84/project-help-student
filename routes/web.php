@@ -5,8 +5,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AvatarController;
-use App\Http\Controllers\MessageController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +17,7 @@ use App\Http\Controllers\MessageController;
 |
 */
 
-Route::get('/', function(){
+Route::get('home', function(){
     return view('home');})
     ->name('home');
 
@@ -42,7 +40,7 @@ Route::view('sign-up-3', 'sign-up-3'); // 3
 Route::view('sign-up-4', 'sign-up-4'); // 4
 Route::view('sign-up-5', 'sign-up-5'); // 5
 
-Route::view('welcome', 'welcome'); 
+Route::view('/', 'welcome'); 
 
 Route::view('dashboard', 'dashboard') // Route qui mène au dashboard / feed
     ->middleware(['auth', 'verified'])
@@ -98,7 +96,3 @@ Route::get('/avatars', [AvatarController::class, 'index'])
 Route::get('add', [PostController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('add'); 
-
-Route::get('chat', [MessageController::class, 'index'])
-    ->middleware(['auth', 'verified'])
-    ->name('chat'); 

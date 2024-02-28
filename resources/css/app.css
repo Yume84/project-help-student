@@ -93,3 +93,7 @@
     border: 2px solid #80CAFF;
     border-radius: 10px;
 }
+
+.carousel::-webkit-scrollbar {
+    display: none;
+  }
