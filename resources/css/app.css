@@ -24,6 +24,11 @@
     background-color: #FFDA7C;
 }
 
+.bg-white {
+    background-color: #FFFFFF;
+}
+
+
 /* Couleurs au survol */
 
 .hover\:bg-blue:hover {
@@ -45,7 +50,19 @@
 }
 
 .text-blue {
+    color: #32AAFF;
+}
+
+.text-light-blue {
     color: #80CAFF;
+}
+
+.text-yellow {
+    color: #FFDA7C;
+}
+
+.text-white {
+    color: #FFFFFF;
 }
   
 .text-light-blue {
@@ -88,9 +105,27 @@
 }
 
 /* Ombres */
+.ombre-dark-blue {
+    box-shadow: 3px 3px 0px 0 #001053;
+    border: 2px solid #001053;
+    border-radius: 10px;
+}
+
 .ombre-blue {
     box-shadow: 3px 3px 0px 0 #80CAFF;
     border: 2px solid #80CAFF;
+    border-radius: 10px;
+}
+
+.ombre-yellow {
+    box-shadow: 3px 3px 0px 0 #FFDA7C;
+    border: 2px solid #FFDA7C;
+    border-radius: 10px;
+}
+
+.ombre-white {
+    box-shadow: 3px 3px 0px 0 #FFFFFF;
+    border: 2px solid #FFFFFF;
     border-radius: 10px;
 }
 

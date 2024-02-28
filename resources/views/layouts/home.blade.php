@@ -21,7 +21,7 @@
 
     </head>
 
-    <body class="font-sans antialiased bg-light-blue">
+    <body class="font-sans antialiased">
 
         <!-- Barre de navigation -->
         <livewire:layout.home/>
