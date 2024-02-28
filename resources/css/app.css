@@ -91,6 +91,7 @@
 }
 .border-light-blue {
     border: 2px solid #E1F2FF;
+    border-radius: 10px;
 }
 
 .border-blue {
@@ -100,6 +101,7 @@
 
 .border-yellow {
     border: 2px solid #FFDA7C;
+    border-radius: 10px;
 }
 
 .hover\:border-blue:hover {
