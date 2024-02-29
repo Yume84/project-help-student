@@ -1,4 +1,4 @@
-@props(['align' => 'right', 'contentClasses' => 'py-1 bg-white dark:bg-gray-700'])
+@props(['align' => 'right', 'contentClasses' => 'py-1 mb-14 bg-white dark:bg-gray-700'])
 
 <div class="relative" x-data="{ open: false }" @click.outside="open = false" @close.stop="open = false">
     <div @click="open = ! open">
