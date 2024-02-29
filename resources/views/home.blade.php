@@ -112,6 +112,77 @@
             <p class="text-lg text-left mt-4 mb-8">Retrouve ici les aides administratives principales en fonction de leur thématique.</p>
         </div>
 
+        <!-- En savoir plus -->
+        <x-help-dropdown>
+
+            <x-slot name="trigger"> <!-- Contenu visible -->
+                <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
+                    <span>Langue</span>
+
+                        <div class="ms-1"> <!-- Flèche -->
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                </button>
+            </x-slot>
+
+            <x-slot name="content"> <!-- Liste déroulante des aides -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-4 p-6">
+                        
+                    <a href="https://laracasts.com" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 p-6 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline">
+                        <div>
+                            <div class="h-16 w-16 bg-white flex items-center justify-center rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="block text-blue w-10 h-10">
+                                    <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+            
+                            <h2 class="mt-6 text-xl font-semibold text-blue">Etape 3 : Mise en relation</h2>
+            
+                            <p class="mt-4 text-dark-blue text-sm leading-relaxed">
+                                L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !
+                            </p>
+                        </div>
+                    </a>
+
+                    <a href="https://laracasts.com" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 p-6 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline">
+                        <div>
+                            <div class="h-16 w-16 bg-white flex items-center justify-center rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="block text-blue w-10 h-10">
+                                    <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+            
+                            <h2 class="mt-6 text-xl font-semibold text-blue">Etape 3 : Mise en relation</h2>
+            
+                            <p class="mt-4 text-dark-blue text-sm leading-relaxed">
+                                L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !
+                            </p>
+                        </div>
+                    </a>
+
+                    <a href="https://laracasts.com" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 p-6 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline">
+                        <div>
+                            <div class="h-16 w-16 bg-white flex items-center justify-center rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="block text-blue w-10 h-10">
+                                    <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+            
+                            <h2 class="mt-6 text-xl font-semibold text-blue">Etape 3 : Mise en relation</h2>
+            
+                            <p class="mt-4 text-dark-blue text-sm leading-relaxed">
+                                L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !
+                            </p>
+                        </div>
+                    </a>
+
+                </div>
+            </x-slot>
+
+        </x-help-dropdown>
+
     </div>
 
 </x-home-layout>
