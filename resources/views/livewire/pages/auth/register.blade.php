@@ -98,12 +98,6 @@ $register = function () {
   <button class="langue" onclick="toggleListeLangue(this)">Sélectionne ta / tes langue(s)<img src="images/icone/arrow.png" alt="arrow" class="arrow"></button>
 </div>
 
-<ul>
-    @foreach ($languages as $language)
-        <li>{{ $language->label }}</li>
-    @endforeach
-</ul>
-
 <h3>Quel est ton niveau de langue ?</h3>
 <div class="choix">
   <select name="level" id="level" multiple>
