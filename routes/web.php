@@ -86,10 +86,9 @@ Route::view('account', 'account') // Route qui mène à la page Notifications
 
 Route::get('/articles/{article}', [ArticleController::class, 'show']);
 
-Route::get('/register', 'Controller@index');
 
 //Route pour liste campus
-Route::get('/afficher-college', [CollegeController::class, 'showForm'])->name('afficher-college');
+Route::get('/register', [CollegeController::class, 'showForm'])->name('register');
 
 //Route pour la liste langues dans le formulaire
 Route::get('/afficher-langue', [LanguageController::class, 'showForm'])->name('afficher-langue');

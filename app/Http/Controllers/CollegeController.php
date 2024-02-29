@@ -8,6 +8,6 @@ class CollegeController extends Controller
     {
         $colleges = College::all();
 
-        return view('college-list', compact('colleges'));
+        return view('afficher-register', compact('colleges'));
     }
 }

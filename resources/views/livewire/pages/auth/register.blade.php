@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use App\Http\Controllers\LanguageController;
 use App\Models\Language;
+use App\Http\Controllers\CollegeController;
+use App\Models\College;
 
 
 use function Livewire\Volt\layout;
@@ -45,129 +47,89 @@ $register = function () {
 
 ?>
 
-<script src="{{ asset('ressources/js/register.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
-<div>
-    <form wire:submit="register">
-    <div class="liste menu-langue" id="langue">
-    <button class="coche" id="france" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_france"><img src="images/drapeau/france.png" alt="FR" class="drapeau">Français</button>
-    <button class="coche" id="royaume-uni" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_royaume-uni"><img src="images/drapeau/royaume-uni.png" alt="EN" class="drapeau">Anglais</button>
-    <button class="coche" id="allemagne" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_allemagne"><img src="images/drapeau/allemagne.png" alt="DE" class="drapeau">Allemand</button>
-    <button class="coche" id="espagne" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_espagne"><img src="images/drapeau/espagne.png" alt="ES" class="drapeau">Espagnol</button>
-    <button class="coche" id="italie" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_italie"><img src="images/drapeau/italie.png" alt="IT" class="drapeau">Italien</button>
-    <button class="coche" id="coree-du-sud" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_coree-du-sud"><img src="images/drapeau/coree-du-sud.png" alt="KR" class="drapeau">Coréen</button>
-</div>
-        <!-- Status -->
-    <div class="container">
-        <div class="mt-4"> <h3>Pourquoi es-tu ici ?</h3>
-            <div class="flex items-center justify-between mt-4">
-            <x-post-button onclick="askForHelp()"> {{ __('Ask for help') }} </x-post-button>
-<x-post-button onclick="offerHelp()"> {{ __('Offer help') }} </x-post-button>
-            </div>
-        </div>
+<form wire:submit="register">
+    @csrf
+
+    <h3>Choisissez une option :</h3>
+
+    <div class="choix-options">
+        <input type="radio" id="demanderAide" name="choix" value="demanderAide" required>
+        <label for="demanderAide" class="option">
+            <div class="option-titre">Demander de l'aide</div>
+        </label>
+
+        <input type="radio" id="proposerAide" name="choix" value="proposerAide" required>
+        <label for="proposerAide" class="option">
+            <div class="option-titre">Proposer son aide</div>
+        </label>
     </div>
+</br>
+</br>
+    <div id="sectionDemanderAide" class="section-question">
+        <!-- Les questions spécifiques pour "Demander de l'aide" -->
+        <label for="raisonAide">Pour quoi as-tu besoin d'aide ?</label>
 
-     <!-- Category -->
-     <div class="container">
-        <div class="mt-4"> <h3>Pourquoi as-tu besoin d'aide ?</h3>
-            <div class="flex items-center justify-between mt-4">
-                <x-post-button> <!--Ajouter href-->
-                    {{ __('Administration scolaire') }}
-                </x-post-button>
-                    
-                <x-post-button> <!--Ajouter href-->
-                    {{ __('Services publics') }}
-                </x-post-button>
+<div class="choix-categories">
+    <input type="radio" id="inscription" name="categorie" value="inscription" required>
+    <label for="inscription" class="option">
+        <div class="option-titre">Inscriptions administratives</div>
+    </label>
 
-                <x-post-button> <!--Ajouter href-->
-                    {{ __('Les deux') }}
-                </x-post-button>
+    <input type="radio" id="service" name="categorie" value="service" required>
+    <label for="service" class="option">
+        <div class="option-titre">Service public</div>
+    </label>
 
-                <x-post-button> <!--Ajouter href-->
-                    {{ __('Je ne sais pas') }}
-                </x-post-button>
-            </div>
-        </div>
-    </div>
+    <input type="radio" id="both" name="categorie" value="both" required>
+    <label for="both" class="option">
+        <div class="option-titre">Les deux</div>
+    </label>
 
-    <div class="liste" id="deux">
-  <h3 id="liste-text">Coche les aides dont tu as besoin :</h3>
-  <button class="coche" id="inscriptions" onclick="toggleCocherAide(this)"><input type="checkbox" id="check_inscriptions">Inscriptions</button>
-  <button class="coche" id="bourse" onclick="toggleCocherAide(this)"><input type="checkbox" id="check_bourse">Demande de bourse</button>
-  <button class="coche" id="caf" onclick="toggleCocherAide(this)"><input type="checkbox" id="check_caf">CAF</button>
-  <button class="coche" id="ameli" onclick="toggleCocherAide(this)"><input type="checkbox" id="check_ameli">Ameli</button>
-  <button class="coche" id="sejour" onclick="toggleCocherAide(this)"><input type="checkbox" id="check_sejour">Permis de séjour</button>
-  <button class="coche" id="autres" onclick="toggleCocherAide(this)"><input type="checkbox" id="check_autres">Autres</button>
+    <input type="radio" id="idk" name="categorie" value="idk" required>
+    <label for="idk" class="option">
+        <div class="option-titre">Je ne sais pas</div>
+    </label>
+</div>    </div>
+
+    <div id="sectionProposerAide" class="section-question">
+        <!-- Les questions spécifiques pour "Proposer son aide" -->
+        <label for="domaineAide">En quoi peux-tu aider ?</label>
+
+        <div class="choix-categories">
+    <input type="radio" id="inscription2" name="categorie2" value="inscription2" required>
+    <label for="inscription2" class="option">
+        <div class="option-titre">Inscriptions administratives</div>
+    </label>
+
+    <input type="radio" id="service2" name="categorie2" value="service2" required>
+    <label for="service2" class="option">
+        <div class="option-titre">Service public</div>
+    </label>
+
+    <input type="radio" id="both2" name="categorie2" value="both2" required>
+    <label for="both2" class="option">
+        <div class="option-titre">Les deux</div>
+    </label>
+
+    <input type="radio" id="idk2" name="categorie2" value="idk2" required>
+    <label for="idk2" class="option">
+        <div class="option-titre">Je ne sais pas</div>
+    </label>
+</div>    </div>
+
+<h3>Où étudies-tu ?</h3>
+<div class="college">
+    <select name="liste_college" id="liste_college">
+        <option value="default">Sélectionne un campus</option>
+        @foreach($colleges as $college)
+            <option value="{{ $college->id }}">{{ $college->name }}</option>
+        @endforeach
+    </select>
 </div>
-
-<!-- Champs pour les langues et niveaux -->
-<h3>Quelle(s) langue(s) parles tu ?</h3>
-<div class="choix">
-  <select name="language" id="language">
-    <option value="default">Sélectionne une langue</option>
-    <option value="fr">Français</option>
-  <option value="en">Anglais</option>
-  <option value="es">Espagnol</option>
-  <option value="kr">Coréen</option>
-  </select>
-</div>
-
-<h3>Quel est ton niveau de langue ?</h3>
-<div class="choix">
-  <select name="level" id="level">
-    <option value="default">Sélectionne un niveau</option>
-    <option value="a1">A1 : Je débute</option>
-  <option value="a2">A2 : Je comprends quelques mots</option>
-  <option value="b1">B1-B2 : Je peux communiquer</option>
-  <option value="c1">C1-C2 : Je suis à l'aise</option>
-  </select>
-</div>
-
-<h3>Quelle(s) langue(s) parles tu ?</h3>
-<div class="choix">
-  <select name="language2" id="language2">
-    <option value="default">Sélectionne une langue</option>
-    <option value="fr">Français</option>
-  <option value="en">Anglais</option>
-  <option value="es">Espagnol</option>
-  <option value="kr">Coréen</option>
-  </select>
-</div>
-
-<h3>Quel est ton niveau de langue ?</h3>
-<div class="choix">
-  <select name="level2" id="level2">
-    <option value="default">Sélectionne un niveau</option>
-    <option value="a1">A1 : Je débute</option>
-  <option value="a2">A2 : Je comprends quelques mots</option>
-  <option value="b1">B1-B2 : Je peux communiquer</option>
-  <option value="c1">C1-C2 : Je suis à l'aise</option>
-</select>
-</div>
-
-    <h3>Quel est ton niveau de français ?</h3>
-    <div class="choix">
-  <select name="level_fr" id="level_fr">
-    <option value="default">Sélectionne un niveau</option>
-    <option value="a1">A1 : Je débute</option>
-  <option value="a2">A2 : Je comprends quelques mots</option>
-  <option value="b1">B1-B2 : Je peux communiquer</option>
-  <option value="c1">C1-C2 : Je suis à l'aise</option>
-  </select>
-</div>
-
-    <h3>Où étudies-tu ?</h3>
-<div class="campus">
-  <select name="liste_campus" id="liste_campus">
-    <option value="default">Sélectionne un campus</option>
-    <option value="campus1">Campus 1</option>
-  <option value="campus2">Campus 2</option>
-  <option value="campus3">Campus 3</option>
-  <option value="campus4">Campus 4</option>
-  </select>
-</div>
-        <!-- Name -->
-        <div class="mt-4">
+   <!-- Name -->
+   <div class="mt-4">
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input wire:model="name" id="name" class="block mt-1 w-full" type="text" name="name" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
@@ -221,3 +183,39 @@ $register = function () {
         </div>
     </form>
 </div>
+
+
+<!-- Ajoutez ceci à la section script de votre vue -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var formulaire = document.getElementById('formulaireChoix');
+        var sectionDemanderAide = document.getElementById('sectionDemanderAide');
+        var sectionProposerAide = document.getElementById('sectionProposerAide');
+
+        function afficherMasquerSections() {
+            var choixUtilisateur = document.querySelector('input[name="choix"]:checked');
+            sectionProposerAide.style.display = 'none';
+            sectionDemanderAide.style.display = 'none';
+
+            if (choixUtilisateur) {
+                if (choixUtilisateur.value === 'demanderAide') {
+                    sectionDemanderAide.style.display = 'block';
+                    sectionProposerAide.style.display = 'none';
+                } else if (choixUtilisateur.value === 'proposerAide') {
+                    sectionDemanderAide.style.display = 'none';
+                    sectionProposerAide.style.display = 'block';
+                }
+            }
+        }
+
+        formulaire.addEventListener('change', function(event) {
+            if (event.target.name === 'choix') {
+                afficherMasquerSections();
+            }
+        });
+
+        // Appel initial pour afficher/masquer les sections en fonction du choix
+        afficherMasquerSections();
+    });
+</script>
+
