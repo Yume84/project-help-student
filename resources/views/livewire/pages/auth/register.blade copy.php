@@ -47,6 +47,7 @@ $register = function () {
 
 <form wire:submit="register">
 
+   
    <!-- Name -->
    <div class="mt-4">
             <x-input-label for="name" :value="__('Name')" />

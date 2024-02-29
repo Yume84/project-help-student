@@ -3,35 +3,19 @@
 
     <x-slot name="header">
         <!-- Contenu principal -->
-        <div class="flex flex-col sm:flex-row items-center justify-center">
-            <!-- Logo -->
-            <x-studdle-logo :href="route('home')" class="w-60 h-60 object-cover text-light-blue mb-4 sm:mb-0 sm:mr-6"></x-studdle-logo>                         
-                        
-            <!-- Contenu à droite de la photo -->
-            <div class="flex flex-col items-center sm:items-start">
-                <h1 class="mt-2 font-extrabold text-light-blue text-center text-2xl uppercase sm:text-left">L'application qui aide les étudiants étrangers dans leurs démarches administratives !</h1>
-                    @if (Route::has('login'))
-                        <livewire:welcome.studdle />
-                    @endif
-            </div>
-        </div>
-    </x-slot>
 
-    <div class=" bg-dark-blue w-full">
-        <div class="flex items-center max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- Logo -->
+        <img src="{{ asset('/images/logo/mascotte.png') }}" alt="studdle-mascotte" class="block w-80 h-full">
     
-            <!--Photo de profil-->
-            <img src="{{ asset('/images/exemple.jpg') }}" alt="avatar" class="block w-40 h-40 object-cover rounded border-blue ">
-    
-            <!--Contenu à droite de la photo-->
-            <div class="flex flex-col items-center sm:items-start">
-                <h1 class="mt-2 font-extrabold text-light-blue text-center text-2xl uppercase sm:text-left">L'application qui aide les étudiants étrangers dans leurs démarches administratives !</h1>
-                <x-post-button class="bg-blue hover:bg-yellow hover:text-dark-blue mt-4">{{ __('Edit Profile') }}</x-post-button>
-                <x-post-button class="bg-blue hover:bg-yellow hover:text-dark-blue mt-4">{{ __('Edit Profile') }}</x-post-button>
-            </div>
-    
+        <!-- Informations -->
+        <div class="flex flex-col items-center sm:items-start">
+            <h1 class="mt-2 font-extrabold text-light-blue text-center text-2xl uppercase sm:text-left mb-8">L'application qui aide les étudiants étrangers dans leurs démarches administratives !</h1>
+                @if (Route::has('login'))
+                    <livewire:welcome.studdle />
+                @endif
         </div>
-    </div>
+    
+    </x-slot>
 
     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8" >
 
