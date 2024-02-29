@@ -11,13 +11,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Model
+/* class User extends Model
 {
     // Assurez-vous que le modèle est correctement configuré avec la table 'languages'
     protected $table = 'users';
 
     // Ajoutez des relations ici si nécessaire
-}
+}*/
 
 class User extends Authenticatable
 {
