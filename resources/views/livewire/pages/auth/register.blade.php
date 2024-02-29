@@ -49,7 +49,14 @@ $register = function () {
 
 <div>
     <form wire:submit="register">
-
+    <div class="liste menu-langue" id="langue">
+    <button class="coche" id="france" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_france"><img src="images/drapeau/france.png" alt="FR" class="drapeau">Français</button>
+    <button class="coche" id="royaume-uni" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_royaume-uni"><img src="images/drapeau/royaume-uni.png" alt="EN" class="drapeau">Anglais</button>
+    <button class="coche" id="allemagne" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_allemagne"><img src="images/drapeau/allemagne.png" alt="DE" class="drapeau">Allemand</button>
+    <button class="coche" id="espagne" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_espagne"><img src="images/drapeau/espagne.png" alt="ES" class="drapeau">Espagnol</button>
+    <button class="coche" id="italie" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_italie"><img src="images/drapeau/italie.png" alt="IT" class="drapeau">Italien</button>
+    <button class="coche" id="coree-du-sud" onclick="toggleCocherLangue(this)"><input type="checkbox" id="check_coree-du-sud"><img src="images/drapeau/coree-du-sud.png" alt="KR" class="drapeau">Coréen</button>
+</div>
         <!-- Status -->
     <div class="container">
         <div class="mt-4"> <h3>Pourquoi es-tu ici ?</h3>
@@ -93,21 +100,72 @@ $register = function () {
   <button class="coche" id="autres" onclick="toggleCocherAide(this)"><input type="checkbox" id="check_autres">Autres</button>
 </div>
 
-<h3>Quelle(s) langue(s) parles-tu ?</h3>
+<!-- Champs pour les langues et niveaux -->
+<h3>Quelle(s) langue(s) parles tu ?</h3>
 <div class="choix">
-  <button class="langue" onclick="toggleListeLangue(this)">Sélectionne ta / tes langue(s)<img src="images/icone/arrow.png" alt="arrow" class="arrow"></button>
+  <select name="language" id="language">
+    <option value="default">Sélectionne une langue</option>
+    <option value="fr">Français</option>
+  <option value="en">Anglais</option>
+  <option value="es">Espagnol</option>
+  <option value="kr">Coréen</option>
+  </select>
 </div>
 
 <h3>Quel est ton niveau de langue ?</h3>
 <div class="choix">
-  <select name="level" id="level" multiple>
+  <select name="level" id="level">
     <option value="default">Sélectionne un niveau</option>
     <option value="a1">A1 : Je débute</option>
   <option value="a2">A2 : Je comprends quelques mots</option>
   <option value="b1">B1-B2 : Je peux communiquer</option>
   <option value="c1">C1-C2 : Je suis à l'aise</option>
+  </select>
 </div>
 
+<h3>Quelle(s) langue(s) parles tu ?</h3>
+<div class="choix">
+  <select name="language2" id="language2">
+    <option value="default">Sélectionne une langue</option>
+    <option value="fr">Français</option>
+  <option value="en">Anglais</option>
+  <option value="es">Espagnol</option>
+  <option value="kr">Coréen</option>
+  </select>
+</div>
+
+<h3>Quel est ton niveau de langue ?</h3>
+<div class="choix">
+  <select name="level2" id="level2">
+    <option value="default">Sélectionne un niveau</option>
+    <option value="a1">A1 : Je débute</option>
+  <option value="a2">A2 : Je comprends quelques mots</option>
+  <option value="b1">B1-B2 : Je peux communiquer</option>
+  <option value="c1">C1-C2 : Je suis à l'aise</option>
+</select>
+</div>
+
+    <h3>Quel est ton niveau de français ?</h3>
+    <div class="choix">
+  <select name="level_fr" id="level_fr">
+    <option value="default">Sélectionne un niveau</option>
+    <option value="a1">A1 : Je débute</option>
+  <option value="a2">A2 : Je comprends quelques mots</option>
+  <option value="b1">B1-B2 : Je peux communiquer</option>
+  <option value="c1">C1-C2 : Je suis à l'aise</option>
+  </select>
+</div>
+
+    <h3>Où étudies-tu ?</h3>
+<div class="campus">
+  <select name="liste_campus" id="liste_campus">
+    <option value="default">Sélectionne un campus</option>
+    <option value="campus1">Campus 1</option>
+  <option value="campus2">Campus 2</option>
+  <option value="campus3">Campus 3</option>
+  <option value="campus4">Campus 4</option>
+  </select>
+</div>
         <!-- Name -->
         <div class="mt-4">
             <x-input-label for="name" :value="__('Name')" />
