@@ -1,8 +1,10 @@
 <nav class="bg-dark-blue shadow-lg">
     <div class="mx-auto sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between md:justify-end h-16 ">
-            <div class="absolute inset-y-0 left-0 flex items-center">                   
-                <span class="text-light-blue font-black text-2xl pl-4">STUDDLE</span>
+            <div class="absolute inset-y-0 left-0 flex items-center">
+                <a href="{{ route ('home')}}">                 
+                    <h1 class="text-light-blue font-black text-2xl pl-4">STUDDLE</h1>
+                </a>
             </div>
 
             <!-- Logo au centre de la barre de navigation --> 
