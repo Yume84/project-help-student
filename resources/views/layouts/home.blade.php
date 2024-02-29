@@ -28,8 +28,8 @@
 
         <!-- Page d'accueil -->
         @if (isset($header))
-            <header class="bg-dark-blue w-full">
-                <div class="flex items-center max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+            <header class="bg-dark-blue w-full mb-6">
+                <div class="flex flex-col sm:flex-row items-center max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
                     {{ $header }}
                 </div>
             </header>

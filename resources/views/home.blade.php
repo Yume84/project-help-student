@@ -8,8 +8,8 @@
         <img src="{{ asset('/images/logo/mascotte.png') }}" alt="studdle-mascotte" class="block w-80 h-full">
     
         <!-- Informations -->
-        <div class="flex flex-col items-center sm:items-start">
-            <h1 class="mt-2 font-extrabold text-light-blue text-center text-2xl uppercase sm:text-left mb-8">L'application qui aide les étudiants étrangers dans leurs démarches administratives !</h1>
+        <div class="flex flex-col items-center sm:items-start mt-6 gap-2 sm:ml-14">
+            <h1 class="font-extrabold text-light-blue text-center text-2xl uppercase sm:text-left mb-8">L'application qui aide les étudiants étrangers dans leurs démarches administratives !</h1>
                 @if (Route::has('login'))
                     <livewire:welcome.studdle />
                 @endif
@@ -17,7 +17,7 @@
     
     </x-slot>
 
-    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8" >
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
 
         <!-- Présentation -->
         <div class="text-center mb-14">
@@ -271,7 +271,7 @@
                     <a href="https://laracasts.com" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
                         <div>
                             <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
+                                <img src="{{ asset('images/aide/logement.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
 
                             </div>
             
@@ -366,7 +366,7 @@
                     <a href="https://laracasts.com" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
                         <div>
                             <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
+                                <img src="{{ asset('images/aide/visa.jpeg') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
 
                             </div>
             
@@ -381,7 +381,7 @@
                     <a href="https://laracasts.com" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
                         <div>
                             <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
+                                <img src="{{ asset('images/aide/visa.jpeg') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
 
                             </div>
             
@@ -396,7 +396,7 @@
                     <a href="https://laracasts.com" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
                         <div>
                             <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
+                                <img src="{{ asset('images/aide/visa-2.jpg') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
 
                             </div>
             

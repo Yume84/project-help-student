@@ -1,8 +1,8 @@
-<footer class="bg-dark-blue shadow-lg grid grid-cols-1 md:grid-cols-3">
+<footer class="bg-dark-blue shadow-lg grid grid-cols-1 md:grid-cols-3 px-2 sm:px-8 ">
 
     <x-footer-link-home href="{{ route('a-propos') }}" :active="request()->routeIs('dashboard')" class="mx-auto w-full sm:px-6 lg:px-8 flex justify-center">
         <div class="text-light-blue">
-            Qui sommes nous ?
+            À propos
         </div>
     </x-footer-link-home>
     
