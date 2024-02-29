@@ -1,15 +1,13 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\Models\Language;
-use Illuminate\View\View;
 
-public function index()
+class LanguageController extends Controller
 {
-    $languages = Language::all(); // Récupère toutes les langues
+    public function showForm()
+    {
+        $languages = Language::all();
 
-    return view('register', compact('languages'));
+        return view('language-list', compact('languages'));
+    }
 }
-
-
-
