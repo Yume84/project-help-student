@@ -3,8 +3,8 @@
 
     @if ($currentStep ==1)
 
-        <h3 class="text-3xl text-blue uppercase font-bold">ÉTAPE 1/6 - Pourquoi es-tu ici ?</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-4 p-6">
+        <h3 class="text-3xl text-blue uppercase font-extrabold text-center">ÉTAPE 1/6 - Pourquoi es-tu ici ?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 sm:gap-2 md:gap-8 p-6">
             
             <div class="mt-4">
                 <x-option-input required wire:model="option" id="ask_help" class="block mt-1 w-full" type="radio" name="choice" :value="__('Ask for help')">
@@ -221,7 +221,7 @@
   </div>
   @endif
 
-        <div class="action-buttons d-flex justify-content-between bg-blue pt-2 pb-2">
+        <div class="flex justify-between bg-blue pt-2 pb-2">
 
         @if ($currentStep ==1)
             <div></div>
