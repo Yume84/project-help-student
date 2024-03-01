@@ -33,6 +33,8 @@ class User extends Authenticatable
         'pseudo',
         'email',
         'password',
+        'avatar_url',
+        'college_id'
     ];
 
     /**

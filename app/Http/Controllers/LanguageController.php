@@ -8,6 +8,6 @@ class LanguageController extends Controller
     {
         $languages = Language::all();
 
-        return view('language-list', compact('languages'));
+        return view('multi-step-form', compact('languages'));
     }
 }
