@@ -18,7 +18,7 @@
         <div class="min-h-screen flex flex-col justify-center items-center pb-10 mx-6 rounded"> <!--min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 mx-4 bg-gray-100 dark:bg-gray-900-->
             <div>
                 <!--<a href="/" wire:navigate> </a>-->
-                <x-studdle-mascotte :href="route('dashboard')" class="block w-full h-20"></x-studdle-mascotte>
+                <x-studdle-mascotte :href="route('welcome')" class="block w-full h-20"></x-studdle-mascotte>
             </div>
 
             <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg border-blue ombre-blue">

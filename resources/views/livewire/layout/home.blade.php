@@ -10,7 +10,7 @@
             <!-- Logo au centre de la barre de navigation --> 
             <div class="flex flex-1 items-center justify-center md-hidden">
                 <div class="flex flex-shrink-0 items-center">
-                    <x-studdle-logo :href="route('home')" class="block h-10 w-auto text-light-blue"></x-studdle-logo>                         
+                    <x-studdle-logo :href="route('welcome')" class="block h-10 w-auto text-light-blue"></x-studdle-logo>                         
                 </div>
             </div>
 
