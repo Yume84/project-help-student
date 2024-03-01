@@ -48,7 +48,7 @@
                     <div class="flex items-center">
                         <img src="{{ asset('/images/exemple.jpg') }}" alt="avatar" class="block w-20 h-20 object-cover rounded border-blue">
                         <div class="ml-4 flex flex-col">
-                            <div x-data="{ name: '{{ auth()->user()->name }}' }" x-text="name" x-on:profile-updated.window="name = $event.detail.name"></div>
+                            <div x-data="{ name: '{{ auth()->user()->pseudo }}' }" x-text="name" x-on:profile-updated.window="name = $event.detail.name"></div>
                             <span class="mt-2">Aller sur mon profil</span>
                         </div>
                     </div>

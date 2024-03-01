@@ -10,8 +10,8 @@
         <!-- Contenu à droite de la photo -->
         <div class="ml-10 flex flex-col sm:flex-row sm:items-center flex-grow">
             <div>
-                <div x-data="{ name: '{{ auth()->user()->name }}' }" x-text="name" x-on:profile-updated.window="name = $event.detail.name" class="text-blue"></div>
-                <span class="mt-2 text-light-blue">Le statut sera ici</span>
+                <div x-data="{ name: '{{ auth()->user()->pseudo }}' }" x-text="name" x-on:profile-updated.window="name = $event.detail.name" class="text-blue"></div>
+                <span class="mt-2 text-light-blue">Le campus sera ici</span>
             </div>
 
             <!-- Bouton "Modifier le profil" -->
