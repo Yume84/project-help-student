@@ -21,6 +21,12 @@ use App\Http\Controllers\FormulaireController;
 |
 */
 
+// Route::view('/', 'welcome'); 
+
+Route::get('/', function(){
+    return view('welcome');})
+    ->name('welcome');
+
 Route::get('home', function(){
     return view('home');})
     ->name('home');
@@ -47,8 +53,6 @@ Route::view('sign-up-2', 'sign-up-2'); // 2
 Route::view('sign-up-3', 'sign-up-3'); // 3
 Route::view('sign-up-4', 'sign-up-4'); // 4
 Route::view('sign-up-5', 'sign-up-5'); // 5
-
-Route::view('/', 'welcome'); 
 
 Route::view('/register', 'register')->name('register');
 Route::view('/registration-success', 'registration-success')->name('registration.success');

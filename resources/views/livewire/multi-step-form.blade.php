@@ -155,10 +155,10 @@
                             <div class="college">
                                 <select wire:model="college" name="liste_college" id="liste_college">
                                     <option value="" selected>Select college</option>
-                                    <option value="gustave_eiffel">Université Gustave Eiffel</option>
-                                    <option value="paris_sorbonne">Unisersité Paris Sorbonne</option>
-                                    <option value="paris8">Paris 8</option>
-                                    <option value="upec">UPEC</option>
+                                    <option value="1">Université Gustave Eiffel</option>
+                                    <option value="2">Sorbonne Université</option>
+                                    <option value="3">Paris 8</option>
+                                    <option value="4">UPEC</option>
                                 </select>
                             <span class="text-danger">@error('college'){{ $message }}@enderror</span>
                             </div>
@@ -173,18 +173,49 @@
             <div class="card">
                 <div class="card-header bg-secondary text-black">STEP 6/6 - INFOS PERSONNELLES</div>
         <h3>C'est la dernière étape !</h3>
-  <div class="cadre">
-    <label for="name">Nom<input id="name" type="text" placeholder="Votre nom" wire:model="nom"></label>
-    <span class="text-danger">@error('nom'){{ $message }}@enderror</span></label>
-    <label for="pseudo">Pseudo<input id="pseudo" type="text" placeholder="Votre pseudo" wire:model="pseudo"></label>
-    <span class="text-danger">@error('pseudo'){{ $message }}@enderror</span></label>
-    <label for="email">Email<input id="email" type="email" placeholder="Votre email"wire:model="email"/></label>
-    <span class="text-danger">@error('email'){{ $message }}@enderror</span></label>
-    <label for="password">Mot de passe<input id="password" type="password" placeholder="Votre mot de passe" wire:model="password"/></label>
-    <span class="text-danger">@error("password"){{ $message }}@enderror</span></label>
-    <label for="password">Confirmez votre mot de passe<input id="password" type="password" placeholder="Confirmez votre mot de passe" wire:model="password_confirm"></label>
-    <span class="text-danger">@error('password_confirm'){{ $message }}@enderror</span>
+     <!-- Name -->
+     <div class="mt-4">
+        <x-input-label for="name" :value="__('Name')" />
+        <x-text-input wire:model="name" id="name" class="block mt-1 w-full" type="text" name="name" required autofocus autocomplete="name" />
+        <x-input-error :messages="$errors->get('name')" class="mt-2" />
+    </div>
 
+    <!-- Pseudo -->
+    <div class="mt-4">
+        <x-input-label for="pseudo" :value="__('Pseudo')" />
+        <x-text-input wire:model="pseudo" id="pseudo" class="block mt-1 w-full" type="text" name="pseudo" required autofocus autocomplete="pseudo" />
+        <x-input-error :messages="$errors->get('pseudo')" class="mt-2" />
+    </div>
+
+    <!-- Email Address -->
+    <div class="mt-4">
+        <x-input-label for="email" :value="__('Email')" />
+        <x-text-input wire:model="email" id="email" class="block mt-1 w-full" type="email" name="email" required autocomplete="username" />
+        <x-input-error :messages="$errors->get('email')" class="mt-2" />
+    </div>
+
+    <!-- Password -->
+    <div class="mt-4">
+        <x-input-label for="password" :value="__('Password')" />
+
+        <x-text-input wire:model="password" id="password" class="block mt-1 w-full"
+                        type="password"
+                        name="password"
+                        required autocomplete="new-password" />
+
+        <x-input-error :messages="$errors->get('password')" class="mt-2" />
+    </div>
+
+    <!-- Confirm Password -->
+    <div class="mt-4">
+        <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+
+        <x-text-input wire:model="password_confirmation" id="password_confirmation" class="block mt-1 w-full"
+                        type="password"
+                        name="password_confirmation" required autocomplete="new-password" />
+
+        <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+    </div>
   <div class="checkbox">
     <input id="rgpd" type="checkbox" class="checkbox" wire:model="rgpd"/>
     <label for="rgpd" class="rgpd">J'accepte les <a href="#" class="rgpd" onclick="openPopup()">conditions d'utilisation</a></label>

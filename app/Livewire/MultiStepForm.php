@@ -16,11 +16,11 @@ class MultiStepForm extends Component
     public $liste_langue;
     public $level;
     public $college;
-    public $nom;
+    public $name;
     public $pseudo;
     public $email;
     public $password;
-    public $password_confirm;
+    public $password_confirmation;
 
     public $totalSteps = 6;
     public $currentStep = 1;
@@ -81,11 +81,11 @@ class MultiStepForm extends Component
         }
         elseif($this->currentStep == 6){
              $this->validate([
-                'nom'=>'required',
+                'name'=>'required',
                 'pseudo'=>'required',
                 'email'=>'required|email|unique:users',
                 'password'=>'required|min:8',
-                'password_confirm'=>'required'
+                'password_confirmation'=>'required'
             ]);
         }
     }
@@ -93,7 +93,7 @@ class MultiStepForm extends Component
     public function register(){
         $this->resetErrorBag();
                 $values = array(
-                "name"=>$this->nom,
+                "name"=>$this->name,
                 "pseudo"=>$this->pseudo,
                 "email"=>$this->email,
                 "password"=>$this->password,
@@ -103,7 +103,7 @@ class MultiStepForm extends Component
             User::insert($values);
             //$this->reset();
             //$this->currentStep = 1;
-            $data = ['name'=>$this->nom, 'email'=>$this->email];
+            $data = ['name'=>$this->name, 'email'=>$this->email];
             return redirect()->route('registration.success', $data);
 
     }
