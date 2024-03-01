@@ -24,7 +24,7 @@
             </a> 
 
             <h4 class="text-3xl text-blue font-bold uppercase">Inscription réussie !</h4>
-            <p class="text-light-blue text-2xl">Salut, <b>{{ request()->name }}</b>, merci de nous avoir rejoint !</p>
+            <p class="text-light-blue text-2xl">Salut <b>{{ request()->name }}</b>, merci de nous avoir rejoint !</p>
             <a href="/dashboard" class="text-light-blue text-2xl">Tu peux maintenant te connecter pour accéder à l'espace communautaire !</a>
 
         </div>

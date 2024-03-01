@@ -85,7 +85,8 @@ class MultiStepForm extends Component
                 'pseudo'=>'required',
                 'email'=>'required|email|unique:users',
                 'password'=>'required|min:8',
-                'password_confirmation'=>'required'
+                'password_confirmation'=>'required',
+                'rgpd'=>'required'
             ]);
         }
     }
