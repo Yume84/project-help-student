@@ -33,6 +33,10 @@ Route::get('/mentions-legales', function(){
     return view('mentions-legales');})
     ->name('mentions-legales');
 
+Route::get('/accessibilite', function(){
+    return view('accessibilite');})
+    ->name('accessibilite');
+
 Route::get('/contact', function(){
     return view('contact');})
     ->name('contact');
