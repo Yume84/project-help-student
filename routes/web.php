@@ -50,6 +50,9 @@ Route::view('sign-up-5', 'sign-up-5'); // 5
 
 Route::view('/', 'welcome'); 
 
+Route::view('/register', 'register')->name('register');
+Route::view('/registration-success', 'registration-success')->name('registration.success');
+
 Route::view('dashboard', 'dashboard') // Route qui mène au dashboard / feed
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
@@ -92,7 +95,7 @@ Route::get('/articles/{article}', [ArticleController::class, 'show']);
 
 
 //Route pour liste campus
-Route::get('/register', [CollegeController::class, 'showForm'])->name('register');
+//Route::get('/register', [CollegeController::class, 'showForm'])->name('register');
 
 //Route pour la liste langues dans le formulaire
 Route::get('/afficher-langue', [LanguageController::class, 'showForm'])->name('afficher-langue');
