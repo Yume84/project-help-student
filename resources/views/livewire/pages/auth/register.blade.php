@@ -8,13 +8,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
-
-
 use function Livewire\Volt\layout;
 use function Livewire\Volt\rules;
 use function Livewire\Volt\state;
 
-layout('layouts.guest');
+layout('layouts.step');
 
 state([
     'name' => '',
@@ -45,11 +43,6 @@ $register = function () {
 
 ?>
 
-<div class="container">
-    <div class="row" style="margin-top:50px">
-        <div class="col-md-6 offset-md-3">
-            <h1>Multi Step form</h1><hr>
-            @livewire('multi-step-form')
-        </div>
-    </div>
+<div>
+    @livewire('multi-step-form')
 </div>

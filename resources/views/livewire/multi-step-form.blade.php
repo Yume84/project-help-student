@@ -1,31 +1,29 @@
-
-
 <div>
     <form wire:submit.prevent="register">
 
     @if ($currentStep ==1)
-        <div class="step-one">
-            <div class="card">
-                <div class="card-header bg-secondary text-black">ÉTAPE 1/6 - Status</div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h3>Pourquoi es-tu ici ?</h3>
-                            <div class="form-group">
-                                <label for="ask_help" class="option">Demander de l'aide</label>
-                                <input type="radio" class="form-control" id="ask_help" name="choice" value="ask_help" required wire:model="option">
-                                <span class="text-danger">@error('option'){{ $message }}@enderror</span>
-                                <br>
-                                <label for="propose_help" class="option">Proposer son aide</label>
-                                <input type="radio" class="form-control" id="propose_help" name="choice" value="propose_help" required wire:model="option">
-                                <span class="text-danger">@error('option'){{ $message }}@enderror</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+        <h3 class="text-3xl text-blue uppercase font-bold">ÉTAPE 1/6 - Pourquoi es-tu ici ?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-4 p-6">
+            
+            <div class="mt-4">
+                <x-option-input required wire:model="option" id="ask_help" class="block mt-1 w-full" type="radio" name="choice" :value="__('Ask for help')">
+                    {{ __('Ask for help') }}
+                </x-option-input>
+                <x-input-error :messages="$errors->get('option')" class="mt-2" />
             </div>
+            
+            <div class="mt-4">
+                <x-option-input required wire:model="option" id="offer_help" class="block mt-1 w-full" type="radio" name="choice">
+                    {{ __('Offer help') }}
+                </x-option-input>
+                <x-input-error :messages="$errors->get('option')" class="mt-2" />
+            </div>
+            
         </div>
-        @endif
+
+    @endif
+
 
 @if ($currentStep ==2)
        

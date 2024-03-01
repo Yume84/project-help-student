@@ -19,7 +19,7 @@
 
             <h3 class="text-6xl text-blue font-extrabold uppercase">Bienvenue</h3>
 
-            <a href="{{ route('/') }}">
+            <a href="{{ route('welcome') }}">
                 <img src="images/logo/mascotte.png" alt="Logo_Studdle" class="inline-block w-44 h-full"/>
             </a> 
 
