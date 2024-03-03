@@ -16,11 +16,11 @@ class MultiStepForm extends Component
     public $liste_langue;
     public $level;
     public $college;
-    public $name;
-    public $pseudo;
-    public $email;
-    public $password;
-    public $password_confirmation;
+    public $name; //Ces infos là sont déjà dans le fichier register, essaie de mettre tout le reste que t'as fait dans le fichier register
+    public $pseudo; //Ces infos là sont déjà dans le fichier register, essaie de mettre tout le reste que t'as fait dans le fichier register
+    public $email; //Ces infos là sont déjà dans le fichier register, essaie de mettre tout le reste que t'as fait dans le fichier register
+    public $password; //Ces infos là sont déjà dans le fichier register, essaie de mettre tout le reste que t'as fait dans le fichier register
+    public $password_confirmation; //Ces infos là sont déjà dans le fichier register, essaie de mettre tout le reste que t'as fait dans le fichier register
 
     public $totalSteps = 6;
     public $currentStep = 1;

@@ -9,7 +9,7 @@
     x-data="{ isActive: false }"
     @click="isActive = !isActive"
     :class="{ 'bg-yellow': isActive, 'bg-light-blue': !isActive }"
-    class="bg-light-blue h-20 ombre-blue rounded-lg cursor-pointer flex items-center justify-center text-dark-blue text-lg" 
+    class="bg-light-blue h-24 ombre-blue rounded-lg cursor-pointer flex items-center justify-center text-dark-blue text-lg mb-6" 
     for="{{ $attributes['id'] }}"
 >
     {{ $slot }}

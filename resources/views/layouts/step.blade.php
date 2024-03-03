@@ -21,7 +21,7 @@
                 <x-studdle-mascotte :href="route('welcome')" class="block w-20 h-full mb-"></x-studdle-mascotte>
             </div>
 
-            <div class="w-full max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+            <div class="w-full max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 overflow-hidden">
                 {{ $slot }}
             </div>
         </div>

@@ -40,5 +40,14 @@
     "Update your account's profile information and email address." : "Mettre à jour les informations de profil et le mail du compte.",
     "Your email address is unverified." : "Ton mail n'est pas vérifié",
     "Click here to re-send the verification email." : "Clique ici pour renvoyer le mail de vérification.",
-    "A new verification link has been sent to your email address." : "Un nouveau mail de vérification t'a été envoyé par mail."
+    "A new verification link has been sent to your email address." : "Un nouveau mail de vérification t'a été envoyé par mail.",
+
+    "Ask for help" : "Demander de l'aide",
+    "Offer help" : "Proposer ton aide",
+    "Administration" : "Administration",
+    "Public service" : "Service public",
+    "Both" : "Les deux",
+    "I don't know" : "Je ne sais pas",
+    "Back" : "Retour",
+    "Next" : "Suivant"
 }
