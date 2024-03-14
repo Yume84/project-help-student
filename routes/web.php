@@ -95,7 +95,7 @@ Route::view('account', 'account') // Route qui mène à la page Notifications
     ->middleware(['auth', 'verified'])
     ->name('account');
 
-Route::get('/articles/{article}', [ArticleController::class, 'show']);
+Route::get('/articles/{article:slug}', [ArticleController::class, 'show'])->name('articles.show');
 
 
 //Route pour liste campus
