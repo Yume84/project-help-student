@@ -5,6 +5,7 @@ namespace App\Livewire;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class MultiStepForm extends Component
 {
@@ -96,11 +97,11 @@ class MultiStepForm extends Component
                 "name"=>$this->name,
                 "pseudo"=>$this->pseudo,
                 "email"=>$this->email,
-                "password"=>$this->password,
+                "password"=>Hash::make($this->password),
                 "college_id"=>$this->college,
             );
 
-            User::insert($values);
+            User::create($values);
             //$this->reset();
             //$this->currentStep = 1;
             $data = ['name'=>$this->name, 'email'=>$this->email];

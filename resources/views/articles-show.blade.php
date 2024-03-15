@@ -526,6 +526,50 @@
           
         </x-help-case>
 
+        <!-- Visa de longue période -->
+
+        <div class="mb-8">
+        <x-help-case>
+            <!-- Visa de longue période -->
+            <x-help-dropdown>
+
+                <x-slot name="trigger"> <!-- Contenu visible -->
+                    <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
+                        <span class="text-dark-blue font-semibold text-xl">Tu souhaites faire une demande de visa de longue période</span>
+
+                            <div class="ms-1"> <!-- Flèche -->
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                    </button>
+                </x-slot>
+
+                <x-slot name="content"> <!-- Liste déroulante -->
+                    <div class="m-8">
+
+                        <!-- Informations -->
+                        <div class="text-lg text-left">
+                            <p class="mt-4">Il existe une manière simple de faire sa demande. Il est possible de numériser ses documents et de suivre la prolongation directement sur le site. Voici les étapes pour un visa de longue durée :</p>
+                            <li class="mt-4">Tu dois créer ton compte sur <a href="https://france-visas.gouv.fr" target="_blank"><span class="lien">france-visas.gouv.fr</span></a>.</li>
+                            <li class="mt-4">Tu arrives sur une page ou tu peux suivre tes demandes en cours. Si c'est ta première demande, clique sur "Créer une nouvelle demande"</li>
+                            <li class="mt-4">Une page s'affiche avec la durée du processus d'enregistrement et les documents dont tu vas avoir besoin. Appuie sur “Accéder” dès que tu es prêt.</li>
+                            <li>Une fois toutes les étapes renseignées. Un récapitulatif me sera décerné.</li>
+                            <div class="liste-blue mb-4">
+                                <p>⛔ Pour y être logé, il faut être inscrit dans un établissement de la région parisienne et préparer au moins un diplôme de niveau Master 1.</p>
+                            </div>
+
+                            <li class="mt-4">Tu fais partie du plateau universitaire Paris Saclay ? L'université met à disposition l'ensemble des <a href="https://logement.campus-paris-saclay.fr/" target="_blank"><span class="lien">offres de logement</span></a> des différents bailleurs ayant une ou plusieurs résidences étudiantes sur ou à proximité du Plateau de Saclay.</li>
+                        </div>
+
+                    </div>
+                </x-slot>
+
+            </x-help-dropdown>
+
+        </x-help-case>
+        </div>
+
         @endif
 
     </div>
