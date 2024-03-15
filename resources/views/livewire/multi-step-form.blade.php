@@ -1,5 +1,4 @@
 <form wire:submit="register">
-
     
 @if ($currentStep ==1)
 
@@ -17,6 +16,10 @@
 
 
 @if ($currentStep ==2)
+
+    <div class="flex flex-col justify-center items-center">
+        <x-studdle-mascotte :href="route('welcome')" class="block w-20 h-full mb-4"></x-studdle-mascotte>
+    </div>
 
     <div class="bg-blue w-full h-6 border-blue rounded-lg mb-14">  
         <div class="bg-yellow h-5 rounded-lg w-0"></div>
@@ -41,6 +44,10 @@
 
 @if ($currentStep ==3)
 
+    <div class="flex flex-col justify-center items-center">
+        <x-studdle-mascotte :href="route('welcome')" class="block w-20 h-full mb-4"></x-studdle-mascotte>
+    </div>
+
     <h3 class="text-3xl text-blue uppercase font-extrabold text-center">STEP 3/4 - Coche les aides dont tu as besoin</h3>
     <div class="grid grid-cols-1 md:grid-cols-4 sm:gap-2 md:gap-8 pt-10 pb-10">
 
@@ -57,6 +64,10 @@
 @endif
 
 @if ($currentStep ==4)
+
+    <div class="flex flex-col justify-center items-center">
+        <x-studdle-mascotte :href="route('welcome')" class="block w-20 h-full mb-4"></x-studdle-mascotte>
+    </div>
 
     <h3 class="text-3xl text-blue uppercase font-extrabold text-center">STEP 4/6 - Quelle(s) langue(s) parles-tu ?</h3>
         
@@ -88,6 +99,10 @@
 
 @if ($currentStep ==5)
 
+    <div class="flex flex-col justify-center items-center">
+        <x-studdle-mascotte :href="route('welcome')" class="block w-20 h-full mb-4"></x-studdle-mascotte>
+    </div>
+
     <h3 class="text-3xl text-blue uppercase font-extrabold text-center">STEP 5/6 - Où étudies-tu ?</h3>
 
     {{-- <select wire:model="college" name="list_college" id="list_college">
@@ -113,6 +128,10 @@
 @endif
 
 @if ($currentStep ==6)
+
+    <div class="flex flex-col justify-center items-center">
+        <x-studdle-mascotte :href="route('welcome')" class="block w-20 h-full mb-4"></x-studdle-mascotte>
+    </div>
 
     <h3 class="text-3xl text-blue uppercase font-extrabold text-center">STEP 6/6 - C'est la dernière étape !</h3>
 
