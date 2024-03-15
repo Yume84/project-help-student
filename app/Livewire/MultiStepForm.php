@@ -29,7 +29,6 @@ class MultiStepForm extends Component
         $this->currentStep = 1;
     }
 
-
     public function render()
     {
         return view('livewire.multi-step-form');

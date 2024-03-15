@@ -19,7 +19,15 @@ state([
     'pseudo' => '',
     'email' => '',
     'password' => '',
-    'password_confirmation' => ''
+    'password_confirmation' => '',
+
+    'option' => '',
+    'category' => '',
+    'helps' => [],
+    'list_language' => [],
+    'list_level' => '',
+    'list_college' => [],
+    'rgpd' => false
 ]);
 
 rules([
@@ -27,6 +35,14 @@ rules([
     'pseudo' => ['required', 'string', 'max:50', 'unique:'.User::class],
     'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
     'password' => ['required', 'string', 'confirmed', Rules\Password::defaults()],
+
+    'option' => ['required'],
+    'category' => ['required'],
+    'helps' => ['required', 'array'],
+    'list_language' => ['required', 'array'],
+    'list_level' => ['required', 'array'],
+    'list_college' => ['required', 'array'],
+    'rgpd' => ['required'],
 ]);
 
 $register = function () {
