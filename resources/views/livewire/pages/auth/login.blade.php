@@ -19,7 +19,7 @@ $login = function () {
     Session::regenerate();
 
     $this->redirect(
-        session('url.intended', RouteServiceProvider::HOME),
+        RouteServiceProvider::HOME,
         navigate: true
     );
 };
@@ -31,6 +31,7 @@ $login = function () {
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <form wire:submit="login">
+
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />

@@ -402,7 +402,7 @@
             <x-slot name="content"> <!-- Liste déroulante des aides -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-4 p-6">
                         
-                    <a href="{{ route('articles.show', App\Models\Article::find(6)->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
+                    <a href="{{ route('articles.show', App\Models\Article::find(6)?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
                         <div>
                             <div class="h-30 w-full bg-white flex items-center justify-center">
                                 <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>

@@ -1,7 +1,22 @@
 <form wire:submit="register">
 
-
+    
 @if ($currentStep ==1)
+
+    <div class="mx-auto flex flex-col items-center justify-center" >
+
+        <h3 class="text-6xl text-blue font-extrabold uppercase">Bienvenue</h3>
+
+        <a href="{{ route('welcome') }}">
+            <img src="images/logo/mascotte.png" alt="Logo_Studdle" class="inline-block w-44 h-full"/>
+        </a> 
+
+    </div>
+
+@endif
+
+
+@if ($currentStep ==2)
 
     <div class="bg-blue w-full h-6 border-blue rounded-lg mb-14">  
         <div class="bg-yellow h-5 rounded-lg w-0"></div>
@@ -24,86 +39,16 @@
 
 @endif
 
-
-@if ($currentStep ==2)
-
-    <div class="bg-blue w-full h-6 border-blue rounded-lg mb-14">  
-        <div class="bg-yellow h-5 rounded-lg w-60"></div>
-    </div>
-
-    <h3 class="text-3xl text-blue uppercase font-extrabold text-center">ÉTAPE 2/6 - Pour quoi as-tu besoin d'aide/En quoi peux-tu aider ?</h3>
-    <div class="grid grid-cols-1 md:grid-cols-4 sm:gap-2 md:gap-8 pt-10 pb-10">
-        
-        <x-radio-input required wire:model="category" id="administration" class="block mt-1 w-full" type="radio" name="category" :value="__('Administration')">
-            {{ __('Administration') }}
-        </x-radio-input>
-
-        <x-radio-input required wire:model="category" id="public_service" class="block mt-1 w-full" type="radio" name="category" :value="__('Public service')">
-            {{ __('Public service') }}
-        </x-radio-input>
-
-        <x-radio-input required wire:model="category" id="both" class="block mt-1 w-full" type="radio" name="category" :value="__('Both')">
-            {{ __('Both') }}
-        </x-radio-input>
-
-        <x-radio-input required wire:model="category" id="idk" class="block mt-1 w-full" type="radio" name="category" :value="__('I don\'t know')">
-            {{ __('I don\'t know') }}
-        </x-radio-input>
-
-        <x-input-error :messages="$errors->get('category')" class="text-blue mt-2" />
-
-    </div>
-
-@endif
-
 @if ($currentStep ==3)
 
     <h3 class="text-3xl text-blue uppercase font-extrabold text-center">STEP 3/4 - Coche les aides dont tu as besoin</h3>
     <div class="grid grid-cols-1 md:grid-cols-4 sm:gap-2 md:gap-8 pt-10 pb-10">
 
-        <x-checkbox-input required wire:model="helps" id="inscription" class="block mt-1 w-full" type="checkbox" name="helps" :value="__('Inscriptions')">
-            {{ __('Inscriptions') }}
-        </x-checkbox-input>
-
-        <x-checkbox-input required wire:model="helps" id="bourse" class="block mt-1 w-full" type="checkbox" name="helps" :value="__('Demande de bourse')">
-            {{ __('Demande de bourse') }}
-        </x-checkbox-input>
-
-        <x-checkbox-input required wire:model="helps" id="demande_visa" class="block mt-1 w-full" type="checkbox" name="helps" :value="__('Demande de visa')">
-            {{ __('Demande de visa') }}
-        </x-checkbox-input>
-
-        <x-checkbox-input required wire:model="helps" id="renouvellement_visa" class="block mt-1 w-full" type="checkbox" name="helps" :value="__('Renouvellement de visa')">
-            {{ __('Renouvellement de visa') }}
-        </x-checkbox-input>
-
-        <x-checkbox-input required wire:model="helps" id="caf" class="block mt-1 w-full" type="checkbox" name="helps" :value="__('CAF')">
-            {{ __('CAF') }}
-        </x-checkbox-input>
-
-        <x-checkbox-input required wire:model="helps" id="ameli" class="block mt-1 w-full" type="checkbox" name="helps" :value="__('Ameli')">
-            {{ __('Ameli') }}
-        </x-checkbox-input>
-
-        <x-checkbox-input required wire:model="helps" id="carte_vitale" class="block mt-1 w-full" type="checkbox" name="helps" :value="__('Carte vitale')">
-            {{ __('Carte vitale') }}
-        </x-checkbox-input>
-
-        <x-checkbox-input required wire:model="helps" id="compte_bancaire" class="block mt-1 w-full" type="checkbox" name="helps" :value="__('Ouverture d\'un compte bancaire')">
-            {{ __('Ouverture d\'un compte bancaire') }}
-        </x-checkbox-input>
-
-        <x-checkbox-input required wire:model="helps" id="demande_logement" class="block mt-1 w-full" type="checkbox" name="helps" :value="__('Demande de logement')">
-            {{ __('Demande delogement') }}
-        </x-checkbox-input>
-
-        <x-checkbox-input required wire:model="helps" id="assurance_habitation" class="block mt-1 w-full" type="checkbox" name="helps" :value="__('Assurance habitation')">
-            {{ __('Assurance habitation') }}
-        </x-checkbox-input>
-        
-        <x-checkbox-input required wire:model="helps" id="other" class="block mt-1 w-full" type="checkbox" name="helps" :value="__('Other')">
-            {{ __('Other') }}
-        </x-checkbox-input>
+        @foreach($articles as $article)
+            <x-checkbox-input required wire:model="helps" id="{{$article->title}}" class="block mt-1 w-full" type="checkbox" name="helps" :value="$article->id">
+                {{ __($article->title) }}
+            </x-checkbox-input>
+        @endforeach 
 
         <x-input-error :messages="$errors->get('helps')" class="text-blue mt-2" />
 
@@ -115,13 +60,14 @@
 
     <h3 class="text-3xl text-blue uppercase font-extrabold text-center">STEP 4/6 - Quelle(s) langue(s) parles-tu ?</h3>
         
-    <select name="list_language" id="list_language" wire:model="liste_langue">
-        <option value="" selected>Sélectionne ta langue</option>
-        <option value="a1">Français</option>
-        <option value="a2">Anglais</option>
-        <option value="b1">Espagnol</option>
-        <option value="c1">Allemand</option>
-    </select>
+    <div class="language">
+        <select name="list_language" id="list_language" wire:model="list_language">
+            <option value="default">Sélectionne une langue</option>
+            @foreach($languages as $language)
+                <option value="{{ $language->id }}">{{ $language->label }}</option>
+            @endforeach
+        </select>
+    </div>
 
     <x-input-error :messages="$errors->get('language')" class="mt-2" /> <!-- A définir car tu l'avais pas mis-->
 
@@ -144,13 +90,23 @@
 
     <h3 class="text-3xl text-blue uppercase font-extrabold text-center">STEP 5/6 - Où étudies-tu ?</h3>
 
-    <select wire:model="college" name="list_college" id="list_college">
+    {{-- <select wire:model="college" name="list_college" id="list_college">
         <option value="" selected>Sélectionne ton campus</option>
         <option value="1">Université Gustave Eiffel</option>
         <option value="2">Sorbonne Université</option>
         <option value="3">Paris 8</option>
         <option value="4">UPEC</option>
-    </select>
+    </select> --}}
+
+    <h3>Où étudies-tu ?</h3>
+    <div class="college">
+        <select name="list_college" id="list_college" wire:model="college">
+            <option value="default">Sélectionne un campus</option>
+            @foreach($colleges as $college)
+                <option value="{{ $college->id }}">{{ $college->name }}</option>
+            @endforeach
+        </select>
+    </div>
 
     <x-input-error :messages="$errors->get('college')" class="text-blue mt-2" />
 
@@ -222,7 +178,11 @@
     <div class="flex justify-between pt-2 pb-2">
 
     @if ($currentStep ==1)
-        <div></div>
+        <x-register-button type="button">
+            <a href="{{ route('welcome') }}">
+                {{ __('Back') }}
+            </a>
+        </x-register-button>
     @endif
 
     @if ($currentStep ==2 || $currentStep ==3 || $currentStep ==4 || $currentStep ==5 || $currentStep ==6)
@@ -244,4 +204,3 @@
     @endif
 
 </form>
-

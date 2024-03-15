@@ -2,6 +2,9 @@
 
 namespace App\Livewire;
 
+use App\Models\Article;
+use App\Models\College;
+use App\Models\Language;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Models\User;
@@ -14,7 +17,7 @@ class MultiStepForm extends Component
     public $option;
     public $category;
     public $helps = [];
-    public $liste_langue;
+    public $list_language;
     public $level;
     public $college;
     public $name; //Ces infos là sont déjà dans le fichier register, essaie de mettre tout le reste que t'as fait dans le fichier register
@@ -23,16 +26,38 @@ class MultiStepForm extends Component
     public $password; //Ces infos là sont déjà dans le fichier register, essaie de mettre tout le reste que t'as fait dans le fichier register
     public $password_confirmation; //Ces infos là sont déjà dans le fichier register, essaie de mettre tout le reste que t'as fait dans le fichier register
 
+    public $colleges;
+    public $languages;
+    public $articles;
+
     public $totalSteps = 6;
     public $currentStep = 1;
 
     public function mount(){
         $this->currentStep = 1;
+        $this->getColleges();
+        $this->getLanguages();
+        $this->getArticles();
     }
 
     public function render()
     {
         return view('livewire.multi-step-form');
+    }
+
+    public function getColleges(){
+       $this->colleges =  College::all();
+    }
+
+    public function getLanguages(){
+        $this->languages =  Language::all();
+     }
+
+    public function getArticles(){
+        $this->articles = Article::all();
+        //$other = new Article();
+        //:$other->title = "Autres";
+        //$this->articles->push($other);
     }
 
     public function increaseStep(){
@@ -42,6 +67,7 @@ class MultiStepForm extends Component
         if($this->currentStep > $this->totalSteps){
             $this->currentStep = $this->totalSteps;
         }
+
     }
 
     public function decreaseStep(){
@@ -53,15 +79,11 @@ class MultiStepForm extends Component
     }
 
     public function validateData(){
-        if($this->currentStep == 1){
-            $this->validate([
+
+        if($this->currentStep == 2){
+                $this->validate([
                 'option'=>'required',
             ]);
-        }
-        elseif($this->currentStep == 2){
-                $this->validate([
-                    'category'=>'required',   
-                ]);
         }
         elseif($this->currentStep == 3){
              $this->validate([
@@ -70,7 +92,7 @@ class MultiStepForm extends Component
         }
         elseif($this->currentStep == 4){
              $this->validate([
-                'liste_langue'=>'required',
+                'list_language'=>'required',
                 'level'=>'required'
             ]);
         }
@@ -101,7 +123,19 @@ class MultiStepForm extends Component
                 "college_id"=>$this->college,
             );
 
-            User::create($values);
+            $user = User::create($values);
+            // lien avec les aides 
+            $language = Language::find($this->list_language);
+            $user->languages()->attach($this->list_language, ['level' => $this->level,"is_primary"=>true]);
+
+
+            info('contenu de variable helps', [$this->helps]);
+            foreach($this->helps as $help){
+                $user->articles()->attach($help);
+            }
+
+            //$article = Article::find($this->helps);
+            //$user->articles()->attach($this->helps, ['level' => $this->level,"is_primary"=>true]);
             //$this->reset();
             //$this->currentStep = 1;
             $data = ['name'=>$this->name, 'email'=>$this->email];
