@@ -13,6 +13,6 @@ class LocalizedScope implements Scope
      */
     public function apply(Builder $builder, Model $model): void
     {
-        $builder->join('languages','languages.id',"=",$model->table.".lang_id")->where('languages.iso',app()->getLocale());
+        $builder->join('languages','languages.id',"=",$model->getTable().".lang_id")->where('languages.iso',app()->getLocale());
     }
 }
