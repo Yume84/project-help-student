@@ -95,6 +95,7 @@ class ArticleSeeder extends Seeder
         $i = 0;
         foreach(\App\Models\Language::all() as $language) // pour chaque langue
         {
+            app()->setLocale($language->iso);
             foreach($articles as $article_index => $article) // on insert une version de chaque article
             {
                 // on insert une version de chaque article
