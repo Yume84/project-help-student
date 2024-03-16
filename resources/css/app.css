@@ -169,3 +169,45 @@
     width: auto;
     height: 100px; 
 }
+
+/*Remplissage de la barre de chargement*/
+
+.remplissage-1 {
+    animation: remplissage-1 3s ease-in-out forwards;
+}
+
+.remplissage-2 {
+    animation: remplissage-2 3s ease-in-out forwards;
+}
+
+.remplissage-3 {
+    animation: remplissage-3 3s ease-in-out forwards;
+}
+
+.remplissage-4 {
+    animation: remplissage-4 3s ease-in-out forwards;
+}
+
+.remplissage-5 {
+    animation: remplissage-5 3s ease-in-out forwards;
+}
+
+@keyframes remplissage-1 {
+    0% { width: 0; } 100% { width: 20%; }
+}
+
+@keyframes remplissage-2 {
+    0% { width: 20%; } 100% { width: 40%; }
+}
+
+@keyframes remplissage-3 {
+    0% { width: 40%; } 100% { width: 60%; }
+}
+
+@keyframes remplissage-4 {
+    0% { width: 60%; } 100% { width: 80%; }
+}
+
+@keyframes remplissage-5 {
+    0% { width: 80%; } 100% { width: 100%; }
+}

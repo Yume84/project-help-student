@@ -138,7 +138,7 @@ class MultiStepForm extends Component
             //$user->articles()->attach($this->helps, ['level' => $this->level,"is_primary"=>true]);
             //$this->reset();
             //$this->currentStep = 1;
-            $data = ['name'=>$this->name, 'email'=>$this->email];
+            $data = ['pseudo'=>$this->pseudo, 'email'=>$this->email];
             return redirect()->route('registration.success', $data);
 
     }

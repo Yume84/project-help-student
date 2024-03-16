@@ -24,7 +24,7 @@
             </a> 
 
             <div class="text-light-blue text-center text-3xl mt-10 mb-10 mx-2">
-                <p>Salut <span class="bg-blue rounded-lg text-light-blue px-2 font-bold mr-2">{{ request()->name }}</span>!</p>
+                <p>Salut <span class="bg-blue rounded-lg text-light-blue px-2 font-bold mr-2">{{ request()->pseudo }}</span>!</p>
                 <p>Merci de nous avoir rejoint.</p>
                 <p>Tu peux maintenant te connecter pour accéder à l'espace communautaire.</p>
             </div>

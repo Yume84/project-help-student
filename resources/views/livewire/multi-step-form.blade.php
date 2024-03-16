@@ -24,7 +24,7 @@
     </div>
 
     <div class="bg-blue w-full h-6 border-blue rounded-lg mb-14">  
-        <div class="bg-yellow h-5 rounded-lg w-0"></div>
+        <div class="bg-yellow h-5 rounded-lg remplissage-1"></div>
     </div>
 
     <h3 class="text-3xl text-blue uppercase font-extrabold text-center">Pourquoi es-tu ici ?</h3>
@@ -50,6 +50,10 @@
         <x-studdle-mascotte :href="route('welcome')" class="block step mb-4"></x-studdle-mascotte>
     </div>
 
+    <div class="bg-blue w-full h-6 border-blue rounded-lg mb-14">  
+        <div class="bg-yellow h-5 rounded-lg remplissage-2"></div>
+    </div>
+
     <h3 class="text-3xl text-blue uppercase font-extrabold text-center">Coche les aides dont tu as besoin</h3>
     <div class="grid grid-cols-1 md:grid-cols-4 sm:gap-2 md:gap-8 pt-10 pb-10">
 
@@ -70,6 +74,10 @@
     <div class="flex flex-col justify-center items-center mb-10">
 
         <x-studdle-mascotte :href="route('welcome')" class="block step mb-4"></x-studdle-mascotte>
+
+        <div class="bg-blue w-full h-6 border-blue rounded-lg mb-14">  
+            <div class="bg-yellow h-5 rounded-lg remplissage-3"></div>
+        </div>
 
         <div class="grid grid-cols-1 pb-10">
 
@@ -108,6 +116,10 @@
         <x-studdle-mascotte :href="route('welcome')" class="block step mb-4"></x-studdle-mascotte>
     </div>
 
+    <div class="bg-blue w-full h-6 border-blue rounded-lg mb-14">  
+        <div class="bg-yellow h-5 rounded-lg remplissage-4"></div>
+    </div>
+
     <h3 class="text-3xl text-blue uppercase font-extrabold text-center">Où étudies-tu ?</h3>
 
     {{-- <select wire:model="college" name="list_college" id="list_college">
@@ -135,6 +147,10 @@
 
     <div class="flex flex-col justify-center items-center">
         <x-studdle-mascotte :href="route('welcome')" class="block step mb-4"></x-studdle-mascotte>
+    </div>
+
+    <div class="bg-blue w-full h-6 border-blue rounded-lg mb-14">  
+        <div class="bg-yellow h-5 rounded-lg remplissage-5"></div>
     </div>
 
     <h3 class="text-3xl text-blue uppercase font-extrabold text-center">C'est la dernière étape !</h3>
@@ -185,8 +201,8 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="text-blue mt-2" />
         </div>
 
-        <div class="checkbox">
-            <input id="rgpd" type="checkbox" required wire:model="rgpd"/>
+        <div class="mt-4 mb-4">
+            <input id="rgpd" type="checkbox" class="rounded" wire:model="rgpd"/>
             <label for="rgpd" class="rgpd">J'accepte les <a href="#" class="rgpd" onclick="openPopup()">conditions d'utilisation</a></label>
 
             <x-input-error :messages="$errors->get('rgpd')" class="text-blue mt-2" />
