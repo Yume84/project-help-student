@@ -115,8 +115,8 @@ class ArticleSeeder extends Seeder
                         "tag_id"     => $tag
                     ];
                 }
+                $i++;
             }
-            $i++;
         }
 
         // nos deux tableaux sont prêts
