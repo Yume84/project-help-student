@@ -92,6 +92,7 @@ class ArticleSeeder extends Seeder
         $insert_articles    = [];
         $insert_article_tag = [];
         
+        $i = 0;
         foreach(\App\Models\Language::all() as $language) // pour chaque langue
         {
             foreach($articles as $article_index => $article) // on insert une version de chaque article
@@ -110,11 +111,12 @@ class ArticleSeeder extends Seeder
                 {
                     // on insert un article_tag correspondant
                     $insert_article_tag[] = [
-                        "article_id" => $article_index + 1,
+                        "article_id" => $article_index + $i + 1,
                         "tag_id"     => $tag
                     ];
                 }
             }
+            $i++;
         }
 
         // nos deux tableaux sont prêts
