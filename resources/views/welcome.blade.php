@@ -199,295 +199,48 @@
 
         <!-- Liste des aides par thématique -->
         
+        @foreach (App\Models\Tag::all() as $tag)
         <div class="mb-8">
-        <!-- Santé -->
-        <x-help-dropdown>
-
-            <x-slot name="trigger"> <!-- Contenu visible -->
-                <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
-                    <span>Santé</span><!--Remplacer par label de la table tag-->
-
-                        <div class="ms-1"> <!-- Flèche -->
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                </button>
-            </x-slot>
-
-            <x-slot name="content"> <!-- Liste déroulante des aides -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-4 p-6">
-                        
-                    <a href="{{ route('articles.show', App\Models\Article::find(1)?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline">
-                        <div>
-                            <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
+            <!-- Santé -->
+            <x-help-dropdown>
+    
+                <x-slot name="trigger"> <!-- Contenu visible -->
+                    <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
+                        <span>{{ __(tag->label) }}</span><!--Remplacer par label de la table tag-->
+    
+                            <div class="ms-1"> <!-- Flèche -->
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
                             </div>
-            
-                            <h2 class="mt-6 text-xl font-semibold text-blue">Carte vitale</h2><!--Remprendre BDD-->
-            
-                            <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                                L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !
-                            </p>
-                        </div>
-                    </a>
-
-                    <a href="{{ route('articles.show', App\Models\Article::find(8)?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
-                        <div>
-                            <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
-                            </div>
-            
-                            <h2 class="mt-6 text-xl font-semibold text-blue">Ameli</h2><!--Remprendre BDD-->
-            
-                            <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                                L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !
-                            </p>
-                        </div>
-                    </a>
-
-                </div>
-            </x-slot>
-
-        </x-help-dropdown>
-        </div>
-
-        <div class="mb-8">
-        <!-- Social -->
-        <x-help-dropdown>
-
-            <x-slot name="trigger"> <!-- Contenu visible -->
-                <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
-                    <span>Social</span><!--Remplacer par label de la table tag-->
-
-                        <div class="ms-1"> <!-- Flèche -->
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                </button>
-            </x-slot>
-
-            <x-slot name="content"> <!-- Liste déroulante des aides -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-4 p-6">
-                        
-                    <a href="{{ route('articles.show', App\Models\Article::find(7)?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
-                        <div>
-                            <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
-                            </div>
-            
-                            <h2 class="mt-6 text-xl font-semibold text-blue">CAF</h2><!--Remprendre BDD-->
-            
-                            <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                                L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !
-                            </p>
-                        </div>
-                    </a>
-
-                </div>
-            </x-slot>
-
-        </x-help-dropdown>
-        </div>
-
-        <div class="mb-8">
-        <!-- Universitaire -->
-        <x-help-dropdown>
-
-            <x-slot name="trigger"> <!-- Contenu visible -->
-                <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
-                    <span>Universitaire</span><!--Remplacer par label de la table tag-->
-
-                        <div class="ms-1"> <!-- Flèche -->
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                </button>
-            </x-slot>
-
-            <x-slot name="content"> <!-- Liste déroulante des aides -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-4 p-6">
-                        
-                    <a href="{{ route('articles.show', App\Models\Article::find(9)?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
-                        <div>
-                            <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
-                            </div>
-            
-                            <h2 class="mt-6 text-xl font-semibold text-blue">Inscription universitaire</h2><!--Remprendre BDD-->
-            
-                            <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                                L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !
-                            </p>
-                        </div>
-                    </a>
-
-                </div>
-            </x-slot>
-
-        </x-help-dropdown>
-        </div>
-
-        <div class="mb-8">
-        <!-- Logement -->
-        <x-help-dropdown>
-
-            <x-slot name="trigger"> <!-- Contenu visible -->
-                <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
-                    <span>Logement</span><!--Remplacer par label de la table tag-->
-
-                        <div class="ms-1"> <!-- Flèche -->
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                </button>
-            </x-slot>
-
-            <x-slot name="content"> <!-- Liste déroulante des aides -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-4 p-6">
-                        
-                    <a href="{{ route('articles.show', App\Models\Article::find(2)?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
-                        <div>
-                            <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/logement.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
-                            </div>
-            
-                            <h2 class="mt-6 text-xl font-semibold text-blue">Demande de logement</h2><!--Remprendre BDD-->
-            
-                            <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                                L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !
-                            </p>
-                        </div>
-                    </a>
-
-                    <a href="{{ route('articles.show', App\Models\Article::find(10)?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
-                        <div>
-                            <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
-                            </div>
-            
-                            <h2 class="mt-6 text-xl font-semibold text-blue">Assurance habitation</h2><!--Remprendre BDD-->
-            
-                            <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                                L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !
-                            </p>
-                        </div>
-                    </a>
-
-                </div>
-            </x-slot>
-
-        </x-help-dropdown>
-        </div>
-
-        <div class="mb-8">
-        <!-- Finance -->
-        <x-help-dropdown>
-
-            <x-slot name="trigger"> <!-- Contenu visible -->
-                <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
-                    <span>Finance</span><!--Remplacer par label de la table tag-->
-
-                        <div class="ms-1"> <!-- Flèche -->
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                </button>
-            </x-slot>
-
-            <x-slot name="content"> <!-- Liste déroulante des aides -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-4 p-6">
-                        
-                    <a href="{{ route('articles.show', App\Models\Article::find(6)?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
-                        <div>
-                            <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
-                            </div>
-            
-                            <h2 class="mt-6 text-xl font-semibold text-blue">Ouvrir un compte bancaire</h2><!--Remprendre BDD-->
-            
-                            <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                                L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !
-                            </p>
-                        </div>
-                    </a>
-
-                </div>
-            </x-slot>
-
-        </x-help-dropdown>
-        </div>
-
-        <div class="mb-14">
-        <!-- Papiers -->
-        <x-help-dropdown>
-
-            <x-slot name="trigger"> <!-- Contenu visible -->
-                <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
-                    <span>Papiers</span><!--Remplacer par label de la table tag-->
-
-                        <div class="ms-1"> <!-- Flèche -->
-                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                            </svg>
-                        </div>
-                </button>
-            </x-slot>
-
-            <x-slot name="content"> <!-- Liste déroulante des aides -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-4 p-6">
-                        
-                    <a href="{{ route('articles.show', App\Models\Article::find(3)?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
-                        <div>
-                            <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/visa.jpeg') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
-                            </div>
-            
-                            <h2 class="mt-6 text-xl font-semibold text-blue">Demande de visa avant son arrivée</h2><!--Remprendre BDD-->
-            
-                            <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                                L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !
-                            </p>
-                        </div>
-                    </a>
-
-                    <a href="{{ route('articles.show', App\Models\Article::find(4)?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
-                        <div>
-                            <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/visa.jpeg') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
-                            </div>
-            
-                            <h2 class="mt-6 text-xl font-semibold text-blue">Demande de renouvellement de visa</h2><!--Remprendre BDD-->
-            
-                            <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                                L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !
-                            </p>
-                        </div>
-                    </a>
-
-                    <a href="{{ route('articles.show', App\Models\Article::find(5)?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline"><!--Remplacer par la route-->
-                        <div>
-                            <div class="h-30 w-full bg-white flex items-center justify-center">
-                                <img src="{{ asset('images/aide/visa-2.jpg') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
-                            </div>
-            
-                            <h2 class="mt-6 text-xl font-semibold text-blue">Acte de naissance</h2><!--Remprendre BDD-->
-            
-                            <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                                L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !
-                            </p>
-                        </div>
-                    </a>
-
-                </div>
-            </x-slot>
-
-        </x-help-dropdown>
-        </div>
+                    </button>
+                </x-slot>
+    
+                <x-slot name="content"> <!-- Liste déroulante des aides -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-4 p-6">
+                            
+                        @foreach (App\Models\Article::whereHas('tags', function($q) {$q->where('tags.id', '=', $tag->id);})->get() as $article)
+                            <a href="{{ route('articles.show', $article?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline">
+                                <div>
+                                    <div class="h-30 w-full bg-white flex items-center justify-center">
+                                        {{-- Todo : Image à dynamiser, sans doute issue du Tag ou de l'article ? --}} 
+                                        <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
+                                    </div>
+                    
+                                    <h2 class="mt-6 text-xl font-semibold text-blue">{{ __($article->title) }}</h2><!--Remprendre BDD-->
+                    
+                                    <p class="mt-4 text-dark-blue text-sm leading-relaxed">
+                                        {{__("L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !")}}
+                                    </p>
+                                </div>
+                            </a>
+                        @endforeach
+                    </div>
+                </x-slot>
+    
+            </x-help-dropdown>
+            </div>
+        @endforeach
 
     </div>
 
