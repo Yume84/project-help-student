@@ -206,7 +206,7 @@
     
                 <x-slot name="trigger"> <!-- Contenu visible -->
                     <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
-                        <span>{{ __(tag->label) }}</span><!--Remplacer par label de la table tag-->
+                        <span>{{ __($tag->label) }}</span><!--Remplacer par label de la table tag-->
     
                             <div class="ms-1"> <!-- Flèche -->
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
