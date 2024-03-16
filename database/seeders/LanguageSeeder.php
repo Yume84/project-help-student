@@ -13,7 +13,7 @@ class LanguageSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('colleges')->insert(
+        DB::table('languages')->insert(
             [
                 [
                     "label" =>  "Français",
