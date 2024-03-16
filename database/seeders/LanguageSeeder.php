@@ -28,6 +28,14 @@ class LanguageSeeder extends Seeder
                     "iso"   =>  "es"
                 ],
                 [
+                    "label" =>  "Deutsch",
+                    "iso"   =>  "de"
+                ],
+                [
+                    "label" =>  "Italiano",
+                    "iso"   =>  "it"
+                ],
+                [
                     "label" => "한국어",
                     "iso"   => "kr"
                 ]
