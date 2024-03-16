@@ -92,13 +92,13 @@ class ArticleSeeder extends Seeder
         $insert_articles    = [];
         $insert_article_tag = [];
         
-        $i = 0;
+        $i = 1;
         foreach(\App\Models\Language::all() as $language) // pour chaque langue
         {
             app()->setLocale($language->iso);
             foreach($articles as $article_index => $article) // on insert une version de chaque article
             {
-                // on insert une version de chaque article
+                // On insert une version de chaque article
                 $insert_articles[] =    [
                                             "title"     => __($article['title']),
                                             "content"   => $article['content'], // placeholder pour l'instant le contenu n'est pas traduit
@@ -112,7 +112,7 @@ class ArticleSeeder extends Seeder
                 {
                     // on insert un article_tag correspondant
                     $insert_article_tag[] = [
-                        "article_id" => $article_index + $i + 1,
+                        "article_id" => $i,
                         "tag_id"     => $tag
                     ];
                 }
