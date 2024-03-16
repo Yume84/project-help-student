@@ -3,5 +3,6 @@
         <livewire:posts.create />
 
         <livewire:posts.list />
+
     </div>
 </x-admin-layout>

@@ -6,7 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AvatarController;
 use App\Http\Controllers\LanguageController;
-use App\Http\Controllers\CollegeController;
+use App\Http\Controllers\AdController;
 use App\Http\Controllers\FormulaireController;
 
 
@@ -47,13 +47,6 @@ Route::get('/contact', function(){
     return view('contact');})
     ->name('contact');
 
-Route::view('sign-up', 'sign-up-0'); // Pour avoir accès à la première page du tunnel d'inscription
-Route::view('sign-up-1', 'sign-up-1'); // 1
-Route::view('sign-up-2', 'sign-up-2'); // 2
-Route::view('sign-up-3', 'sign-up-3'); // 3
-Route::view('sign-up-4', 'sign-up-4'); // 4
-Route::view('sign-up-5', 'sign-up-5'); // 5
-
 Route::view('/register', 'register')->name('register');
 Route::view('/registration-success', 'registration-success')->name('registration.success');
 
@@ -81,9 +74,9 @@ Route::view('search', 'dashboard') // Route qui mène à la page Paramètres et 
     ->middleware(['auth'])
     ->name('search');
 
-Route::view('add', 'dashboard') // Route qui mène à la page Notifications
+Route::get('add', [AdController::class, 'index']) // Route pour les nouvelles annonces
     ->middleware(['auth', 'verified'])
-    ->name('add');
+    ->name('add'); 
 
 Route::view('messages', 'dashboard') // Route qui mène à la page Notifications
     ->middleware(['auth', 'verified'])
@@ -114,11 +107,10 @@ require __DIR__.'/auth.php';
 
 Route::get('/user',[Controller::class, 'action']);
 
-
 Route::get('/avatars', [AvatarController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('avatars');
 
-Route::get('add', [PostController::class, 'index'])
+Route::get('ads', [PostController::class, 'index'])
     ->middleware(['auth', 'verified'])
-    ->name('add'); 
+    ->name('ads'); 

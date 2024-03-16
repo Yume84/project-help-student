@@ -124,10 +124,9 @@ class MultiStepForm extends Component
             );
 
             $user = User::create($values);
-            // lien avec les aides 
+
             $language = Language::find($this->list_language);
             $user->languages()->attach($this->list_language, ['level' => $this->level,"is_primary"=>true]);
-
 
             info('contenu de variable helps', [$this->helps]);
             foreach($this->helps as $help){

@@ -62,6 +62,11 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    public function ads(): HasMany
+    {
+        return $this->hasMany(Ad::class);
+    }
+
     public function user(): HasMany /*A vérifier*/
     {
         return $this->hasMany(User::class);
