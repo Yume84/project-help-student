@@ -17,6 +17,7 @@ return new class extends Migration
             $table->longText('content');
             $table->unsignedBigInteger('lang_id');
             $table->string('slug'); //URL
+            $table->timestamps();
         });
     }
 
