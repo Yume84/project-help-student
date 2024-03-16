@@ -214,7 +214,7 @@
 
 <!-- Step by step -->
 
-    <div class="flex justify-between pt-2 pb-2">
+    <div class="flex justify-between pt-2 pb-10">
 
     @if ($currentStep ==1)
         <x-register-button type="button">
