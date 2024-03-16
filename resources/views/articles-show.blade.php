@@ -530,6 +530,10 @@
 
         <div class="mb-8">
         <x-help-case>
+
+            <h2 class="inline-block font-bold uppercase text-light-blue text-2xl bg-dark-blue border-dark-blue p-2 mb-8 rounded-lg">Les différents types de visa</h2>
+
+            <div class="mb-8">
             <!-- Visa de longue période -->
             <x-help-dropdown>
 
@@ -549,26 +553,331 @@
                     <div class="m-8">
 
                         <!-- Informations -->
-                        <div class="text-lg text-left">
+                        <div class="text-lg text-left mb-4">
                             <p class="mt-4">Il existe une manière simple de faire sa demande. Il est possible de numériser ses documents et de suivre la prolongation directement sur le site. Voici les étapes pour un visa de longue durée :</p>
                             <li class="mt-4">Tu dois créer ton compte sur <a href="https://france-visas.gouv.fr" target="_blank"><span class="lien">france-visas.gouv.fr</span></a>.</li>
-                            <li class="mt-4">Tu arrives sur une page ou tu peux suivre tes demandes en cours. Si c'est ta première demande, clique sur "Créer une nouvelle demande"</li>
-                            <li class="mt-4">Une page s'affiche avec la durée du processus d'enregistrement et les documents dont tu vas avoir besoin. Appuie sur “Accéder” dès que tu es prêt.</li>
+                            <li>Tu arrives sur une page ou tu peux suivre tes demandes en cours. Si c'est ta première demande, clique sur "Créer une nouvelle demande"</li>
+                            <li>Une page s'affiche avec la durée du processus d'enregistrement et les documents dont tu vas avoir besoin. Appuie sur “Accéder” dès que tu es prêt.</li>
                             <li>Une fois toutes les étapes renseignées. Un récapitulatif me sera décerné.</li>
-                            <div class="liste-blue mb-4">
-                                <p>⛔ Pour y être logé, il faut être inscrit dans un établissement de la région parisienne et préparer au moins un diplôme de niveau Master 1.</p>
-                            </div>
+                            <li>Une fois les étapes validées, une icône apparaît pour télécharger ton formulaire Cerfa ainsi qu'une liste des justificatifs à fournir pour valider la demande de visa.</li>
+                        </div>
 
-                            <li class="mt-4">Tu fais partie du plateau universitaire Paris Saclay ? L'université met à disposition l'ensemble des <a href="https://logement.campus-paris-saclay.fr/" target="_blank"><span class="lien">offres de logement</span></a> des différents bailleurs ayant une ou plusieurs résidences étudiantes sur ou à proximité du Plateau de Saclay.</li>
+                        <!-- Si tu souhaites numériser tes documents en ligne : -->
+                        <div class="text-lg text-left liste-blue mb-4">
+                            <p class="font-bold text-blue mt-4">Si tu souhaites numériser tes documents en ligne :</p>
+                            <p>Tu dois télécharger un par un les documents demandés en respectant le format.</p>
+                            <p>La dernière étape nécessite obligatoirement un rendez-vous au centre de visas.</p>
+                            <p>Tu dois apporter le jour de ton rendez-vous :</p>
+                            <li>Ton titre de voyage en cours de validité ainsi qu'une copie de la page d'identité et des pages comportant tes visas précédents</li>
+                            <li>L'original du formulaire datés et signé et le justificatif de saisie de la demande France-Visas</li>
+                            <li>Les justificatifs originaux et copie au format A4</li>
+                        </div>
+
+                        <!-- Si tu ne souhaites pas passer par la numérisation des documents en ligne -->
+                        <div class="text-lg text-left liste-blue mb-6">
+                            <p class="font-bold text-blue mt-4">Si tu ne souhaites pas passer par la numérisation des documents en ligne :</p>
+                            <li>Tu dois cliquer sur “Poursuivre” sans avoir télécharger les documents. Un message va apparaître te demandant de confirmer tes choix et de poursuivre malgré le fait que tu n'as rien téléchargé.</li>
+                            <li>Prends note que le jour du dépôt de ton dossier, tu devras venir avec les originaux et les photocopies des justificatifs demandés.</li>
                         </div>
 
                     </div>
                 </x-slot>
 
             </x-help-dropdown>
+            </div>
+
+            <!-- Visa pour un long séjour mention étudiant -->
+
+            <div class="mb-8">
+                <!-- Mention étudiant -->
+                <x-help-dropdown>
+    
+                    <x-slot name="trigger"> <!-- Contenu visible -->
+                        <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
+                            <span class="text-dark-blue font-semibold text-xl">Tu souhaites faire une demande de visa pour un long séjour temporaire mention “étudiant”</span>
+    
+                                <div class="ms-1"> <!-- Flèche -->
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                        </button>
+                    </x-slot>
+    
+                    <x-slot name="content"> <!-- Liste déroulante -->
+                        <div class="m-8">
+    
+                            <!-- Permet de -->
+                            <div class="text-lg text-left mb-4">
+                                <p class="mt-4">Il existe ce qu'on appelle le visa VLS-TS qui comprend un apprentissage entre une période de 4 à 12 mois. Il permet de :</p>
+                                <div class="liste-blue mb-4">
+                                    <li class="mt-4">Séjourner en France de 4 mois à 12 mois afin d'y suivre des études supérieures</li>
+                                    <li>Voyager librement dans tous les pays de l'espace Schengen</li>
+                                    <li>Bénéficier de la sécurité sociale après l'inscription dans un établissement d'enseignement supérieur et pendant son séjour afin de se faire rembourser une partie de ses frais de santé</li>
+                                    <li>Aucune démarche n'est à accomplir pendant toute la durée de validité de ton visa car le VLS-TS ne se valide pas en préfecture à ton arrivée</li>
+                                </div>
+                            </div>
+
+                            <!-- Ne permet pas de -->
+                            <div class="text-lg text-left mb-4">
+                                <p class="mt-4">Le visa VLS-TS ne te permet pas de:</p>
+                                <div class="liste-blue mb-4">
+                                    <li class="mt-4">Travailler pendant tes études</li>
+                                    <li>Bénéficier de VISALE, la caution locative étudiante gratuite</li>
+                                    <li>Recevoir une allocation logement de la CAF</li>
+                                    <li>Prolonger ton séjour au-delà de la durée de validité du titre de séjour délivré</li>
+                                </div>
+                                <p class="mt-4">Seul ce visa permet une demande de carte de séjour afin de pouvoir rester en France. Cette demande peut concerner les stagiaires par exemple.</p>
+                            </div>
+
+                            <!-- Si tu ne souhaites pas passer par la numérisation des documents en ligne -->
+                            <div class="text-lg text-left liste-blue mb-6">
+                                <p class="font-bold text-blue mt-4">Si tu ne souhaites pas passer par la numérisation des documents en ligne :</p>
+                                <li>Tu dois cliquer sur “Poursuivre” sans avoir télécharger les documents. Un message va apparaître te demandant de confirmer tes choix et de poursuivre malgré le fait que tu n'as rien téléchargé.</li>
+                                <li>Prends note que le jour du dépôt de ton dossier, tu devras venir avec les originaux et les photocopies des justificatifs demandés.</li>
+                            </div>
+
+                            <!-- Comment faire la demande -->
+                            <div class="text-lg text-left mb-6">
+                                <p class="font-bold text-blue mt-4">Comment faire la demande ?</p>
+                                <p>Clique sur <a href="https://www.service-public.fr/particuliers/vosdroits/R52684" target="_blank"><span class="lien">ce lien</span></a> pour faire la demande d'un visa VLS-TS.</p>
+                            </div>
+
+                        </div>
+                    </x-slot>
+    
+                </x-help-dropdown>
+            </div>
+
+                <!-- Visa courte durée -->
+                <x-help-dropdown>
+                    
+                    <x-slot name="trigger"> <!-- Contenu visible -->
+                        <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
+                            <span class="text-dark-blue font-semibold text-xl">Tu souhaites faire une demande de visa de courte durée : le Visa Schengen</span>
+
+                                <div class="ms-1"> <!-- Flèche -->
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                        </button>
+                    </x-slot>
+
+                    <x-slot name="content"> <!-- Liste déroulante -->
+                        <div class="m-8">
+
+                            <!-- Informations -->
+                            <div class="text-lg text-left mb-4">
+                                <p class="mt-4">Aussi appelé “le visa Schengen”, ce visa permet de rentrer sur le territoire pour une durée maximale de 90 jours (soit 3 mois).</p>
+                                <div class="liste-blue mb-4">
+                                    <p class="mt-4">⚠️ En fonction de ta nationalité ou de ta situation tu peux en être dispensé. Rapporte-toi à <a href="https://www.campusfrance.org/fr/le-visa-schengen-court-sejour" target="_blank"><span class="lien">cette page</span></a> pour connaître les modalités.</li>
+                                </div>
+                            </div>
+
+                            <!-- Permet de -->
+                            <div class="text-lg text-left mb-4">
+                                <p class="mt-4">Le visa Schengen te permet de:</p>
+                                <div class="liste-blue mb-4">
+                                    <li class="mt-4">Suivre une courte formation</li>
+                                    <li>D'ffectuer un stage</li>
+                                    <li>Demander un renouvellement du même visa</li>
+                                </div>
+                            </div>
+
+                            <!-- Ne permet de -->
+                            <div class="text-lg text-left mb-4">
+                                <p class="mt-4">En revanche, ce visa ne te permet pas de:</p>
+                                <div class="liste-blue mb-4">
+                                    <li class="mt-4">Rester dans l'espace Schengen les 90 jours écoulés sans renouvellement</li>
+                                    <li>T'installer en France</li>
+                                </div>
+                            </div>
+
+                            <!-- Comment faire la demande -->
+                            <div class="text-lg text-left mb-6">
+                                <p class="font-bold text-blue mt-4">Comment faire la demande ?</p>
+                                <p>Faire une demande de visa Schengen est possible auprès des consulats ou autorités consulaires des pays de l'espace Schengen.</p>
+                            </div>
+
+                        </div>
+                    </x-slot>
+
+                </x-help-dropdown>
+    
+            <h2 class="inline-block font-bold uppercase text-light-blue text-xl bg-blue border-blue p-1 mb-2 mt-8 rounded-lg">Combien cela coûte ?</h2>
+            
+            <!-- Le coût -->
+            <div class="text-lg text-left mb-6">
+                <p class="mt-4">Le prix du visa varie selon le pays ou a été faite la demande.</p>
+                <p>Des frais supplémentaires peuvent être demandés de la part des prestataires privés.</p>
+                <p><a href="https://france-visas.gouv.fr/en/visa-wizard" target="_blank"><span class="lien">Obtiens plus d'informations</span></a>.</p>
+            </div>
 
         </x-help-case>
         </div>
+
+        <!-- Des doutes -->
+        <x-help-case>
+            <h2 class="inline-block font-bold uppercase text-light-blue text-2xl bg-dark-blue border-dark-blue p-2 mb-2 rounded-lg">Des doutes ?</h2>
+            <div class="text-lg text-left">
+                <p class="mt-4">Si tu n'as pas trouvé le visa qui te correspondrait le mieux, alors reporte-toi à <a href="https://www.campusfrance.org/fr/visas-et-cartes-de-sejour" target="_blank"><span class="lien">cette page</span></a>.</p>
+                <p class="mt-4">Si tu as besoin d'aide dans ta démarche, inscris-toi sur notre application pour discuter avec les autres utilisateurs qui t'aideront volontiers ou rends-toi sur <a href="https://france-visas.gouv.fr/en/place-of-submission" target="_blank"><span class="lien">cette page</span></a>.</p>
+            </div>
+        </x-help-case>
+
+        @endif
+
+        <!-- Renouvellement visa -->
+
+
+        @if($article->slug === 'demande-de-renouvellement-de-visa')
+
+        <!-- Présentation -->
+        <x-help-case>
+            <h2 class="inline-block font-bold uppercase text-light-blue text-2xl bg-dark-blue border-dark-blue p-2 mb-2 rounded-lg">{{ $article->title }} </h2>
+            <div class="text-lg text-left mt-4">Quels documents joindre à sa demande de renouvellement ?<br>
+                Par quelle plateforme passer ou encore sous quelle condition peut-on obtenir une carte de séjour pluriannuelle ?<br>
+                Cette fiche informative est là pour répondre à tes questions.
+            </div>
+        </x-help-case>
+
+        <!-- Documents requis -->
+        <x-help-case>
+
+            <!-- Titre -->
+            <h2 class="inline-block font-bold uppercase text-light-blue text-xl bg-blue border-blue p-1 mb-2 mt-2 rounded-lg">Documents requis</h2>
+
+            <!-- Informations -->
+            <div class="text-lg text-left mt-4 total-dark-blue">
+                <p>Si ta demande est faite à la préfecture, tu dois amener :</p>
+                <li>Un extrait d'acte de naissance avec filiation (ou une copie intégrale d’acte de naissance)</li>
+                <li>Une attestation d'inscription pour l'année à venir</li>
+                <li>Tes relevés de notes de l'année qui vient de passer</li>
+                <li>Un document attestant que tu as les ressources financières nécessaires pour continuer tes études pendant un an en France (soit 615 par mois)</li>
+                <li>Un justificatif de domicile de moins de 3 mois (facture d'électricité ou contrat de bail)</li>
+                <li>Un justificatif d'Assurance Maladie (c'est une attestation de droits délivrée par la Caisse Primaire d'Assurance Maladie que tu peux télécharger depuis ton espace personnel sur <a href="https://ameli.fr" target="_blank"><span class="lien">ameli.fr</span></a>)</li>
+                <li>3 photographies d'identité</li>
+            </div>
+          
+        </x-help-case>
+
+        <!-- Quelques informations -->
+        <x-help-case>
+
+            <h2 class="inline-block font-bold uppercase text-light-blue text-2xl bg-dark-blue border-dark-blue p-2 mb-8 rounded-lg">Les différents types de visa</h2>
+                
+            <!-- Visa étudiant -->
+            <div class="mb-4">
+            <x-help-dropdown>
+
+                <x-slot name="trigger"> <!-- Contenu visible -->
+                    <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
+                        <span class="text-dark-blue font-semibold text-xl">Tu as un visa de type VLS-TS qui arrive à expiration ?</span>
+
+                            <div class="ms-1"> <!-- Flèche -->
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                    </button>
+                </x-slot>
+
+                <x-slot name="content"> <!-- Liste déroulante -->
+                    <div class="m-8">
+
+                        <!-- Informations -->
+                        <div class="text-lg text-left">
+                            <p class="mt-4">Si tu souhaites rester en France pour continuer tes études alors que ton visa VLS-TS à expiré, tu as la possibilité de renouveler ton visa.</p>
+                            <p class="mt-4">En principe, cette demande est faite après 1 an de séjour. Tu seras donc amené à faire une demande de carte de séjour pluriannuelle.</p>
+                            <p class="mt-4">La carte de séjour pluriannuelle étudiant est délivrée pour la durée restant à courir du cycle d'études dans lequel l'étudiant est inscrit. Cette durée pourra donc varier de 1 à 4 ans. La carte de séjour pluriannuelle étudiant-programme de mobilité est d'une durée égale à celle du programme ou de la convention.</p>
+                            <p class="mt-4">Contrairement à une carte de séjour temporaire, qui a une durée de validité limitée, la carte de séjour pluriannuelle autorise le titulaire à rester dans le pays pendant une période prolongée, généralement de plusieurs années. Elle peut être renouvelée périodiquement en fonction de certaines conditions.</p>
+                            <p class="mt-4">Dans ce cas, la première carte de séjour pluriannuelle qui te sera délivrée sous certaines conditions aura une durée de validité correspondant au nombre d'années restant dans le cycle d'études dans lequel tu es inscrit.</p>
+ 
+                            <h3 class="text-blue text-left font-extrabold text-xl mt-8 mb-4">Combien cela coûte ?</h3>
+                            <p>Tu dois payer 225 € (taxe de 200 € + droit de timbre de 25 €) par timbres fiscaux.</p>
+                            <p>Tu dois payer 225 € (taxe de 200 € + droit de timbre de 25 €) par timbres fiscaux.</p>
+
+                            <h3 class="text-blue text-left font-extrabold text-xl mt-8 mb-4">Comment faire ta demande ?</h3>
+                            <p>Tu dois déposer ta demande à la préfecture ou la sous-préfecture de ton domicile, dans les 2 mois précédant la date d'expiration de ta carte de séjour.</p>
+                            <p>Tu peux <a href="https://administration-etrangers-en-france.interieur.gouv.fr/particuliers/#/" target="_blank"><span class="lien">faire ta demande de renouvellement en ligne</span></a>.</p>
+                            <p>Tu peux te renseigner sur le site internet de ta préfecture ou <a href="https://www.service-public.fr/particuliers/vosdroits/F35799" target="_blank"><span class="lien">ici</span></a>.</p>
+                        </div>
+
+                    </div>
+                </x-slot>
+
+            </x-help-dropdown>
+            </div>
+
+            <div class="mb-4">
+            <!-- Visa Schengen -->
+            <x-help-dropdown>
+
+                <x-slot name="trigger"> <!-- Contenu visible -->
+                    <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
+                        <span class="text-dark-blue font-semibold text-xl">Tu as un visa de courte durée : le Visa Schengen ?</span>
+
+                            <div class="ms-1"> <!-- Flèche -->
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                    </button>
+                </x-slot>
+
+                <x-slot name="content"> <!-- Liste déroulante -->
+                    <div class="m-8">
+
+                        <!-- Informations -->
+                        <div class="text-lg text-left">
+                            <p>Il n'est pas possible de faire un renouvellement sauf cas exceptionnel comme le cas de catastrophe naturelle…</p>
+                        </div>
+
+                    </div>
+                </x-slot>
+
+            </x-help-dropdown>
+            </div>
+
+            <!-- Autres visa -->
+            <div class="mb-4">
+            <x-help-dropdown>
+
+                <x-slot name="trigger"> <!-- Contenu visible -->
+                    <button class="flex w-full items-center justify-between p-4 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 focus:outline-none transition ease-in-out duration-200">
+                        <span class="text-dark-blue font-semibold text-xl">Tu veux renouveller un titre de séjour “scientifique”, “stagiaire” ou visa C “concours” ?</span>
+
+                            <div class="ms-1"> <!-- Flèche -->
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </div>
+                    </button>
+                </x-slot>
+
+                <x-slot name="content"> <!-- Liste déroulante -->
+                    <div class="m-8">
+
+                        <!-- Informations -->
+                        <div class="text-lg text-left">
+                            <p>Tu dois prendre rendez-vous en préfecture pour déposer ta demande.</p>
+                        </div>
+
+                    </div>
+                </x-slot>
+
+            </x-help-dropdown>
+            </div>
+            
+            <!-- Temps -->
+            <h2 class="inline-block font-bold uppercase text-light-blue text-xl bg-blue border-blue p-1 mb-2 mt-4 rounded-lg">Quand faire ta demande ?</h2>
+
+            <div class="text-lg text-left">           
+                <p class="mt-4">Il faut faire la demande 3 mois avant l'expiration de ton titre de séjour.</p>
+            </div>
+
+        </x-help-case>
 
         @endif
 
@@ -577,7 +886,6 @@
 
     <!--<p>
         Contenu : {{ $article->content }}
-    </p>
 
     <p>
         Langue : {{ $article->lang_id }}
