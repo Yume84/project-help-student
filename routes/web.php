@@ -7,7 +7,6 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AvatarController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\AdController;
-use App\Http\Controllers\FormulaireController;
 
 
 /*
@@ -89,17 +88,6 @@ Route::view('account', 'account') // Route qui mène à la page Notifications
     ->name('account');
 
 Route::get('/articles/{article:slug}', [ArticleController::class, 'show'])->name('articles.show');
-
-
-//Route pour liste campus
-//Route::get('/register', [CollegeController::class, 'showForm'])->name('register');
-
-//Route pour la liste langues dans le formulaire
-Route::get('/afficher-langue', [LanguageController::class, 'showForm'])->name('afficher-langue');
-
-//Route pour le test bouton formulaire
-Route::get('/tester-formulaire', [FormulaireController::class, 'afficherFormulaire'])->name('tester-formulaire');
-
 
 // Autres
 
