@@ -227,6 +227,14 @@
                                         @if($article->id === 1)
                                             <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
                                         @endif
+
+                                        @if($article->id === 1)
+                                            <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
+                                        @endif
+
+                                        @if($article->id === 1)
+                                            <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
+                                        @endif
                                     </div>
                     
                                     <h2 class="mt-6 text-xl font-semibold text-blue">{{ __($article->title) }}</h2><!--Remprendre BDD-->
