@@ -223,14 +223,16 @@
                             <a href="{{ route('articles.show', $article?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline">
                                 <div>
                                     <div class="h-30 w-full bg-white flex items-center justify-center">
-                                        {{-- Todo : Image à dynamiser, sans doute issue du Tag ou de l'article ? --}} 
-                                        <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
+                                        {{-- Todo : Image à dynamiser, sans doute issue du Tag ou de l'article ? --}}
+                                        @if($article->id === 1)
+                                            <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
+                                        @endif
                                     </div>
                     
                                     <h2 class="mt-6 text-xl font-semibold text-blue">{{ __($article->title) }}</h2><!--Remprendre BDD-->
                     
                                     <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                                        {{__("L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !")}}
+                                        {{ __($article->content) }}
                                     </p>
                                 </div>
                             </a>

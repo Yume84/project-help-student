@@ -9,6 +9,8 @@ use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\Rules;
+
 
 class MultiStepForm extends Component
 {
@@ -106,7 +108,7 @@ class MultiStepForm extends Component
                 'name'=>'required',
                 'pseudo'=>'required',
                 'email'=>'required|email|unique:users',
-                'password'=>'required|min:8',
+                'password'=> ['required', 'string', 'confirmed', Rules\Password::defaults()],
                 'password_confirmation'=>'required',
                 'rgpd'=>'required'
             ]);
