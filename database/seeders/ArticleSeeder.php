@@ -43,7 +43,7 @@ class ArticleSeeder extends Seeder
                                     ],
                                     [
                                         "title"     => "Ameli",
-                                        "content"   => $content_placeholder,
+                                        "content"   => 'Plonge dans le processus simplifié pour obtenir une couverture santé en France grâce à la Caisse Primaire d’Assurance Maladie (CPAM). Notre guide t’accompagne à chaque étape, de l’inscription en ligne à l’obtention de ton numéro de sécurité sociale, garantissant ainsi ton accès aux soins de santé essentiels dès ton arrivée.',
                                         "tags"      => [1]
                                     ],
                                     [
@@ -58,22 +58,22 @@ class ArticleSeeder extends Seeder
                                     ],
                                     [
                                         "title"     => "Demande de logement",
-                                        "content"   => $content_placeholder,
+                                        "content"   => 'Une demande de logement peut parfois être laborieuse. Nous t’expliquons les étapes à suivre pour faire ta demande : formulaires à remplir, documents à fournir, ce qu’est un garant et surtout où rechercher lorsqu’on est étudiant.',
                                         "tags"      => [4]
                                     ],
                                     [
                                         "title"     => "Assurance habitation",
-                                        "content"   => $content_placeholder,
+                                        "content"   => 'Partir étudier dans un autre pays soulève la question cruciale de l’assurance habitation pour les étudiants étrangers. Cette forme d’assurance revêt une importance capitale pour ces étudiants qui, vivant loin de leur pays d’origine, cherchent à protéger leur logement. Cette fiche explique le fonctionnement de l’assurance habitation pour les étudiants étrangers, les nombreux avantages qu’elle offre, et la raison pour laquelle il est primordial de s’y souscrire.',
                                         "tags"      => [4]
                                     ],
                                     [
                                         "title"     => "Ouvrir un compte bancaire",
-                                        "content"   => $content_placeholder,
+                                        "content"   => 'L’ouverture d’un compte bancaire en France est essentielle pour faciliter la gestion financière au quotidien. Ce guide détaille les étapes nécessaires pour ouvrir un compte bancaire en France, les documents requis et les avantages associés à la détention d’un compte bancaire français.',
                                         "tags"      => [5]
                                     ],
                                     [
                                         "title"     => "Demande de visa avant son arrivée",
-                                        "content"   => $content_placeholder,
+                                        "content"   => 'Guide étape par étape pour une demande de visa étudiant : de la préparation des documents à la remise des documents, pour faciliter votre parcours d’étudiant international.',
                                         "tags"      => [6]
                                     ],
                                     [
@@ -83,7 +83,7 @@ class ArticleSeeder extends Seeder
                                     ],
                                     [
                                         "title"     => "Acte de naissance",
-                                        "content"   => $content_placeholder,
+                                        "content"   => 'Ce document juridique qui atteste ta naissance peut-être demandé lors d’une demande de visa, de l’obtention d’une pièce d’identité, de l’obtention d’un permis de conduire, etc.',
                                         "tags"      => [6]
                                     ],
                                 ];
