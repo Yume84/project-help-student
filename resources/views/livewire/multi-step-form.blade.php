@@ -96,10 +96,10 @@
 
             <x-select name="list_level" id="list_level" wire:model="level">
                 <option value="" selected>Sélectionne ton niveau</option>
-                <option value="a1">A1 : Je débute</option>
-                <option value="a2">A2 : Je comprends quelques mots</option>
-                <option value="b1_b2">B1-B2 : Je peux communiquer</option>
-                <option value="c1_c2">C1-C2 : Je suis à l'aise</option>
+                <option value="A1">A1 : Je débute</option>
+                <option value="A2">A2 : Je comprends quelques mots</option>
+                <option value="B1-B2">B1-B2 : Je peux communiquer</option>
+                <option value="C1-C2">C1-C2 : Je suis à l'aise</option>
             </x-select>
             
             <x-input-error :messages="$errors->get('level')" class="text-blue" />
@@ -122,18 +122,10 @@
 
     <h3 class="text-3xl text-blue uppercase font-extrabold text-center">Où étudies-tu ?</h3>
 
-    {{-- <select wire:model="college" name="list_college" id="list_college">
-        <option value="" selected>Sélectionne ton campus</option>
-        <option value="1">Université Gustave Eiffel</option>
-        <option value="2">Sorbonne Université</option>
-        <option value="3">Paris 8</option>
-        <option value="4">UPEC</option>
-    </select> --}}
-
     <div class="grid grid-cols-1 sm:gap-2 md:gap-8 pb-10">
         <x-select name="list_college" id="list_college" wire:model="college">
             <option value="default">Sélectionne un campus</option>
-            @foreach($colleges as $college)
+            @foreach($colleges->sortBy('name') as $college)
                 <option value="{{ $college->id }}">{{ $college->name }}</option>
             @endforeach
         </x-select>

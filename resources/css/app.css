@@ -170,6 +170,11 @@
     height: 100px; 
 }
 
+/*Texte sm */
+.date {
+    font-size: 0.875rem;
+}
+
 /*Remplissage de la barre de chargement*/
 
 .remplissage-1 {

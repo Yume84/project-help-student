@@ -49,5 +49,11 @@
     "Both" : "Les deux",
     "I don't know" : "Je ne sais pas",
     "Back" : "Retour",
-    "Next" : "Suivant"
+    "Next" : "Suivant",
+
+    "Go to profile" : "Aller sur le profil",
+    "Send message" : "Envoyer un message",
+    "Level" : "Niveau",
+    "Delete" : "Supprimer",
+    "Do you really want to delete this ad ?" : "Veux-tu vraiment supprimer cette annonce ?"
 }
