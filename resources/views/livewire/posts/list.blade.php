@@ -92,7 +92,14 @@ new class extends Component {
                 @if ($post->is($editing)) 
                     <livewire:posts.edit :post="$post" :key="$post->id" />
                 @else
-                    <p class="mt-4 text-lg text-gray-900">{{ $post->message }}</p>
+                    <p class="mt-4 text-lg text-gray-900">Nouvel utilisateur : {{ $post->pseudo}}
+                        <ul>
+                            <li>aides : {{ $post->message }}</li>
+                            <li>langue : {{ $post->language_name}}</li>
+                            <li>niveau : {{ $post->level}}</li>
+                            <li>université : {{ $post->college_name}}</li>
+                        </ul>
+                    </p>
                 @endif 
             </div>
         </div>

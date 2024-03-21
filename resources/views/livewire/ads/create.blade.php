@@ -47,20 +47,14 @@ new class extends Component
         <div class="grid grid-cols-1 md:grid-cols-4 sm:gap-2 md:gap-8 pt-10 pb-10">
     
             @foreach (\App\Models\Article::all() as $article)
-                <x-checkbox-input required wire:model="helps" id="{{$article->title}}" class="block mt-1 w-full" type="checkbox" name="helps" :value="$article->id">
+                <x-checkbox-input required wire:model="message" id="{{$article->title}}" class="block mt-1 w-full" type="checkbox" name="message" :value="$article->id">
                     {{ __($article->title) }}
                 </x-checkbox-input>
             @endforeach 
     
-            <x-input-error :messages="$errors->get('helps')" class="text-blue" />
+            <x-input-error :messages="$errors->get('message')" class="text-blue" />
     
         </div>
-
-        <textarea
-            wire:model="message"
-            placeholder="{{ __('Partage ton annonce ici !') }}"
-            class="block w-full border-dark-blue hover:border-blue rounded-md shadow-sm"
-        ></textarea>
  
         <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <x-register-button type="submit">

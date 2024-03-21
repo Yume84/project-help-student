@@ -88,7 +88,14 @@ new class extends Component
                 @if ($ad->is($editing)) 
                     <livewire:ads.edit :ad="$ad" :key="$ad->id" />
                  @else
-                    <p class="mt-4 text-lg text-gray-900">{{ $ad->message }}</p>
+                    <p class="mt-4 text-lg text-gray-900">
+                    <ul>
+                            <li>aides : {{ $ad->message }}</li>
+                            <li>langue : {{ $ad->language_name}}</li>
+                            <li>niveau : {{ $ad->level}}</li>
+                            <li>université : {{ $ad->college_name}}</li>
+                        </ul>
+                    </p>
                 @endif 
             </div>
         </div>

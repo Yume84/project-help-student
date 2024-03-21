@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Article;
 use App\Models\College;
 use App\Models\Language;
+use App\Models\Post;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use App\Models\User;
@@ -133,12 +134,36 @@ class MultiStepForm extends Component
                 $user->articles()->attach($help);
             }
 
+            $userId = $user->id;
+            $collegeName = College::find($user->college_id)->name;
+            $selectedArticles = $this->helps;
+            $articleNames = Article::whereIn('articles.id', $selectedArticles)->pluck('title')->toArray();
+            $languageWithLevel = Language::where('id', $this->list_language)->first();
+            $languageName = $languageWithLevel->label;
+            $level = $this->level;
+
+            $message = "";
+            if (!empty($articleNames)) {
+                $message .= implode(', ', $articleNames);
+            }
+
+            $post = new Post();
+            $post->user_id = $userId;
+            $post->message = $message;
+            $post->pseudo = $user->pseudo;
+            $post->college_name = $collegeName;
+            $post->language_name = $languageName;
+            $post->level = $level;
+
+            $post->save();
+    
             //$article = Article::find($this->helps);
             //$user->articles()->attach($this->helps, ['level' => $this->level,"is_primary"=>true]);
             //$this->reset();
             //$this->currentStep = 1;
             $data = ['pseudo'=>$this->pseudo, 'email'=>$this->email];
             return redirect()->route('registration.success', $data);
+
 
     }
 }

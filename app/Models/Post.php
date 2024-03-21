@@ -12,6 +12,12 @@ class Post extends Model
 
     protected $fillable = [
         'message',
+        'user_id',
+        'pseudo',
+        'college_name',
+        'helps',
+        'level',
+        'language_name'
     ];
     
     public function user(): BelongsTo

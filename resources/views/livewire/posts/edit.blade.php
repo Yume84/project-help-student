@@ -10,10 +10,18 @@ new class extends Component {
  
     #[Validate('required|string|max:255')]
     public string $message = '';
+
+    #[Validate('required|string|max:255')]
+    public string $language_name = '';
+
+    #[Validate('required|string|max:255')]
+    public string $college_name = '';
  
     public function mount(): void
     {
         $this->message = $this->post->message;
+        $this->language_name = $this->post->language_name;
+        $this->college_name = $this->post->college_name;
     }
  
     public function update(): void
