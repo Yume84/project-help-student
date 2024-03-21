@@ -223,14 +223,51 @@
                             <a href="{{ route('articles.show', $article?->slug) }}" class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20 bg-white flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline">
                                 <div>
                                     <div class="h-30 w-full bg-white flex items-center justify-center">
-                                        {{-- Todo : Image à dynamiser, sans doute issue du Tag ou de l'article ? --}} 
-                                        <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="Logo_Studdle" class="h-30 w-full object-cover"/>
+                                        
+                                        {{-- Done : Image à dynamiser, sans doute issue du Tag ou de l'article --}}
+
+                                        @if($article->id === 1 || $article->id === 11 || $article->id === 21 || $article->id === 31 || $article->id === 41 || $article->id === 51)
+                                            <img src="{{ asset('images/aide/carte-vitale.png') }}" alt="carte-vitale" class="h-30 w-full object-cover"/>
+                                        @endif
+
+                                        @if($article->id === 2 || $article->id === 12 || $article->id === 22 || $article->id === 32 || $article->id === 42 || $article->id === 52)
+                                            <img src="{{ asset('images/aide/ameli.png') }}" alt="ameli" class="h-30 w-full object-cover"/>
+                                        @endif
+
+                                        @if($article->id === 3 || $article->id === 13 || $article->id === 23 || $article->id === 33 || $article->id === 43 || $article->id === 53)
+                                            <img src="{{ asset('images/aide/caf.png') }}" alt="caf" class="h-30 w-full object-cover"/>
+                                        @endif
+
+                                        @if($article->id === 4 || $article->id === 14 || $article->id === 24 || $article->id === 34 || $article->id === 44 || $article->id === 54) 
+                                            <img src="{{ asset('images/aide/inscription-universitaire.jpeg') }}" alt="inscription-universitaire" class="h-30 w-full object-cover"/>
+                                        @endif
+
+                                        @if($article->id === 5 || $article->id === 15 || $article->id === 25 || $article->id === 35 || $article->id === 45 || $article->id === 55)
+                                            <img src="{{ asset('images/aide/demande-de-logement.png') }}" alt="demande-de-logement" class="h-30 w-full object-cover"/>
+                                        @endif
+
+                                        @if($article->id === 6 || $article->id === 16 || $article->id === 26 || $article->id === 36 || $article->id === 46 || $article->id === 56)
+                                            <img src="{{ asset('images/aide/assurance-habitation.jpeg') }}" alt="assurance-habitation" class="h-30 w-full object-cover"/>
+                                        @endif
+
+                                        @if($article->id === 7 || $article->id === 17 || $article->id === 27 || $article->id === 37 || $article->id === 47 || $article->id === 57)
+                                            <img src="{{ asset('images/aide/ouvrir-un-compte-bancaire.jpg') }}" alt="ouvrir-un-compte-bancaire" class="h-30 w-full object-cover"/>
+                                        @endif
+
+                                        @if($article->id === 8 || $article->id === 9 || $article->id === 18 || $article->id === 19 || $article->id === 28 || $article->id === 29 || $article->id === 38 || $article->id === 39 || $article->id === 48 || $article->id === 49 || $article->id === 58 || $article->id === 59)
+                                            <img src="{{ asset('images/aide/visa.jpeg') }}" alt="visa" class="h-30 w-full object-cover"/>
+                                        @endif
+
+                                        @if($article->id === 10 || $article->id === 20 || $article->id === 30 || $article->id === 40 || $article->id === 50 || $article->id === 60)
+                                            <img src="{{ asset('images/aide/acte-de-naissance.png') }}" alt="acte-de-naissance" class="h-30 w-full object-cover"/>
+                                        @endif
+
                                     </div>
                     
                                     <h2 class="mt-6 text-xl font-semibold text-blue">{{ __($article->title) }}</h2><!--Remprendre BDD-->
                     
                                     <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                                        {{__("L'application se base sur le bon vouloir de chacun. Des volontaires répondront à ton annonce dans les meilleurs délais grâce à un système de messagerie privée !")}}
+                                        {{ __($article->content) }}
                                     </p>
                                 </div>
                             </a>

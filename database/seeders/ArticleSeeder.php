@@ -38,7 +38,7 @@ class ArticleSeeder extends Seeder
         $articles           =   [
                                     [
                                         "title"     => "Carte vitale",
-                                        "content"   => $content_placeholder,
+                                        "content"   => 'La carte Vitale contient tous les renseignements nécessaires au remboursement de tes frais de santé. Cette fiche contient les instructions détaillées pour l’obtenir : du formulaire de demande aux documents nécessaires, du suivi de l’avancement jusqu’à la réception.',
                                         "tags"      => [1]
                                     ],
                                     [
@@ -48,12 +48,12 @@ class ArticleSeeder extends Seeder
                                     ],
                                     [
                                         "title"     => "CAF",
-                                        "content"   => $content_placeholder,
+                                        "content"   => 'La Caisse d’Allocations Familiales (CAF) offre des aides selon des critères sociaux. Cette fiche te permet de comprendre comment bénéficier d’aides financières telles que l’Aide Personnalisée au Logement (APL), pour alléger ton budget étudiant. Des conseils pratiques et des démarches simplifiées pour t’aider à profiter pleinement de ton expérience en France.',
                                         "tags"      => [2]
                                     ],
                                     [
                                         "title"     => "Inscription universitaire",
-                                        "content"   => $content_placeholder,
+                                        "content"   => 'Tu es étranger et souhaites t’inscrire dans l’enseignement supérieur en France ? La procédure d’inscription varie selon ta nationalité, ton niveau d’étude ou le type d’établissement d’enseignement supérieur dans lequel tu souhaites t’inscrire. Cette fiche résume les marches à suivre selon les différentes situations.',
                                         "tags"      => [3]
                                     ],
                                     [
@@ -78,7 +78,7 @@ class ArticleSeeder extends Seeder
                                     ],
                                     [
                                         "title"     => "Demande de renouvellement de visa",
-                                        "content"   => $content_placeholder,
+                                        "content"   => 'Quels documents joindre à sa demande de renouvellement ? Par quelle plateforme passer ou encore sous quelles conditions peut-on obtenir une carte de séjour pluriannuelle ? Cette fiche informative est là pour répondre à tes questions.',
                                         "tags"      => [6]
                                     ],
                                     [
