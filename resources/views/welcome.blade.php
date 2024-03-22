@@ -24,7 +24,7 @@
             <h2 class="inline-block font-bold uppercase text-light-blue text-2xl bg-dark-blue border-dark-blue p-2 mb-4 rounded-lg">Studdle, c'est quoi ?</h2>
             <p class="text-lg text-left mt-4 mb-8">L'administration française peut sembler complexe : les aides sont réparties sur plusieurs plateformes et même les Français ne connaissent pas toujours toutes les aides dont ils peuvent disposer. </p>
             <p class="text-lg text-left mt-4 mb-8">Un étudiant étranger qui arrive en France doit, non seulement s'habituer à un nouvel environnement, mais il doit aussi gérer toutes les démarches administratives, tout en surmontant la barrière de la langue et de la compréhension.</p>
-            <p class="text-lg text-left mt-4 mb-4">Studdle est donc LA solution qui aide et accompagne les jeunes universitaires étrangers venus étudier en Ile-de-France dans leurs démarches administratives.</p>
+            <p class="text-lg text-left mt-4 mb-4">Studdle est donc LA solution qui aide et accompagne les jeunes universitaires étrangers venus étudier dans une université francophone dans leurs démarches administratives.</p>
         </div>
         
         <!-- Avantages -->
@@ -101,7 +101,7 @@
             <div class="p-6 bg-light-blue rounded-lg shadow-2xl shadow-gray-500/20">
                 <h2 class="text-xl font-semibold text-blue">Jeunes étudiants étrangers</h2>
                 <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                    Tu t'es lancé dans l'aventure en faisant tes études en France et tu fais partie de l'une des universités d'Ile-de-France ?
+                    Tu t'es lancé dans l'aventure en faisant tes études en France et tu fais partie d'une université francophone ?
                 </p>
             </div>
 
@@ -148,7 +148,7 @@
                     <h2 class="mt-6 text-xl font-semibold text-blue">Etape 1 : Création du compte</h2>
 
                     <p class="mt-4 text-dark-blue text-sm leading-relaxed">
-                        Tout le monde peut se créer un compte : les étudiants qui font parti d'un des campus universitaires situés en Ile-de-France et toutes les personnes souhaitant les aider dans leur processus administratif.
+                        Tout le monde peut se créer un compte : les étudiants qui font parti d'un campus universitaire francophone et toutes les personnes souhaitant les aider dans leur processus administratif.
                     </p>
                 </div>
             </div>

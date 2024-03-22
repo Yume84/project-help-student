@@ -4,13 +4,13 @@
 
     <div class="mx-auto flex flex-col items-center justify-center" >
 
-        <h3 class="text-4xl text-blue font-extrabold uppercase mb-10">Bienvenue</h3>
+        <h3 class="text-4xl text-blue font-extrabold uppercase mb-10">{{ __('Welcome') }}</h3>
 
         <a href="{{ route('welcome') }}">
             <img src="images/logo/mascotte.png" alt="Logo_Studdle" class="inline-block step-1"/>
         </a> 
 
-        <h3 class="text-2xl text-light-blue font-extrabold uppercase mt-10 mb-20">Démarrons ton inscription !</h3>
+        <h3 class="text-2xl text-light-blue font-extrabold uppercase mt-10 mb-20">{{ __('Let’s start your registration !') }}</h3>
 
     </div>
 

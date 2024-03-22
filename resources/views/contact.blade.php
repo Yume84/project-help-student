@@ -1,10 +1,10 @@
 <x-home-layout>
 
-    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 min-h-screen" >
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8" >
         
         <!-- Titre -->
         <div class="text-center mb-14">
-            <h2 class="inline-block font-bold uppercase text-light-blue text-2xl bg-dark-blue border-dark-blue p-2 mb-4 rounded-lg">Accessibilité</h2>
+            <h2 class="inline-block font-bold uppercase text-light-blue text-2xl bg-dark-blue border-dark-blue p-2 mb-4 rounded-lg">Contact et support</h2>
             <p class="text-lg text-left mt-4 mb-4">Studdle est non conforme avec le référentiel général d'amélioration de l'accessibilité (RGAA), car le site n'a pas encore été audité.</p>
 
             <div class="text-lg text-left">
