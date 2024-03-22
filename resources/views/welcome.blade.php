@@ -9,7 +9,7 @@
     
         <!-- Informations -->
         <div class="flex flex-col items-center sm:items-start mt-6 gap-2 sm:ml-14">
-            <h1 class="font-extrabold text-light-blue text-center text-2xl uppercase sm:text-left mb-8">L'application qui aide les étudiants étrangers dans leurs démarches administratives !</h1>
+            <h1 class="font-extrabold text-light-blue text-center text-2xl uppercase sm:text-left mb-8">{{ __('The app that helps foreign students with their administrative formalities !') }}</h1>
                 @if (Route::has('login'))
                     <livewire:welcome.studdle />
                 @endif
@@ -21,7 +21,7 @@
 
         <!-- Présentation -->
         <div class="text-center mb-14">
-            <h2 class="inline-block font-bold uppercase text-light-blue text-2xl bg-dark-blue border-dark-blue p-2 mb-4 rounded-lg">Studdle, c'est quoi ?</h2>
+            <h2 class="inline-block font-bold uppercase text-light-blue text-2xl bg-dark-blue border-dark-blue p-2 mb-4 rounded-lg">{{ __('What’s Studdle ?') }}</h2>
             <p class="text-lg text-left mt-4 mb-8">L'administration française peut sembler complexe : les aides sont réparties sur plusieurs plateformes et même les Français ne connaissent pas toujours toutes les aides dont ils peuvent disposer. </p>
             <p class="text-lg text-left mt-4 mb-8">Un étudiant étranger qui arrive en France doit, non seulement s'habituer à un nouvel environnement, mais il doit aussi gérer toutes les démarches administratives, tout en surmontant la barrière de la langue et de la compréhension.</p>
             <p class="text-lg text-left mt-4 mb-4">Studdle est donc LA solution qui aide et accompagne les jeunes universitaires étrangers venus étudier dans une université francophone dans leurs démarches administratives.</p>
@@ -29,7 +29,7 @@
         
         <!-- Avantages -->
         <div class="text-center mb-4">
-            <h2 class="inline-block text-center font-bold uppercase text-light-blue text-xl bg-blue border-blue p-1 mb-4 mt-2 rounded-lg">Les avantages</h2>
+            <h2 class="inline-block text-center font-bold uppercase text-light-blue text-xl bg-blue border-blue p-1 mb-4 mt-2 rounded-lg">{{ __('The benefits') }}</h2>
         </div>
 
         <!-- 3 avantages -->
@@ -91,7 +91,7 @@
 
         <!-- Cible -->
         <div class="text-center mb-4">
-            <h2 class="inline-block text-center font-bold uppercase text-light-blue text-xl bg-blue border-blue p-1 mb-4 mt-2 rounded-lg">Qui sont les destinataires ?</h2>
+            <h2 class="inline-block text-center font-bold uppercase text-light-blue text-xl bg-blue border-blue p-1 mb-4 mt-2 rounded-lg">{{ __('Who is it for ?') }}</h2>
         </div>
 
         <!-- 2 cibles -->
@@ -117,17 +117,17 @@
 
         <!-- Fonctionnement -->
         <div class="text-center mb-8">
-            <h2 class="inline-block font-bold uppercase text-light-blue text-2xl bg-dark-blue border-dark-blue p-2 mb-4 rounded-lg">Comment ça fonctionne ?</h2>
+            <h2 class="inline-block font-bold uppercase text-light-blue text-2xl bg-dark-blue border-dark-blue p-2 mb-4 rounded-lg">{{ __('How does it work ?') }}</h2>
 
             <!-- Sans assistance -->
             <div>
-                <h2 class="inline-block font-bold uppercase text-light-blue text-xl bg-blue border-blue p-1 mb-4 mt-2 rounded-lg">Sans assistance</h2>
+                <h2 class="inline-block font-bold uppercase text-light-blue text-xl bg-blue border-blue p-1 mb-4 mt-2 rounded-lg">{{ __('Without assistance') }}</h2>
                 <p class="text-lg text-left mt-4 mb-8">Un récapitulatif des aides administratives principales sous forme de fiches individuelles est accessible sans inscription.<br> Ce récapitulatif permet de centraliser les informations d'habitude présentes sur plusieurs sites afin de permettre une navigation simplifiée en toute autonomie.</p>
             </div>
 
             <!-- Avec assistance -->
             <div>
-                <h2 class="inline-block font-bold uppercase text-light-blue text-xl bg-blue border-blue p-1 mb-4 rounded-lg">Avec assistance</h2>
+                <h2 class="inline-block font-bold uppercase text-light-blue text-xl bg-blue border-blue p-1 mb-4 rounded-lg">{{ __('With assistance') }}</h2>
                 <p class="text-lg text-left mt-4 mb-8">L'espace communautaire pour demander ou proposer de l'aide est disponible à condition de créer ton espace personnel.</p>
             </div>
 
@@ -193,7 +193,7 @@
 
         <!-- Récapitulatif des aides -->
         <div class="text-center mb-8">
-            <h2 class="inline-block font-bold uppercase text-light-blue text-2xl bg-dark-blue border-dark-blue p-2 mb-4 rounded-lg">Récapitulatif des aides</h2>
+            <h2 class="inline-block font-bold uppercase text-light-blue text-2xl bg-dark-blue border-dark-blue p-2 mb-4 rounded-lg">{{ __('Summary of administrative assistance') }}</h2>
             <p class="text-lg text-left mt-4 mb-8">Retrouve ici les aides administratives principales en fonction de leur thématique.</p>
         </div>
 

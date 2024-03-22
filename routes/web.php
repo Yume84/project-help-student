@@ -42,9 +42,9 @@ Route::get('/accessibilite', function(){
     return view('accessibilite');})
     ->name('accessibilite');
 
-Route::get('/contact', function(){
-    return view('contact');})
-    ->name('contact');
+Route::get('/contact-support', function(){
+    return view('contact-support');})
+    ->name('contact-support');
 
 Route::view('/register', 'register')->name('register');
 Route::view('/registration-success', 'registration-success')->name('registration.success');

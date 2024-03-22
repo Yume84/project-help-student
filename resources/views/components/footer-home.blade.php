@@ -2,25 +2,25 @@
 
     <x-footer-link-home href="{{ route('a-propos') }}" :active="request()->routeIs('a-propos')" class="mx-auto w-full sm:px-6 lg:px-8 flex justify-center">
         <div class="text-light-blue">
-            À propos
+            {{ __('About us') }}
         </div>
     </x-footer-link-home>
     
     <x-footer-link-home href="{{ route('mentions-legales') }}" :active="request()->routeIs('mentions-legales')" class="mx-auto w-full sm:px-6 lg:px-8 flex justify-center">
         <div class="text-light-blue">
-            Mentions légales
+            {{ __('Terms & Conditions') }}
         </div>
     </x-footer-link-home>
 
     <x-footer-link-home href="{{ route('accessibilite') }}" :active="request()->routeIs('accessibilite')" class="mx-auto w-full sm:px-6 lg:px-8 flex justify-center">
         <div class="text-light-blue">
-            Accessibilité
+            {{ __('Accessibility') }}
         </div>
     </x-footer-link-home>
 
-    <x-footer-link-home href="{{ route('contact') }}" :active="request()->routeIs('contact')" class="mx-auto w-full sm:px-6 lg:px-8 flex justify-center">
+    <x-footer-link-home href="{{ route('contact-support') }}" :active="request()->routeIs('contact-support')" class="mx-auto w-full sm:px-6 lg:px-8 flex justify-center">
         <div class="text-light-blue">
-            Contact et support
+            {{ __('Contact & Support') }}
         </div>
     </x-footer-link-home>
 
