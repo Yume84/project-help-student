@@ -68,7 +68,7 @@ Route::view('search', 'dashboard') // Route qui mène à la page Paramètres et 
     ->middleware(['auth'])
     ->name('search');
 
-Route::get('add', [AdController::class, 'index']) // Route pour les nouvelles annonces
+Route::get('add', [PostController::class, 'index']) // Route pour les nouvelles annonces
     ->middleware(['auth', 'verified'])
     ->name('add'); 
 

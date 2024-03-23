@@ -122,7 +122,7 @@ class MultiStepForm extends Component
                 // Validation des données
                 $validatedData = $this->validate([
                 'name'=> ['required', 'string', 'max:50'],
-                'pseudo'=> ['required', 'string', 'lowercase', 'max:50', 'unique:'.User::class],
+                'pseudo'=> ['required', 'string', 'max:50', 'unique:'.User::class],
                 'email'=> ['required', 'string', 'lowercase', 'email', 'max:100', 'unique:'.User::class],
                 'password'=> ['required', 'min:8', 'confirmed', Rules\Password::defaults()],
             ]);

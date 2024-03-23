@@ -106,9 +106,9 @@ new class extends Component {
                             </div>
 
                             <!-- Aides -->
-                            <div class="flex flex-row">
+                            <div class="flex flex-wrap">
                                 @foreach(explode(',', $post->message) as $info)
-                                    <p class="bg-blue py-1 px-3 rounded-lg mr-2">{{ $info }}</p>
+                                    <p class="bg-blue py-1 px-3 rounded-lg mr-2 mb-2">{{ $info }}</p>
                                 @endforeach
                             </div>
                             

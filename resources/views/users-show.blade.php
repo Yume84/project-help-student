@@ -28,7 +28,7 @@
     </div>
     
     <div class="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
-        <livewire:posts.list :pseudo="$user->pseudo" /> <!-- Passer le pseudo ici -->
+        <livewire:posts.list :pseudo="$user->pseudo" />
     </div>
     
 </x-admin-layout>
