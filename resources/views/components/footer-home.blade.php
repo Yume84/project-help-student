@@ -18,7 +18,7 @@
         </div>
     </x-footer-link-home>
 
-    <x-footer-link-home href="{{ route('contact-support') }}" :active="request()->routeIs('contact-support')" class="mx-auto w-full sm:px-6 lg:px-8 flex justify-center">
+    <x-footer-link-home href="{{ route('contact') }}" :active="request()->routeIs('contact')" class="mx-auto w-full sm:px-6 lg:px-8 flex justify-center">
         <div class="text-light-blue">
             {{ __('Contact & Support') }}
         </div>

@@ -59,7 +59,7 @@
                     <x-hamburger-link href="{{ route('notifications') }}" :active="request()->routeIs('notifications')"> <!-- Remplacer dashboard par notifications -->
                         Notifications
                     </x-hamburger-link>
-                    <x-hamburger-link href="{{ route('contact') }}" :active="request()->routeIs('contact')"> <!-- Remplacer dashboard par contact -->
+                    <x-hamburger-link href="{{ route('contact-support') }}" :active="request()->routeIs('contact-support')"> <!-- Remplacer dashboard par contact -->
                         Contact
                     </x-hamburger-link>
                     <form method="POST" action="{{ route('logout') }}">

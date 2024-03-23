@@ -5,7 +5,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AvatarController;
-use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\AdController;
 
 
@@ -26,10 +25,6 @@ Route::get('/', function(){
     return view('welcome');})
     ->name('welcome');
 
-Route::get('home', function(){
-    return view('home');})
-    ->name('home');
-
 Route::get('/a-propos', function(){
     return view('a-propos');})
     ->name('a-propos');
@@ -42,9 +37,9 @@ Route::get('/accessibilite', function(){
     return view('accessibilite');})
     ->name('accessibilite');
 
-Route::get('/contact-support', function(){
-    return view('contact-support');})
-    ->name('contact-support');
+Route::get('/contact', function(){
+    return view('contact');})
+    ->name('contact');
 
 Route::view('/register', 'register')->name('register');
 Route::view('/registration-success', 'registration-success')->name('registration.success');
@@ -63,9 +58,9 @@ Route::view('notifications', 'dashboard') // Route qui mène à la page Notifica
     ->middleware(['auth', 'verified'])
     ->name('notifications'); 
 
-Route::view('contact', 'dashboard') // Route qui mène à la page Contact
+Route::view('contact-support', 'contact-support') // Route qui mène à la page Contact
     ->middleware(['auth', 'verified'])
-    ->name('contact');
+    ->name('contact-support');
 
 // Route pour le footer
 
@@ -87,6 +82,10 @@ Route::view('account', 'account') // Route qui mène à la page Notifications
     ->middleware(['auth', 'verified'])
     ->name('account');
 
+Route::view('edit-profile', 'edit-profile') // Route qui mène à la page Notifications
+->middleware(['auth', 'verified'])
+->name('edit-profile');
+
 Route::get('/articles/{article:slug}', [ArticleController::class, 'show'])->name('articles.show');
 
 // Autres
@@ -102,3 +101,7 @@ Route::get('/avatars', [AvatarController::class, 'index'])
 Route::get('ads', [PostController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('ads'); 
+
+Route::get('home', function(){
+    return view('home');})
+    ->name('home');

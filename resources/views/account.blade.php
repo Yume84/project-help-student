@@ -11,12 +11,12 @@
         <div class="ml-10 flex flex-col sm:flex-row sm:items-center flex-grow">
             <div>
                 <div x-data="{ name: '{{ auth()->user()->pseudo }}' }" x-text="name" x-on:profile-updated.window="name = $event.detail.name" class="text-blue"></div>
-                <span class="mt-2 text-light-blue">Le campus sera ici</span>
+                <span class="mt-2 text-light-blue">{{ auth()->user()->college_id }}</span>
             </div>
 
             <!-- Bouton "Modifier le profil" -->
             <div class="sm:ml-auto">
-                <a href="{{ route('profile') }}" class="bg-blue hover:bg-yellow hover:text-dark-blue inline-flex items-center mt-4 px-4 py-2 bg-dark-blue border border-transparent rounded-md font-semibold text-xs text-light-blue uppercase tracking-widest hover:bg-blue transition ease-in-out duration-150">{{ __('Edit Profile') }}</a>            </div>
+                <a href="{{ route('edit-profile') }}" class="bg-blue hover:bg-yellow hover:text-dark-blue inline-flex items-center mt-4 px-4 py-2 bg-dark-blue border border-transparent rounded-md font-semibold text-xs text-light-blue uppercase tracking-widest hover:bg-blue transition ease-in-out duration-150">{{ __('Edit Profile') }}</a>            </div>
             </div>
 
     </div>
