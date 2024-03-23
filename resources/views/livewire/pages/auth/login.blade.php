@@ -36,7 +36,7 @@ $login = function () {
         <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input wire:model="form.email" id="email" class="block mt-1 w-full" type="email" name="email" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            <x-input-error :messages="$errors->get('email')" class="text-blue mt-2" />
         </div>
 
         <!-- Password -->
@@ -48,7 +48,7 @@ $login = function () {
                             name="password"
                             required autocomplete="current-password" />
 
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+            <x-input-error :messages="$errors->get('password')" class="text-blue mt-2" />
         </div>
 
         <!-- Remember Me -->

@@ -78,9 +78,7 @@ Route::view('messages', 'dashboard') // Route qui mène à la page Notifications
 
 // Route pour le compte
 
-Route::view('account', 'account') // Route qui mène à la page Notifications
-    ->middleware(['auth', 'verified'])
-    ->name('account');
+Route::get('/users/{user:pseudo}', [UserController::class, 'show'])->name('users-show');
 
 Route::view('edit-profile', 'edit-profile') // Route qui mène à la page Notifications
 ->middleware(['auth', 'verified'])
@@ -106,5 +104,4 @@ Route::get('home', function(){
     return view('home');})
     ->name('home');
 
-Route::get('/users/{user:pseudo}', [UserController::class, 'show'])->name('users.show');
 

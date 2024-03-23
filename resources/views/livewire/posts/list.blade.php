@@ -8,26 +8,33 @@ use Livewire\Volt\Component;
 new class extends Component {
 
     public Collection $posts; 
-
     public ?Post $editing = null;
+    public ?string $pseudo = null; // Ajoutez cette ligne
  
-    public function mount(): void
+    public function mount(?string $pseudo = null): void // Modifiez la signature de la méthode mount
     {
+        $this->pseudo = $pseudo; // Initialisez la propriété $pseudo avec le pseudo fourni
         $this->getPosts(); 
     } 
 
     #[On('post-created')]
     public function getPosts(): void
     {
-        $this->posts = Post::with('user')
-            ->latest()
-            ->get();
+        $query = Post::with('user')->latest();
+
+        if ($this->pseudo) {
+            $query->whereHas('user', function ($query) {
+                $query->where('pseudo', $this->pseudo);
+            });
+        }
+
+        $this->posts = $query->get();
     }
 
     public function edit(Post $post): void //On en a plus besoin
     {
         $this->editing = $post;
- 
+
         $this->getPosts();
     }
 
@@ -100,8 +107,11 @@ new class extends Component {
 
                             <!-- Aides -->
                             <div class="flex flex-row">
-                                <p class="bg-blue py-1 px-3 rounded-lg">{{ $post->message }}</p> <!-- Message = Aides -->
+                                @foreach(explode(',', $post->message) as $info)
+                                    <p class="bg-blue py-1 px-3 rounded-lg mr-2">{{ $info }}</p>
+                                @endforeach
                             </div>
+                            
                         </div>
                 </div>
             </div>
@@ -124,7 +134,9 @@ new class extends Component {
                     </x-slot>
                 </x-dropdown>
                 @else
-                    <a href="" class="block"><div class="bg-yellow rounded py-1 px-4 text-center text-lg">{{ __('Go to profile') }}</div></a>
+                    <a href="{{ route('users-show', $post->user->pseudo) }}" class="block">
+                        <div class="bg-yellow rounded py-1 px-4 text-center text-lg">{{ __('Go to profile') }}</div>
+                    </a>
                     <a href="" class="block"><div class="bg-yellow rounded py-1 px-4 text-center text-lg">{{ __('Send message') }}</div></a>
                 @endif
             </div>            
