@@ -85,39 +85,48 @@ class MultiStepForm extends Component
 
         if($this->currentStep == 2){
                 $this->validate([
-                'option'=>'required',
+                'option'=> ['required']
             ]);
         }
         elseif($this->currentStep == 3){
              $this->validate([
-                'helps'=>'required|array',
+                'helps'=> ['required', 'array']
             ]);
         }
         elseif($this->currentStep == 4){
              $this->validate([
-                'list_language'=>'required',
-                'level'=>'required'
+                'list_language'=> ['required'],
+                'level'=> ['required']
             ]);
         }
         elseif($this->currentStep == 5){
              $this->validate([
-                'college'=>'required'
+                'college'=> ['required']
             ]);
         }
         elseif($this->currentStep == 6){
              $this->validate([
-                'name'=>'required',
-                'pseudo'=>'required',
-                'email'=>'required|email|unique:users',
-                'password'=> ['required', 'string', 'confirmed', Rules\Password::defaults()],
-                'password_confirmation'=>'required',
-                'rgpd'=>'required'
+                'name'=> ['required'],
+                'pseudo'=> ['required'],
+                'email'=> ['required'],
+                'password'=> ['required'],
+                'password_confirmation'=> ['required'],
+                'rgpd'=> ['required']
             ]);
         }
     }
 
     public function register(){
         $this->resetErrorBag();
+
+                // Validation des données
+                $validatedData = $this->validate([
+                'name'=> ['required', 'string', 'max:50'],
+                'pseudo'=> ['required', 'string', 'lowercase', 'max:50', 'unique:'.User::class],
+                'email'=> ['required', 'string', 'lowercase', 'email', 'max:100', 'unique:'.User::class],
+                'password'=> ['required', 'min:8', 'confirmed', Rules\Password::defaults()],
+            ]);
+
                 $values = array(
                 "name"=>$this->name,
                 "pseudo"=>$this->pseudo,

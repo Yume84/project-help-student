@@ -6,7 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AvatarController;
 use App\Http\Controllers\AdController;
-
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -105,3 +105,6 @@ Route::get('ads', [PostController::class, 'index'])
 Route::get('home', function(){
     return view('home');})
     ->name('home');
+
+Route::get('/users/{user:pseudo}', [UserController::class, 'show'])->name('users.show');
+

@@ -16,7 +16,7 @@ state([
 
 rules([
     'current_password' => ['required', 'string', 'current_password'],
-    'password' => ['required', 'string', Password::defaults(), 'confirmed'],
+    'password' => ['required', 'string', 'min:8', Password::defaults(), 'confirmed'],
 ]);
 
 $updatePassword = function () {

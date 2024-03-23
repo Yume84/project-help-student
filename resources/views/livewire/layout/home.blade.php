@@ -32,32 +32,32 @@
 
                     <x-slot name="flag"> <!-- Liste déroulante des drapeaux et des langues -->
                         <!-- Langue : Français -->
-                        <x-dropdown-link-flag :href="route('home')" :image="asset('images/drapeau/france.png')" :alt="'francais'"> <!--Remplacer la route et ajouter la traduction de la page au clic -->
+                        <x-dropdown-link-flag :href="url()->current().'?lang=fr'" :image="asset('images/drapeau/france.png')" :alt="'francais'"> <!--Remplacer la route et ajouter la traduction de la page au clic -->
                             {{ __('Français') }}
                         </x-dropdown-link-flag>
                                                                                
                         <!-- Langue : Anglais -->
-                        <x-dropdown-link-flag :href="route('home')" :image="asset('images/drapeau/royaume-uni.png')" :alt="'anglais'"> <!--Remplacer la route et ajouter la traduction de la page au clic -->
+                        <x-dropdown-link-flag :href="url()->current().'?lang=en'" :image="asset('images/drapeau/royaume-uni.png')" :alt="'anglais'"> <!--Remplacer la route et ajouter la traduction de la page au clic -->
                             {{ __('English') }}
                         </x-dropdown-link-flag>
 
                         <!-- Langue : Espagnol -->
-                        <x-dropdown-link-flag :href="route('home')" :image="asset('images/drapeau/espagne.png')" :alt="'espagnol'"> <!--Remplacer la route et ajouter la traduction de la page au clic -->
+                        <x-dropdown-link-flag :href="url()->current().'?lang=es'" :image="asset('images/drapeau/espagne.png')" :alt="'espagnol'"> <!--Remplacer la route et ajouter la traduction de la page au clic -->
                             {{ __('Español') }}
                         </x-dropdown-link-flag>
 
                         <!-- Langue : Allemagne -->
-                        <x-dropdown-link-flag :href="route('home')" :image="asset('images/drapeau/allemagne.png')" :alt="'allemand'"> <!--Remplacer la route et ajouter la traduction de la page au clic -->
+                        <x-dropdown-link-flag :href="url()->current().'?lang=de'" :image="asset('images/drapeau/allemagne.png')" :alt="'allemand'"> <!--Remplacer la route et ajouter la traduction de la page au clic -->
                             {{ __('Deutsch') }}
                         </x-dropdown-link-flag>
                                                                                
                         <!-- Langue : Italien -->
-                        <x-dropdown-link-flag :href="route('home')" :image="asset('images/drapeau/italie.png')" :alt="'italien'"> <!--Remplacer la route et ajouter la traduction de la page au clic -->
+                        <x-dropdown-link-flag :href="url()->current().'?lang=it'" :image="asset('images/drapeau/italie.png')" :alt="'italien'"> <!--Remplacer la route et ajouter la traduction de la page au clic -->
                             {{ __('Italiano') }}
                         </x-dropdown-link-flag>
 
                         <!-- Langue : Coréen -->
-                        <x-dropdown-link-flag :href="route('home')" :image="asset('images/drapeau/coree-du-sud.png')" :alt="'coreen'"> <!--Remplacer la route et ajouter la traduction de la page au clic -->
+                        <x-dropdown-link-flag :href="url()->current().'?lang=kr'" :image="asset('images/drapeau/coree-du-sud.png')" :alt="'coreen'"> <!--Remplacer la route et ajouter la traduction de la page au clic -->
                             {{ __('한국인') }}
                         </x-dropdown-link-flag>
 

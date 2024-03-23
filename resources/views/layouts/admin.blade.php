@@ -44,8 +44,8 @@
 
                 <!-- Liens à l'intérieur du menu hamburger -->
                 <nav>
-                <x-hamburger-link href="{{ route('account') }}" :active="request()->routeIs('account')">
-                    <div class="flex items-center">
+                    <x-hamburger-link :href="'/users/' . auth()->user()->pseudo" :active="request()->routeIs('users.show')">
+                        <div class="flex items-center">
                         <img src="{{ asset('/images/exemple.jpg') }}" alt="avatar" class="block w-20 h-20 object-cover rounded border-blue">
                         <div class="ml-4 flex flex-col">
                             <div x-data="{ name: '{{ auth()->user()->pseudo }}' }" x-text="name" x-on:profile-updated.window="name = $event.detail.name"></div>
