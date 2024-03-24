@@ -19,14 +19,12 @@ new class extends Component
             'message' => ['required', 'string', 'max:255'],
         ]);
 
-        $user = User::create($values);
+        $user = Post::create($values);
 
-info('contenu de variable helps', [$this->helps]);
-foreach($this->helps as $help){
-    $user->articles()->attach($help);
-}
-
-        $user = Auth::user();
+        info('contenu de variable helps', [$this->helps]);
+        foreach($this->helps as $help){
+            $user->articles()->attach($help);
+        }
 
         $userId = $user->id;
         $collegeName = College::find($user->college_id)->name;

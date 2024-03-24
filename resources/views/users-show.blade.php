@@ -14,7 +14,8 @@
                     @php
                         $college_name = \App\Models\College::find($user->college_id)->name;
                     @endphp
-                    <span class="mt-2 text-light-blue">{{ $college_name }}</span>                </div>
+                    <span class="mt-2 text-light-blue">{{ $college_name }}</span>                
+                </div>
     
                 <!-- Bouton "Modifier le profil" -->
                 @auth

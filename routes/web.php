@@ -48,6 +48,10 @@ Route::view('dashboard', 'dashboard') // Route qui mène au dashboard / feed
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
+Route::view('dashboard-offer', 'dashboard-offer') // Route qui mène au dashboard / feed
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard-offer');
+
 // Route pour la sidebar
 
 Route::view('profile', 'profile') // Route qui mène à la page Paramètres et confidentialité

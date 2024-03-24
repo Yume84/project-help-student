@@ -1,13 +1,13 @@
 <?php
 
 use App\Models\User;
+use App\Models\College;
+use App\Models\Post;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\Rule;
-use Livewire\Component;  // Ajout de l'importation de la classe Component
-
 
 use function Livewire\Volt\state;
 
@@ -19,32 +19,17 @@ $updateProfileInformation = function () {
     $user = Auth::user();
 
     $validated = $this->validate([
-        'college' => ['required'], 
+        'college' => ['required', 'exists:colleges,id'], 
     ]);
 
-    $user->fill($validated);
-
+    // Mettre à jour le college de l'utilisateur
+    $user->college_id = $validated['college'];
     $user->save();
+
+    $collegeName = College::find($user->college_id)->name;
 
     $this->dispatch('profile-updated', ['college' => $user->college_id]);
 };
-
-class College extends Component
-{
-    public $college;
-
-    public function mount(): void
-    {
-        $this->college = \App\Models\College::all();  
-    }
-
-    public function render()
-{
-    return view('edit-profile', [
-        'college' => \App\Models\College::all(),
-    ]);
-}
-}
 
 ?>
 

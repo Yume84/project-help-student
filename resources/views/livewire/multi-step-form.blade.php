@@ -54,7 +54,9 @@
         <div class="bg-yellow h-5 rounded-lg remplissage-2"></div>
     </div>
 
-    <h3 class="text-3xl text-blue uppercase font-extrabold text-center">Coche les aides dont tu as besoin</h3>
+    <h3 class="text-3xl text-blue uppercase font-extrabold text-center">
+        {{ $option == __('Ask for help') ? 'Coche les aides dont tu as besoin' : 'Coche les aides que tu peux fournir' }}
+    </h3>
     <div class="grid grid-cols-1 md:grid-cols-4 sm:gap-2 md:gap-8 pt-10 pb-10">
 
         @foreach($articles as $article)

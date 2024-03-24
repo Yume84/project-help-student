@@ -17,8 +17,7 @@ class MultiStepForm extends Component
 {
     use WithFileUploads;
 
-    public $option;
-    public $category;
+    public $option;    
     public $helps = [];
     public $list_language;
     public $level;
@@ -152,6 +151,7 @@ class MultiStepForm extends Component
             $languageWithLevel = Language::where('id', $this->list_language)->first();
             $languageName = $languageWithLevel->label;
             $level = $this->level;
+            $option = $this->option;
 
             $message = "";
             if (!empty($articleNames)) {
@@ -165,6 +165,7 @@ class MultiStepForm extends Component
             $post->college_name = $collegeName;
             $post->language_name = $languageName;
             $post->level = $level;
+            $post->option = $option;
 
             $post->save();
     
@@ -174,7 +175,6 @@ class MultiStepForm extends Component
             //$this->currentStep = 1;
             $data = ['pseudo'=>$this->pseudo, 'email'=>$this->email];
             return redirect()->route('registration.success', $data);
-
 
     }
 }

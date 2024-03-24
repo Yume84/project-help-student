@@ -17,12 +17,19 @@ class Post extends Model
         'college_name',
         'helps',
         'level',
-        'language_name'
+        'language_name',
+
+        'option'
     ];
     
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
+
+    public function articles()
+    {
+        return $this->belongsToMany(Article::class);
+    }   
     
 }

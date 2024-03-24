@@ -20,7 +20,7 @@ new class extends Component {
     #[On('post-created')]
     public function getPosts(): void
     {
-        $query = Post::with('user')->latest();
+        $query = Post::with('user')->latest()->where('option', 'Proposer ton aide');
 
         if ($this->pseudo) {
             $query->whereHas('user', function ($query) {

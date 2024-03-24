@@ -28,4 +28,9 @@ class Article extends Model
     public function users(){
         return $this->belongsToMany(User::class);
     }
+
+    public function posts()
+    {
+        return $this->belongsToMany(Post::class);
+    }
 }
