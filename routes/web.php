@@ -7,6 +7,8 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\AvatarController;
 use App\Http\Controllers\AdController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MessageController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -76,7 +78,7 @@ Route::get('add', [PostController::class, 'index']) // Route pour les nouvelles 
     ->middleware(['auth', 'verified'])
     ->name('add'); 
 
-Route::view('messages', 'dashboard') // Route qui mène à la page Notifications
+    Route::view('messages', 'dashboard') // Route qui mène à la page Messages
     ->middleware(['auth', 'verified'])
     ->name('messages');
 
@@ -89,6 +91,9 @@ Route::view('edit-profile', 'edit-profile') // Route qui mène à la page Notifi
 ->name('edit-profile');
 
 Route::get('/articles/{article:slug}', [ArticleController::class, 'show'])->name('articles.show');
+
+Route::get('/messages/{post_id}', [MessageController::class, 'showConversation'])->name('messages.conversation');
+Route::post('/messages/store', [MessageController::class, 'store'])->name('messages.store');
 
 // Autres
 

@@ -10,7 +10,7 @@ new class extends Component {
     public Collection $posts; 
     public ?Post $editing = null;
     public ?string $pseudo = null;
- 
+
     public function mount(?string $pseudo = null): void
     {
         $this->pseudo = $pseudo;
@@ -137,7 +137,8 @@ new class extends Component {
                     <a href="{{ route('users-show', $post->user->pseudo) }}" class="block">
                         <div class="bg-yellow rounded py-1 px-4 text-center text-lg">{{ __('Go to profile') }}</div>
                     </a>
-                    <a href="" class="block"><div class="bg-yellow rounded py-1 px-4 text-center text-lg">{{ __('Send message') }}</div></a>
+                    <livewire:messages-conversation />
+                    <a href="#" wire:click="redirectToConversation({{ $post->id }})" class="block"><div class="bg-yellow rounded py-1 px-4 text-center text-lg">{{ __('Send message') }}</div></a>
                 @endif
             </div>            
 

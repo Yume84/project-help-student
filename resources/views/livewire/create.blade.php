@@ -1,4 +1,6 @@
 <div>
+@livewire('create-form')
+
     <form wire:submit.prevent="store"> 
 
         <h3 class="text-3xl text-blue uppercase font-extrabold text-center mb-4">Poste une annonce</h3>
